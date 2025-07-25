@@ -4,65 +4,68 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react';
 
 const BlogSection = () => {
-  // Placeholder blog posts - will be replaced with actual content
+  // Real blog posts from WordPress
   const blogPosts = [
     {
       id: 1,
-      title: "My Journey from Code to Business: Lessons from Visa Internship",
-      excerpt: "Reflecting on how my 3-month internship at Visa International opened my eyes to the intersection of technology and business strategy in the fintech world.",
-      date: "2024-01-15",
-      readTime: "8 min read",
-      category: "Career",
+      title: "I'm back!",
+      excerpt: "I'm dumb. I'm known to be a pessimist and an ardent philosopher of optimistic nihilism. I didn't arrive at this conclusion with ease. It's the way I struggle to understand concepts my friends do nothing but glaze over...",
+      date: "2023-03-20",
+      readTime: "5 min read",
+      category: "Personal",
       featured: true,
-      image: "photo-1498050108023-c5249f4df085"
+      image: "photo-1498050108023-c5249f4df085",
+      url: "https://notsogoodblog289079317.wordpress.com/2023/03/20/im-back/"
     },
     {
       id: 2,
-      title: "Building Scalable Payment Systems: Technical Deep Dive",
-      excerpt: "An exploration of the technical challenges in processing millions of transactions daily and the architectural decisions that make it possible.",
-      date: "2023-12-20",
-      readTime: "12 min read",
-      category: "Technology",
+      title: "Life Of Your Own",
+      excerpt: "Moms are all-rounders. From the minute you wake up to when you go to sleep they take care of you. I can't even imagine my life without my mother. Sometimes I do wonder we all have a life of our own. Our goals, ambitions, etc...",
+      date: "2020-08-30",
+      readTime: "4 min read",
+      category: "Life",
       featured: true,
-      image: "photo-1461749280684-dccba630e2f6"
+      image: "photo-1461749280684-dccba630e2f6",
+      url: "https://notsogoodblog289079317.wordpress.com/2020/08/30/life-of-your-own/"
     },
     {
       id: 3,
-      title: "Why I'm Pursuing an MBA as a Computer Science Student",
-      excerpt: "The strategic thinking behind my decision to pursue a deferred MBA and how it aligns with my long-term career goals in tech leadership.",
-      date: "2023-11-10",
+      title: "The Dash Of Life",
+      excerpt: "You are running. All you can hear is the echo of your footsteps and a high pitched voice ringing in your ears. You want to give up, but you can't. Have to keep running. The earth below you start to fracture...",
+      date: "2020-08-29",
       readTime: "6 min read",
-      category: "Education",
+      category: "Philosophy",
       featured: false,
-      image: "photo-1519389950473-47ba0277781c"
-    },
-    {
-      id: 4,
-      title: "The Future of Fintech: Trends and Opportunities",
-      excerpt: "Analyzing emerging trends in financial technology and how they're reshaping the global financial landscape.",
-      date: "2023-10-25",
-      readTime: "10 min read",
-      category: "Fintech",
-      featured: false,
-      image: "photo-1581090464777-f3220bbe1b8b"
+      image: "photo-1519389950473-47ba0277781c",
+      url: "https://notsogoodblog289079317.wordpress.com/2020/08/29/the-dash-of-life/"
     }
   ];
 
-  // Placeholder for upcoming blog posts
+  // Planned blog posts for MBA application period
   const upcomingPosts = [
     {
-      title: "Preparing for Top MBA Programs: A Technical Student's Guide",
-      description: "Comprehensive guide for engineering students applying to premier business schools",
-      status: "In Progress"
-    },
-    {
-      title: "Building a Personal Brand in Tech",
-      description: "Strategies for establishing thought leadership and professional presence",
+      title: "My MBA Application Journey: From Tech to Business School",
+      description: "Documenting the MBA application process, essays, interviews, and decision-making",
       status: "Planned"
     },
     {
-      title: "The Art of Technical Communication",
-      description: "Bridging the gap between technical complexity and business clarity",
+      title: "Product Management vs Engineering: Finding My Path",
+      description: "Exploring career transitions from technical roles to product management",
+      status: "In Progress"
+    },
+    {
+      title: "Building Communities: Lessons from College Leadership",
+      description: "Insights from leading tech societies and organizing college events",
+      status: "Planned"
+    },
+    {
+      title: "The Future of Fintech in India",
+      description: "Analysis of India's digital payment revolution and emerging opportunities",
+      status: "Planned"
+    },
+    {
+      title: "Data Science for Social Good",
+      description: "Using analytics and machine learning to solve real-world problems",
       status: "Planned"
     }
   ];

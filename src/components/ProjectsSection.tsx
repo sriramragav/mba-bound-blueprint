@@ -4,73 +4,95 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 
 const ProjectsSection = () => {
-  // Placeholder projects - will be replaced with actual GitHub projects
+  // Real projects from GitHub
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack web application with modern design, secure payment integration, and real-time inventory management. Built with scalability and user experience in mind.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Docker"],
-      category: "Full Stack",
+      title: "Traffic Management System",
+      description: "Distributed traffic management system using Spark-Kafka for real-time traffic flow optimization and smart city infrastructure.",
+      technologies: ["Python", "Apache Spark", "Kafka", "Distributed Systems"],
+      category: "Big Data",
       featured: true,
-      github: "#",
+      github: "https://github.com/Not-a-coding-genius/TrafficManagement",
       demo: "#",
-      impact: "Handles 1000+ concurrent users"
+      impact: "Real-time traffic optimization"
     },
     {
       id: 2,
-      title: "Financial Analytics Dashboard",
-      description: "Real-time dashboard for financial data visualization and analysis. Inspired by my Visa internship experience with financial systems.",
-      technologies: ["Python", "Django", "React", "D3.js", "Redis"],
-      category: "Data Science",
+      title: "Banking Application",
+      description: "Secure banking system with modern UI/UX, transaction management, and account services built with SpringBoot and MySQL.",
+      technologies: ["Java", "Spring Boot", "MySQL", "REST APIs"],
+      category: "Full Stack",
       featured: true,
-      github: "#",
+      github: "https://github.com/Not-a-coding-genius/BankingApp",
       demo: "#",
-      impact: "Processes 50GB+ data daily"
+      impact: "Secure financial transactions"
     },
     {
       id: 3,
-      title: "Machine Learning Predictor",
-      description: "AI-powered prediction system using advanced algorithms for business forecasting and trend analysis.",
-      technologies: ["Python", "TensorFlow", "Scikit-learn", "Flask", "AWS"],
+      title: "Formula 1 Winner Predictor",
+      description: "Machine learning model that predicts F1 race winners using historical data, driver statistics, and track conditions.",
+      technologies: ["Python", "Jupyter Notebook", "Pandas", "Scikit-learn"],
       category: "AI/ML",
       featured: false,
-      github: "#",
+      github: "https://github.com/Not-a-coding-genius/Formula1-Predictor",
       demo: "#",
-      impact: "95% accuracy rate"
+      impact: "Predictive racing analytics"
     },
     {
       id: 4,
-      title: "Mobile Task Manager",
-      description: "Cross-platform mobile application for team collaboration and project management with offline capabilities.",
-      technologies: ["React Native", "Firebase", "Node.js", "MongoDB"],
-      category: "Mobile",
+      title: "Yelp Sentiment Analysis",
+      description: "NLP project analyzing customer reviews from Yelp to determine sentiment patterns and business insights.",
+      technologies: ["Python", "NLP", "Jupyter Notebook", "Machine Learning"],
+      category: "Data Science",
       featured: false,
-      github: "#",
+      github: "https://github.com/Not-a-coding-genius/YelpSenitmentAnalysis",
       demo: "#",
-      impact: "10K+ downloads"
+      impact: "Business sentiment insights"
     },
     {
       id: 5,
-      title: "Cloud Infrastructure Tool",
-      description: "DevOps automation tool for cloud deployment and monitoring with CI/CD pipeline integration.",
-      technologies: ["Docker", "Kubernetes", "AWS", "Terraform", "Jenkins"],
-      category: "DevOps",
+      title: "CEG Safety App UI",
+      description: "Mobile application interface designed to make College of Engineering, Guindy a safer place for students and staff.",
+      technologies: ["UI/UX Design", "Mobile Design", "Safety Systems"],
+      category: "Mobile",
       featured: false,
-      github: "#",
+      github: "https://github.com/Not-a-coding-genius/CEGSafetyAppUI",
       demo: "#",
-      impact: "Reduces deployment time by 60%"
+      impact: "Enhanced campus safety"
     },
     {
       id: 6,
-      title: "Blockchain Voting System",
-      description: "Secure, transparent voting system using blockchain technology ensuring immutable records and voter privacy.",
-      technologies: ["Solidity", "Web3.js", "React", "Ethereum", "IPFS"],
-      category: "Blockchain",
+      title: "Movie Recommendation System",
+      description: "Intelligent movie recommendation engine using collaborative filtering and content-based algorithms.",
+      technologies: ["Python", "Machine Learning", "Recommendation Systems"],
+      category: "AI/ML",
       featured: false,
-      github: "#",
+      github: "https://github.com/Not-a-coding-genius/MovieRecSystem",
       demo: "#",
-      impact: "100% transparent elections"
+      impact: "Personalized recommendations"
+    },
+    {
+      id: 7,
+      title: "Thanglish Tokenizer",
+      description: "Natural language processing tool for tokenizing Tamil-English mixed text, useful for regional language analysis.",
+      technologies: ["Python", "NLP", "Jupyter Notebook", "Tokenization"],
+      category: "NLP",
+      featured: false,
+      github: "https://github.com/Not-a-coding-genius/ThanglishTokenizer",
+      demo: "#",
+      impact: "Regional language processing"
+    },
+    {
+      id: 8,
+      title: "C19 Research",
+      description: "COVID-19 data analysis and research project examining pandemic trends and patterns using statistical methods.",
+      technologies: ["Python", "Data Analysis", "Statistical Modeling"],
+      category: "Research",
+      featured: false,
+      github: "https://github.com/Not-a-coding-genius/C19Research",
+      demo: "#",
+      impact: "Pandemic trend analysis"
     }
   ];
 
@@ -197,9 +219,11 @@ const ProjectsSection = () => {
 
         {/* View All Projects CTA */}
         <div className="text-center">
-          <Button variant="outline" size="lg" className="group">
-            View All Projects on GitHub
-            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+          <Button variant="outline" size="lg" className="group" asChild>
+            <a href="https://github.com/Not-a-coding-genius" target="_blank" rel="noopener noreferrer">
+              View All Projects on GitHub
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </div>
       </div>
