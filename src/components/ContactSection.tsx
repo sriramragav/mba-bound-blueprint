@@ -8,13 +8,13 @@ const ContactSection = () => {
       icon: Mail,
       label: "Email",
       value: "samyuctaasriram@gmail.com",
-      href: "mailto:samyuctaasriram@gmail.com"
+      href: "mailto:123@xyz.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (877) 893-6694",
-      href: "tel:+18778936694"
+      value: "+1 (877) abc-defg",
+      href: "tel:+1877abcdefg"
     },
     {
       icon: MapPin,
