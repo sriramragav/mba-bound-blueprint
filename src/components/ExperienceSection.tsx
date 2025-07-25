@@ -25,11 +25,11 @@ const ExperienceSection = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
                   <CardTitle className="text-2xl text-foreground">
-                    Software Engineering Intern
+                    Data Analyst
                   </CardTitle>
                   <div className="flex items-center gap-2 text-primary font-medium text-lg mt-1">
                     <Building className="w-5 h-5" />
-                    Visa International
+                    GR Network
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">

@@ -28,14 +28,14 @@ const HeroSection = () => {
           {/* Name and Title */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-              Your Name
+              Samyuctaa Sriram
               <span className="block text-3xl md:text-4xl text-primary-glow font-normal mt-2">
                 Computer Science Engineer
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-              Final-year CS student with fintech expertise at Visa International, 
-              aspiring MBA candidate passionate about bridging technology and business
+              Final-year CS student from CEG with tech leadership experience, 
+              aspiring MBA candidate passionate about product management and innovation
             </p>
           </div>
 
@@ -63,7 +63,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full" />
-              <span>Currently at Visa International</span>
+              <span>Product Manager & Data Analyst</span>
             </div>
           </div>
         </div>

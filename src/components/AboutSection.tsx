@@ -30,25 +30,21 @@ const AboutSection = () => {
 
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I'm a final-year Computer Science Engineering student with a passion for 
-                bridging the gap between technology and business. My recent internship at 
-                <span className="text-primary font-medium"> Visa International, Bangalore</span>, 
-                has given me valuable insights into the fintech industry and how technology 
-                drives financial innovation.
+                I'm a final-year Computer Science student at College of Engineering, Guindy with a passion for 
+                tech, leadership, and product thinking. I've worked on production systems, built communities 
+                at college, and love blending technical and creative work.
               </p>
               
               <p>
-                As I approach my final year, I'm excited about pursuing a deferred MBA 
-                to further develop my business acumen and leadership skills. My goal is 
-                to become a technology leader who can drive digital transformation and 
-                create meaningful impact at the intersection of tech and business.
+                My journey spans from winning the <span className="text-primary font-medium">NASA Space Settlement Contest (2nd Place Internationally)</span> to 
+                leading cross-functional teams as Product Manager for the CEGian Mentoring App. Currently working as a 
+                Data Analyst at GR Network while pursuing my degree.
               </p>
 
               <p>
-                Through my academic projects, internship experience, and leadership roles, 
-                I've developed a strong foundation in software development, problem-solving, 
-                and team collaboration. I'm particularly interested in how emerging 
-                technologies can solve real-world business challenges.
+                Through my diverse experience as Associate Head of Hacks at Computer Society Anna University, 
+                Head of Contents at ACM CEG, and various tech roles, I've developed strong leadership and 
+                technical skills. I'm now preparing for MBA programs to further develop my strategic thinking.
               </p>
             </div>
 

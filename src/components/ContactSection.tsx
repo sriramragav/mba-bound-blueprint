@@ -7,19 +7,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com"
+      value: "samyuctaasriram@gmail.com",
+      href: "mailto:samyuctaasriram@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 XXXXX XXXXX",
-      href: "tel:+91XXXXXXXXX"
+      value: "+1 (877) 893-6694",
+      href: "tel:+18778936694"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Bangalore, India",
+      value: "Chennai, India",
       href: "#"
     }
   ];
