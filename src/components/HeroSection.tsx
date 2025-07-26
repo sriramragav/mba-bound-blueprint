@@ -11,23 +11,22 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="min-h-screen flex items-center justify-center relative bg-background overflow-hidden"
+      className="min-h-screen w-full max-w-[100vw] flex items-center justify-center relative bg-background overflow-hidden"
     >
-      {/* Background Landmark Images - Safe & Clipped */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden max-w-full">
+      {/* Background Landmark Images - Centered & Clamped */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {/* Left - Space Needle */}
-      {/* Decorative Images on Left and Right */}
-      <img
-        src="/space-needle.svg"
-        alt="Seattle Space Needle"
-        className="hidden md:block absolute top-1/2 left-8 -translate-y-1/2 w-32 opacity-20 pointer-events-none z-0"
-      />
-      <img
-        src="/chennai-central.svg"
-        alt="Chennai Central Station"
-        className="hidden md:block absolute top-1/2 right-8 -translate-y-1/2 w-32 opacity-20 pointer-events-none z-0"
-      />
-
+        <img
+          src="/space-needle.svg"
+          alt="Seattle Space Needle"
+          className="hidden md:block absolute top-1/2 left-4 md:left-8 -translate-y-1/2 w-24 md:w-32 lg:w-40 opacity-25 pointer-events-none z-0"
+        />
+        {/* Right - Chennai Central */}
+        <img
+          src="/chennai-central.svg"
+          alt="Chennai Central Station"
+          className="hidden md:block absolute top-1/2 right-4 md:right-8 -translate-y-1/2 w-24 md:w-32 lg:w-40 opacity-25 pointer-events-none z-0"
+        />
       </div>
 
       {/* Main Content */}
