@@ -35,8 +35,6 @@ const HeroSection = () => {
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
               <em>“I forgot who I was. So I decided to become who I am.” - Hoshi Takayuki</em>
-              <br></br>
-              I’m Samyuctaa Sriram. Engineer in training. Leader in progress. I believe that impact starts with knowing yourself—and building from there.
             </p>
           </div>
 
