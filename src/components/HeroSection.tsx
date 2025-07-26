@@ -82,39 +82,6 @@ const HeroSection = () => {
           <ArrowDown className="w-6 h-6 text-muted-foreground" />
         </div>
       </div>
-
-    {/* 🔽 Insert the dotted path SVGs here 🔽 */}
-    <svg
-      viewBox="0 0 100 10"
-      preserveAspectRatio="none"
-      className="hidden md:block absolute top-10 left-0 w-full h-24 text-primary/30 animate-slow-pulse z-0"
-    >
-      <path
-        d="M0,10 C30,0 70,0 100,10"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="0.6"
-        strokeDasharray="2 3"
-      />
-      <text x="0" y="9" fontSize="2" fill="currentColor">🏙️</text>
-      <text x="96" y="9" fontSize="2" fill="currentColor">🚉</text>
-    </svg>
-
-    <svg
-      viewBox="0 0 100 10"
-      preserveAspectRatio="none"
-      className="hidden md:block absolute bottom-10 left-0 w-full h-24 text-primary/30 animate-slow-pulse z-0"
-    >
-      <path
-        d="M0,0 C30,10 70,10 100,0"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="0.6"
-        strokeDasharray="2 3"
-      />
-      <text x="0" y="9" fontSize="2" fill="currentColor">🏙️</text>
-      <text x="96" y="9" fontSize="2" fill="currentColor">🚉</text>
-    </svg>
     </section>
   );
 };
