@@ -17,12 +17,12 @@ const HeroSection = () => {
      
       <div className="absolute inset-0 flex items-center justify-between px-8 sm:px-16 lg:px-24 pointer-events-none z-0">
         <img
-          src="/space_needle_vector.svg" // Replace with correct path if needed
+          src="/space-needle.svg" // Replace with correct path if needed
           alt="Space Needle"
           className="w-40 sm:w-56 md:w-64 opacity-30" // MODIFIED opacity
         />
         <img
-          src="/chennai_central_vector.svg" // Replace with correct path if needed
+          src="/chennai-central.svg" // Replace with correct path if needed
           alt="Chennai Central"
           className="w-40 sm:w-56 md:w-64 opacity-30" // MODIFIED opacity
         />
