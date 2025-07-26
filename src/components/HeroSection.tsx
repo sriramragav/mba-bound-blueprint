@@ -20,12 +20,12 @@ const HeroSection = () => {
       <img
         src="/space-needle.svg"
         alt="Seattle Space Needle"
-        className="hidden md:block absolute top-1/2 left-12 -translate-y-1/2 w-32 opacity-20 pointer-events-none z-0"
+        className="hidden md:block absolute top-1/2 left-8 -translate-y-1/2 w-32 opacity-20 pointer-events-none z-0"
       />
       <img
         src="/chennai-central.svg"
         alt="Chennai Central Station"
-        className="hidden md:block absolute top-1/2 right-12 -translate-y-1/2 w-32 opacity-20 pointer-events-none z-0"
+        className="hidden md:block absolute top-1/2 right-8 -translate-y-1/2 w-32 opacity-20 pointer-events-none z-0"
       />
 
       </div>
