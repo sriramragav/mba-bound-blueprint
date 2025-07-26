@@ -34,7 +34,8 @@ const HeroSection = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-              <em>“I forgot who I was. So I decided to become who I am.” - Hoshi Takayuki</em>
+              <em>“I forgot who I was. So I decided to become who I am.” 
+                - Hoshi Takayuki</em>
             </p>
           </div>
 
