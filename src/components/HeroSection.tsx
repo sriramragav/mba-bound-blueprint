@@ -13,6 +13,26 @@ const HeroSection = () => {
     <section 
       className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background"
     >
+      {/* --- BACKGROUND ELEMENTS (added) --- */}
+      <img
+        src="/space-needle.svg"
+        alt="Seattle"
+        className="absolute left-0 bottom-0 w-28 md:w-40 opacity-5 pointer-events-none z-0"
+      />
+      <img
+        src="/chennai-central.svg"
+        alt="Chennai"
+        className="absolute right-0 bottom-0 w-32 md:w-44 opacity-5 pointer-events-none z-0"
+      />
+      <svg
+        className="absolute left-1/4 bottom-6 w-1/2 opacity-5 z-0"
+        viewBox="0 0 100 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 5 Q50 0 100 5" stroke="gray" strokeWidth="0.5" fill="none" />
+      </svg>
+      {/* --- BACKGROUND ELEMENTS - SECTION ENDS --- */}
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
