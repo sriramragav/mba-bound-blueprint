@@ -15,19 +15,22 @@ const HeroSection = () => {
     >
       {/* --- BACKGROUND ELEMENTS (added) --- */}
      
-      <div className="absolute inset-0 flex items-center justify-between px-8 sm:px-16 lg:px-24 pointer-events-none z-0">
-        <img
-          src="/space-needle.svg" // Replace with correct path if needed
-          alt="Space Needle"
-          className="w-40 sm:w-56 md:w-64 opacity-30" // MODIFIED opacity
-        />
-        <img
-          src="/chennai-central.svg" // Replace with correct path if needed
-          alt="Chennai Central"
-          className="w-40 sm:w-56 md:w-64 opacity-30" // MODIFIED opacity
-        />
-      </div> 
-      {/* --- BACKGROUND ELEMENTS - SECTION ENDS --- */}
+     {/* MODIFIED: Background Landmark Images with side alignment */}
+  <div className="absolute inset-0 pointer-events-none z-0">
+    {/* Left - Space Needle */}
+    <img
+      src="/space-needle.svg"
+      alt="Space Needle"
+      className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/4 w-36 sm:w-52 md:w-60 opacity-20"
+    />
+    {/* Right - Chennai Central */}
+    <img
+      src="/chennai-central.svg"
+      alt="Chennai Central"
+      className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/4 w-36 sm:w-52 md:w-60 opacity-20"
+    />
+  </div>
+ {/* --- BACKGROUND ELEMENTS - SECTION ENDS --- */}
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
