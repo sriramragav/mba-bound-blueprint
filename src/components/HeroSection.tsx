@@ -30,12 +30,13 @@ const HeroSection = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
               Samyuctaa Sriram
               <span className="block text-3xl md:text-4xl text-primary-glow font-normal mt-2">
-                Computer Science Engineer
+                Computer Science Engineering Student
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-              Final-year CS student from CEG with tech leadership experience, 
-              aspiring MBA candidate passionate about product management and innovation
+              <em></em>“I forgot who I was. So I decided to become who I am.” - Hoshi Takayuki</em>
+              <br></br>
+              I’m Samyuctaa Sriram. Engineer in training. Leader in progress. I believe that impact starts with knowing yourself—and building from there.
             </p>
           </div>
 
