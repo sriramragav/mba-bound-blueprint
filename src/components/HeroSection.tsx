@@ -13,6 +13,7 @@ const HeroSection = () => {
     <section 
       className="min-h-screen flex items-center justify-center relative bg-background overflow-hidden"
     >
+      <div>
       {/* Decorative Images on Left and Right */}
       <img
         src="/space-needle.svg"
