@@ -121,7 +121,12 @@ All colors MUST be HSL for consistency across light/dark modes.
     @apply border-border;
   }
 
+  html {
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
 }
