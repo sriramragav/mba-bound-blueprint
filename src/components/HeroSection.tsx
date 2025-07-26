@@ -46,6 +46,7 @@ const HeroSection = () => {
               <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
               Download Resume
             </Button>
+              </a>
             <Button 
               variant="outline" 
               size="lg"
