@@ -10,29 +10,29 @@ const HeroSection = () => {
   };
 
   return (
-    <section 
-      className="min-h-screen w-full max-w-[100vw] flex items-center justify-center relative bg-background overflow-hidden"
+    <section
+      className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden"
     >
-      {/* Background Landmark Images - Centered & Clamped */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Left - Space Needle */}
+      {/* Background Landmarks */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden w-full max-w-full">
+        {/* Space Needle (Left) */}
         <img
           src="/space-needle.svg"
           alt="Seattle Space Needle"
-          className="hidden md:block absolute top-1/2 left-4 md:left-8 -translate-y-1/2 w-24 md:w-32 lg:w-40 opacity-25 pointer-events-none z-0"
+          className="hidden md:block absolute top-1/2 left-4 -translate-y-1/2 w-28 md:w-32 lg:w-40 opacity-30"
         />
-        {/* Right - Chennai Central */}
+        {/* Chennai Central (Right) */}
         <img
           src="/chennai-central.svg"
           alt="Chennai Central Station"
-          className="hidden md:block absolute top-1/2 right-4 md:right-8 -translate-y-1/2 w-24 md:w-32 lg:w-40 opacity-25 pointer-events-none z-0"
+          className="hidden md:block absolute top-1/2 right-4 -translate-y-1/2 w-28 md:w-32 lg:w-40 opacity-30"
         />
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 text-center w-full max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
-          {/* Name and Title */}
+          {/* Title */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
               Samyuctaa Sriram
@@ -46,7 +46,7 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* CTA Buttons */}
+          {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <a href="/Samyuctaa_Resume.pdf" download="Samyuctaa_Resume.pdf">
               <Button variant="default" size="lg" className="group">
@@ -54,16 +54,12 @@ const HeroSection = () => {
                 Download Resume
               </Button>
             </a>
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={scrollToAbout}
-            >
+            <Button variant="outline" size="lg" onClick={scrollToAbout}>
               Learn More
             </Button>
           </div>
 
-          {/* Current Status */}
+          {/* Status */}
           <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground pt-8">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
