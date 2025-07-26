@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import profileImage from '@/assets/profile-placeholder.jpg';
+import profileImage from '@/assets/samyuctaa.png';
 
 const AboutSection = () => {
   return (
