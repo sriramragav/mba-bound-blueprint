@@ -13,23 +13,7 @@ const HeroSection = () => {
     <section
       className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden"
     >
-      {/* Background Landmarks */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden w-full max-w-full">
-        {/* Space Needle (Left) */}
-        <img
-          src="/space-needle.svg"
-          alt="Seattle Space Needle"
-          className="hidden md:block absolute top-1/2 left-4 -translate-y-1/2 w-28 md:w-32 lg:w-40 opacity-30"
-        />
-        {/* Chennai Central (Right) */}
-        <img
-          src="/chennai-central.svg"
-          alt="Chennai Central Station"
-          className="hidden md:block absolute top-1/2 right-4 -translate-y-1/2 w-28 md:w-32 lg:w-40 opacity-30"
-        />
-      </div>
-
-      {/* Main Content */}
+     {/* Main Content */}
       <div className="relative z-10 text-center w-full max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
           {/* Title */}
