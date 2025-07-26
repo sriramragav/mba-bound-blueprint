@@ -115,10 +115,6 @@ const HeroSection = () => {
       <text x="0" y="9" fontSize="2" fill="currentColor">🏙️</text>
       <text x="96" y="9" fontSize="2" fill="currentColor">🚉</text>
     </svg>
-
-  </section>
-);
-
     </section>
   );
 };
