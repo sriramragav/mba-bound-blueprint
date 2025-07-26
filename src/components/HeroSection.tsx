@@ -17,13 +17,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden max-w-full">
         {/* Left - Space Needle */}
         <img
-          src="/space_needle_vector.svg"
+          src="/space-needle.svg"
           alt="Space Needle"
           className="absolute top-1/2 left-4 transform -translate-y-1/2 w-32 sm:w-40 md:w-52 lg:w-60 opacity-30 max-w-[40vw]"
         />
         {/* Right - Chennai Central */}
         <img
-          src="/chennai_central_vector.svg"
+          src="/chennai-central.svg"
           alt="Chennai Central"
           className="absolute top-1/2 right-4 transform -translate-y-1/2 w-32 sm:w-40 md:w-52 lg:w-60 opacity-30 max-w-[40vw]"
         />
