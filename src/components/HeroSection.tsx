@@ -35,7 +35,7 @@ const HeroSection = () => {
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
               <em>“I forgot who I was. So I decided to become who I am.”</em>
-                <br>Hoshi Takayuki
+                <br>Hoshi Takayuki</br>
             </p>
           </div>
 
