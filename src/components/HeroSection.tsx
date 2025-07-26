@@ -11,21 +11,21 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background"
+      className="min-h-screen flex items-center justify-center relative bg-background overflow-hidden"
     >
-      {/* Background Landmark Images - Responsive and Clean */}
-      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+      {/* Background Landmark Images - Safe & Clipped */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden max-w-full">
         {/* Left - Space Needle */}
         <img
-          src="/space-needle.svg"
+          src="/space_needle_vector.svg"
           alt="Space Needle"
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 w-32 sm:w-40 md:w-52 lg:w-60 opacity-30 max-w-[40vw]"
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 w-32 sm:w-40 md:w-52 lg:w-60 opacity-30 max-w-[40vw]"
         />
         {/* Right - Chennai Central */}
         <img
-          src="/chennai-central.svg"
+          src="/chennai_central_vector.svg"
           alt="Chennai Central"
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 w-32 sm:w-40 md:w-52 lg:w-60 opacity-30 max-w-[40vw]"
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 w-32 sm:w-40 md:w-52 lg:w-60 opacity-30 max-w-[40vw]"
         />
       </div>
 
