@@ -51,11 +51,11 @@ const HeroSection = () => {
           <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground pt-8">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
-              <span>Available for MBA Programs 2025</span>
+              <span>Engineer in Progress</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full" />
-              <span>Product Manager & Data Analyst</span>
+              <span>Leader in Training</span>
             </div>
           </div>
         </div>
