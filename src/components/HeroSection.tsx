@@ -16,16 +16,16 @@ const HeroSection = () => {
       {/* Background Landmark Images - Safe & Clipped */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden max-w-full">
         {/* Left - Space Needle */}
+      {/* Decorative Images on Left and Right */}
       <img
         src="/space-needle.svg"
-        alt="Space Needle"
-        className="hidden md:block absolute top-1/2 left-4 transform -translate-y-1/2 w-40 lg:w-60 opacity-15 max-w-[40vw]"
+        alt="Seattle Space Needle"
+        className="hidden md:block absolute top-1/2 left-0 -translate-y-1/2 w-32 opacity-20 pointer-events-none z-0"
       />
-      {/* Right - Chennai Central */}
       <img
         src="/chennai-central.svg"
-        alt="Chennai Central"
-        className="hidden md:block absolute top-1/2 right-4 transform -translate-y-1/2 w-40 lg:w-60 opacity-15 max-w-[40vw]"
+        alt="Chennai Central Station"
+        className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 w-32 opacity-20 pointer-events-none z-0"
       />
 
       </div>
