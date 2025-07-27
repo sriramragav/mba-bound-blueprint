@@ -7,47 +7,63 @@ import { ExternalLink, Github, Calendar } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "Campus Mentoring App",
-      description: "Designed and shipped an end-to-end mentoring platform with secure login, matching logic, session scheduling, and feedback tracking. Hosted on the university intranet.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "JWT", "Socket.io"],
-      category: "Full Stack",
-      year: "2023",
-      github: "https://github.com",
-      demo: "https://demo.com",
-      featured: true
+      title: 'Campus Mentoring App',
+      description: 'End-to-end mentoring platform with secure login, smart matching, scheduling, and feedback. Deployed internally at the university.',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT'],
+      category: 'Full Stack',
+      year: '2023',
+      github: 'https://github.com/not-a-coding-genius/campus-mentoring-app',
+      featured: true,
     },
     {
-      title: "Web3 Wallet Explorer",
-      description: "Built a frontend tool for Ethereum wallet inspection and token visualization. Learned the basics of blockchain APIs and decentralized data.",
-      technologies: ["React", "Web3.js", "Ethereum", "REST APIs"],
-      category: "Blockchain",
-      year: "2022",
-      github: "https://github.com",
-      demo: "https://demo.com",
-      featured: true
+      title: 'Web3 Wallet Explorer',
+      description: 'Frontend tool for exploring Ethereum wallets and token balances using blockchain APIs.',
+      technologies: ['React', 'Web3.js', 'Ethereum', 'REST APIs'],
+      category: 'Blockchain',
+      year: '2022',
+      github: 'https://github.com/not-a-coding-genius/web3-wallet-explorer',
+      featured: true,
     },
     {
-      title: "E-commerce Platform",
-      description: "Full-featured online shopping platform with user authentication, product catalog, shopping cart, and payment integration.",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
-      category: "Full Stack",
-      year: "2023",
-      github: "https://github.com",
-      featured: false
+      title: 'Frontend Mentor Challenges',
+      description: 'Solutions to advanced frontend challenges with pixel-perfect layouts and accessibility best practices.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+      category: 'Frontend',
+      year: '2023',
+      github: 'https://github.com/not-a-coding-genius/frontend-mentor',
+      featured: true,
     },
     {
-      title: "Task Management System",
-      description: "Collaborative task management application with real-time updates, team collaboration features, and progress tracking.",
-      technologies: ["React", "Firebase", "Material-UI", "TypeScript"],
-      category: "Frontend",
-      year: "2022",
-      github: "https://github.com",
-      featured: false
-    }
+      title: 'E-commerce Platform',
+      description: 'Shopping platform with auth, product catalog, cart, and payment flow.',
+      technologies: ['Next.js', 'TypeScript', 'Stripe', 'Prisma'],
+      category: 'Full Stack',
+      year: '2023',
+      github: 'https://github.com/not-a-coding-genius/ecommerce-platform',
+      featured: false,
+    },
+    {
+      title: 'Task Management System',
+      description: 'Collaborative task tracker with real-time sync and progress boards.',
+      technologies: ['React', 'Firebase', 'Material-UI'],
+      category: 'Frontend',
+      year: '2022',
+      github: 'https://github.com/not-a-coding-genius/task-manager',
+      featured: false,
+    },
+    {
+      title: 'Graph Algorithm Visualizer',
+      description: 'Interactive visualization of graph algorithms like Dijkstra and A* for learning purposes.',
+      technologies: ['JavaScript', 'HTML5 Canvas', 'CSS3'],
+      category: 'Frontend',
+      year: '2021',
+      github: 'https://github.com/not-a-coding-genius/graph-visualizer',
+      featured: false,
+    },
   ];
 
-  const featuredProjects = projects.filter(p => p.featured);
-  const otherProjects = projects.filter(p => !p.featured);
+  const featuredProjects = projects.filter((p) => p.featured);
+  const otherProjects = projects.filter((p) => !p.featured);
 
   return (
     <div className="min-h-screen bg-background">
@@ -55,12 +71,10 @@ const Projects = () => {
       <div className="pt-20 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-foreground mb-4">
-              Projects
-            </h1>
+            <h1 className="text-4xl font-bold text-foreground mb-4">Projects</h1>
             <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              A collection of projects that showcase my technical skills and problem-solving abilities.
+              A curated collection of projects spanning full-stack development, blockchain, and UI challenges. Each taught me something new.
             </p>
           </div>
 
@@ -81,9 +95,7 @@ const Projects = () => {
                     <CardTitle className="text-xl">{project.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      {project.description}
-                    </p>
+                    <p className="text-muted-foreground mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, techIndex) => (
                         <Badge key={techIndex} variant="secondary">
@@ -130,9 +142,7 @@ const Projects = () => {
                     <CardTitle className="text-lg">{project.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <p className="text-muted-foreground text-sm mb-4">
-                      {project.description}
-                    </p>
+                    <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-1 mb-4">
                       {project.technologies.slice(0, 3).map((tech, techIndex) => (
                         <Badge key={techIndex} variant="secondary" className="text-xs">
@@ -159,7 +169,7 @@ const Projects = () => {
 
           <div className="text-center mt-12">
             <Button variant="outline" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/not-a-coding-genius" target="_blank" rel="noopener noreferrer">
                 <Github size={20} className="mr-2" />
                 View All Projects on GitHub
               </a>
