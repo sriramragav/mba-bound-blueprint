@@ -11,14 +11,14 @@ const Projects = () => {
         {
           title: "Campus Mentoring App",
           description:
-            "End-to-end mentoring platform with secure login, matching logic, and feedback tracking.",
-          technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
+            "End-to-end mentoring platform with secure login and feedback workflows.",
+          technologies: ["React", "Node.js", "MongoDB", "Express"],
         },
         {
           title: "E-commerce Platform",
           description:
-            "Online store with product catalog, authentication, and Stripe payment integration.",
-          technologies: ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
+            "Online storefront with user authentication and Stripe payments.",
+          technologies: ["Next.js", "Prisma", "Stripe", "PostgreSQL"],
         },
       ],
     },
@@ -28,14 +28,14 @@ const Projects = () => {
         {
           title: "Web3 Wallet Explorer",
           description:
-            "Frontend tool to inspect Ethereum wallets and visualize token activity.",
-          technologies: ["React", "Web3.js", "Ethereum", "REST APIs"],
+            "Frontend interface to inspect wallet activity on Ethereum.",
+          technologies: ["React", "Web3.js", "REST APIs"],
         },
         {
           title: "Decentralized Voting Prototype",
           description:
-            "Built a minimal dApp for secure, transparent voting on the Ethereum testnet.",
-          technologies: ["Solidity", "Hardhat", "React", "Ethers.js"],
+            "Built a minimal voting dApp on the Ethereum testnet.",
+          technologies: ["Solidity", "Hardhat", "Ethers.js"],
         },
       ],
     },
@@ -45,14 +45,14 @@ const Projects = () => {
         {
           title: "Facial Expression Classifier",
           description:
-            "Trained a CNN to classify facial emotions from images using the FER dataset.",
-          technologies: ["Python", "TensorFlow", "OpenCV", "Keras"],
+            "CNN model for emotion detection from facial images.",
+          technologies: ["Python", "TensorFlow", "OpenCV"],
         },
         {
-          title: "Personalized Book Recommender",
+          title: "Book Recommender",
           description:
-            "Built a content-based book recommender using NLP techniques on user reviews.",
-          technologies: ["Python", "Scikit-learn", "Pandas", "NLP"],
+            "Content-based recommender using NLP on book reviews.",
+          technologies: ["Python", "Scikit-learn", "Pandas"],
         },
       ],
     },
@@ -62,36 +62,40 @@ const Projects = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <div className="pt-20 pb-12">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-foreground mb-2">Projects</h1>
             <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto" />
           </div>
 
-          {projectCategories.map((category, catIdx) => (
-            <div key={catIdx} className="mb-12">
-              <h2 className="text-2xl font-semibold text-foreground mb-6 text-center">
-                {category.category}
-              </h2>
-              <div className="grid sm:grid-cols-2 gap-6">
-                {category.projects.map((project, index) => (
-                  <Card key={index} className="hover:shadow-md transition-shadow duration-300">
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-lg font-semibold">{project.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      <p className="text-muted-foreground text-sm mb-2">{project.description}</p>
-                      <p className="text-muted-foreground text-xs italic">
-                        {project.technologies.join(', ')}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
+          <div className="grid md:grid-cols-3 gap-8">
+            {projectCategories.map((category, catIdx) => (
+              <div key={catIdx}>
+                <h2 className="text-xl font-semibold text-foreground mb-4 text-center">
+                  {category.category}
+                </h2>
+                <div className="space-y-4">
+                  {category.projects.map((project, index) => (
+                    <Card key={index} className="hover:shadow-md transition-shadow duration-300">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-base font-semibold">{project.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        <p className="text-muted-foreground text-sm mb-1">
+                          {project.description}
+                        </p>
+                        <p className="text-muted-foreground text-xs italic">
+                          {project.technologies.join(', ')}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-10">
             <Button variant="outline" asChild>
               <a
                 href="https://github.com/not-a-coding-genius"
