@@ -32,63 +32,60 @@ const Internships = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      <div className="pt-20 pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-foreground mb-4">
-              Internship Experience
-            </h1>
-            <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto mb-6" />
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Professional internship experiences that shaped my career journey and technical expertise.
-            </p>
-          </div>
+  <div className="min-h-screen bg-background">
+    <Navigation />
+    <div className="pt-20 pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <h1 className="text-3xl font-bold text-foreground mb-3">
+            Internship Experience
+          </h1>
+          <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto mb-4" />
+          <p className="text-base text-muted-foreground max-w-3xl mx-auto">
+            Professional internship experiences that shaped my career journey and technical expertise.
+          </p>
+        </div>
 
-          <div className="grid gap-8 max-w-4xl mx-auto">
-            {internships.map((internship, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div>
-                      <CardTitle className="text-xl mb-2">{internship.title}</CardTitle>
-                      <div className="flex items-center gap-4 text-muted-foreground">
-                        <div className="flex items-center gap-1">
-                          <Building size={16} />
-                          <span>{internship.company}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <MapPin size={16} />
-                          <span>{internship.location}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Calendar size={16} />
-                          <span>{internship.duration}</span>
-                        </div>
-                      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {internships.map((internship, index) => (
+            <Card key={index} className="hover:shadow-md transition-shadow duration-200 h-full">
+              <CardHeader className="pb-2">
+                <div>
+                  <CardTitle className="text-lg mb-1">{internship.title}</CardTitle>
+                  <div className="flex flex-col gap-1 text-muted-foreground text-sm">
+                    <div className="flex items-center gap-1">
+                      <Building size={14} />
+                      <span>{internship.company}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <MapPin size={14} />
+                      <span>{internship.location}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar size={14} />
+                      <span>{internship.duration}</span>
                     </div>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    {internship.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {internship.skills.map((skill, skillIndex) => (
-                      <Badge key={skillIndex} variant="secondary">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </div>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground">
+                <p className="mb-3">{internship.description}</p>
+                <div className="flex flex-wrap gap-1">
+                  {internship.skills.map((skill, skillIndex) => (
+                    <Badge key={skillIndex} variant="secondary" className="text-xs px-2 py-1">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default Internships;
