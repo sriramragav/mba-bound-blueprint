@@ -5,79 +5,73 @@ import { Button } from '@/components/ui/button';
 import { Github } from 'lucide-react';
 
 const Projects = () => {
-  const categorizedProjects = {
+  const projectsByCategory = {
     "Full Stack": [
       {
         title: "Campus Mentoring App",
-        description: "End-to-end mentoring platform with login, session scheduling, and feedback tracking.",
+        description: "Built a mentoring platform with matching logic, secure login, and feedback workflows."
       },
       {
         title: "E-commerce Platform",
-        description: "Online shopping app with authentication, product catalog, and Stripe integration.",
-      },
-    ],
-    "Frontend": [
-      {
-        title: "Task Management System",
-        description: "Real-time task collaboration with progress tracking using Firebase.",
-      },
-      {
-        title: "Portfolio Website",
-        description: "Personal site built with React and Tailwind to showcase work and achievements.",
-      },
+        description: "Designed a full-featured online store with payments, authentication, and product catalog."
+      }
     ],
     "Blockchain": [
       {
         title: "Web3 Wallet Explorer",
-        description: "Visual tool to inspect Ethereum wallet balances and token data.",
+        description: "Visualized Ethereum wallet activity using Web3.js and decentralized APIs."
       },
       {
-        title: "NFT Minting Demo",
-        description: "Prototype dApp to mint, list, and view NFTs on Ethereum testnets.",
-      },
+        title: "Token Ownership Tracker",
+        description: "Tracked and rendered ERC-721/1155 token balances from wallet addresses."
+      }
     ],
+    "Machine Learning": [
+      {
+        title: "Pneumonia Detection from X-rays",
+        description: "Built a CNN model to classify medical images using transfer learning."
+      },
+      {
+        title: "ML Pipeline for Missing Data",
+        description: "Compared imputation techniques and trained regressors on synthetic datasets."
+      }
+    ]
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground text-sm">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      <div className="pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold mb-2">Projects</h1>
+      <div className="pt-20 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="text-center mb-10">
+          <h1 className="text-3xl font-bold text-foreground mb-4">Projects</h1>
           <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
-          {Object.entries(categorizedProjects).map(([category, projects]) => (
-            <div key={category}>
-              <h2 className="text-lg font-semibold mb-4 text-center">
-                <Badge variant="outline" className="text-xs px-2 py-1">{category}</Badge>
-              </h2>
-              <div className="space-y-4">
+        {/* Project Categories in Columns */}
+        <div className="grid md:grid-cols-3 gap-6 text-sm">
+          {Object.entries(projectsByCategory).map(([category, projects]) => (
+            <Card key={category} className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <Badge variant="outline" className="text-xs">{category}</Badge>
+              </CardHeader>
+              <CardContent className="space-y-4">
                 {projects.map((project, index) => (
-                  <Card key={index} className="bg-muted/30">
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-md font-medium">{project.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-0 text-muted-foreground">
-                      {project.description}
-                    </CardContent>
-                  </Card>
+                  <div key={index}>
+                    <CardTitle className="text-base font-semibold mb-1">{project.title}</CardTitle>
+                    <p className="text-muted-foreground">{project.description}</p>
+                  </div>
                 ))}
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* GitHub Button */}
+        <div className="text-center mt-10">
           <Button variant="outline" size="sm" asChild>
-            <a
-              href="https://github.com/not-a-coding-genius"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github size={16} className="mr-2" />
-              For more projects, visit GitHub
+            <a href="https://github.com/not-a-coding-genius" target="_blank" rel="noopener noreferrer">
+              <Github size={18} className="mr-2" />
+              For more projects, visit my GitHub
             </a>
           </Button>
         </div>
