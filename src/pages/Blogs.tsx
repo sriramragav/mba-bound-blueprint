@@ -41,8 +41,8 @@ const Blogs = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto" />
           <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
-            These blog entries were written by Samyuctaa when she was just a teenager—well before business school was on her radar.
-            Candid, raw, and honest, they reveal her reflections on society, meaning, and personal values.
+            These blog entries were written by me when I was just a teenager—well before business school was on my radar.
+            Candid, raw, and honest, they reveal my reflections on society, meaning, and personal values.
           </p>
         </div>
 
