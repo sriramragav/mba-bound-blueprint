@@ -35,9 +35,6 @@ const AboutSection = () => {
                 From building a mentoring app that serves real users on campus to contributing to production systems during my internship at Visa, I’ve developed a strong appreciation for the intersection of technology, product, and strategy.
               </p>
               <p>
-                Though I’ve grown up in India, I was born in the U.S. and bring a global perspective to everything I do. I’m fluent in five languages, comfortable in cross-cultural settings, and excited about opportunities that let me blend analytical thinking with empathy and vision.
-              </p>
-              <p>
                 I plan to pursue a deferred MBA to deepen my strategic and leadership skills, and to build toward a future where I can lead product and innovation efforts at scale.
               </p>
             </div>
