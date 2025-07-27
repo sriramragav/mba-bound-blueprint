@@ -4,18 +4,18 @@ import { Award, Rocket, School, Lightbulb, Star } from "lucide-react";
 
 const awards = [
   {
+    icon: <Lightbulb size={20} />,
+    title: "Budding Scientist Contest",
+    description:
+      "Developed a hydroponics-based farming system; won the State Level Science Competition.",
+    year: "2013",
+  },
+  {
     icon: <Rocket size={20} />,
     title: "NSS Space Settlement Contest",
     description:
       "Awarded Second Place Internationally in the NASA Space Society Settlement Contest.",
     year: "2019",
-  },
-  {
-    icon: <Lightbulb size={20} />,
-    title: "Budding Scientist Contest",
-    description:
-      "Developed a hydroponics-based farming system; won the State Level Science Competition.",
-    year: "2018",
   },
   {
     icon: <Award size={20} />,
