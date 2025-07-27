@@ -65,4 +65,15 @@ const AboutSection = () => {
               <Card className="text-center">
                 <CardContent className="p-4">
                   <div className="text-xl font-bold text-secondary-foreground">U.S. Citizen</div>
-                  <div className="text-sm text-
+                  <div className="text-sm text-muted-foreground">Based in India</div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
