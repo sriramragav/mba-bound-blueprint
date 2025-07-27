@@ -43,7 +43,7 @@ const About = () => {
           {about.map((about, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
               <CardHeader className="flex flex-row items-start gap-3 pb-2">
-                <div className="text-primary mt-1">{award.icon}</div>
+                <div className="text-primary mt-1">{about.icon}</div>
                 <CardTitle className="text-base font-semibold text-foreground leading-tight">
                   {about.title}
                 </CardTitle>
