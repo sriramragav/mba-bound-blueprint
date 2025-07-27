@@ -32,6 +32,8 @@ const curatedBlogs = [
 
 const Blogs = () => {
   return (
+  <div className="min-h-screen bg-background">
+  <Navigation />
     <section id="blog" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
@@ -88,6 +90,7 @@ const Blogs = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 
