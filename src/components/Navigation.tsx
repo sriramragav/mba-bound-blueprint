@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom'; // ✅ Import Link from React Router
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,10 +31,8 @@ const Navigation = () => {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
-    } else {
-      window.location.href = href;
+      setIsMenuOpen(false);
     }
-    setIsMenuOpen(false);
   };
 
   return (
@@ -56,15 +55,26 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.label}
-                  onClick={() => handleNavigation(item.href)}
-                  className="text-foreground hover:text-primary transition-colors duration-200 px-3 py-2 text-sm font-medium"
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) =>
+                item.href.startsWith('#') ? (
+                  <button
+                    key={item.label}
+                    onClick={() => handleNavigation(item.href)}
+                    className="text-foreground hover:text-primary transition-colors duration-200 px-3 py-2 text-sm font-medium"
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-foreground hover:text-primary transition-colors duration-200 px-3 py-2 text-sm font-medium"
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
             </div>
           </div>
 
@@ -84,15 +94,26 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md border border-border rounded-lg mt-2">
-              {navItems.map((item) => (
-                <button
-                  key={item.label}
-                  onClick={() => handleNavigation(item.href)}
-                  className="text-foreground hover:text-primary block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200"
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) =>
+                item.href.startsWith('#') ? (
+                  <button
+                    key={item.label}
+                    onClick={() => handleNavigation(item.href)}
+                    className="text-foreground hover:text-primary block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200"
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-foreground hover:text-primary block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200"
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
             </div>
           </div>
         )}
