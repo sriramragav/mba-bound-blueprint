@@ -20,7 +20,7 @@ const Internships = () => {
       duration: "March - April 2024",
       description: "Performed Data Mining and Analysis, Applied Machine Learning and Predictive Models for Student Performane Forecasting.",
       skills: ["Python", "SQL", "Tableau", "Excel", "Power BI"]
-    }
+    },
     {
       title: "Tech Intern",
       company: "The Internet Generation",
