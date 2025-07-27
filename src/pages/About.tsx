@@ -25,7 +25,7 @@ const About = () => {
                 <img
                   src={profileImage}
                   alt="Samyuctaa Sriram"
-                  className="w-full max-w-xs mx-auto rounded-2xl shadow-card hover:shadow-primary transition-all duration-300"
+                  className="w-full max-w-[200px] mx-auto rounded-2xl shadow-card"
                 />
               </div>
               <div className="absolute top-6 left-6 w-full h-full bg-gradient-primary opacity-20 rounded-2xl -z-10" />
