@@ -8,11 +8,7 @@ const Leadership = () => {
     {
       role: "Deputy Director Of Photography",
       organization: "The Guindy Times",
-      period: (
-      <>
-        Aug 2024 – Jun 2025<br />11 mos
-      </>
-      ),
+      period: "Aug 2024 - Jun 2025",
       description: "Supporting the creative vision of the publication through visual storytelling. Managed event photography and editorial shoots.",
       achievements: [
         "Led coverage for 5+ university-wide events with 1000+ attendees",
@@ -25,7 +21,7 @@ const Leadership = () => {
     {
       role: "Associate Head Of Hacks",
       organization: "CSAU - Computer Society of Anna University",
-      period: "Jul 2024 - Jun 2025 <br /> 1 yr",
+      period: "Jul 2024 - Jun 2025",
       description: "Co-led university-wide hackathons and coding events, enhancing tech engagement across departments.",
       achievements: [
         "Spearheaded 2 flagship hackathons with 300+ participants each",
@@ -38,7 +34,7 @@ const Leadership = () => {
     {
       role: "Head of Operations",
       organization: "Literary Club of Anna University",
-      period: "Sep 2023 - Jun 2024 <br /> 10 mos",
+      period: "Sep 2023 - Jun 2024",
       description: "Managed club logistics, event operations, and coordination with university stakeholders.",
       achievements: [
         "Streamlined event planning process, improving efficiency by 40%",
@@ -51,7 +47,7 @@ const Leadership = () => {
     {
       role: "Junior Co-Ordinator Contents",
       organization: "ACM Student Chapter of CEG",
-      period: "2023 - Jun 2024 <br /> 1 yr 6 mos",
+      period: "Jun 2023 - Jun 2024",
       description: "Handled technical content creation and knowledge-sharing initiatives within the ACM student chapter.",
       achievements: [
         "Published 15+ educational blogs and resources",
