@@ -95,7 +95,7 @@ const Leadership = () => {
                           <p className="text-primary font-medium">{exp.organization}</p>
                         </div>
                       </div>
-                      <Badge className="w-fit max-w-full sm:max-w-xs truncate whitespace-nowrap px-3 py-1 text-xs sm:text-sm">
+                      <Badge variant="outline" className="w-fit">
                       {exp.period}
                     </Badge>
                     </div>
