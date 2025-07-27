@@ -19,7 +19,7 @@ const curatedBlogs = [
     category: "Philosophy",
     excerpt:
       "An introspective look at fate, coincidence, and free will—complete with a Sims analogy and a wave-particle duality twist.",
-    url: "https://notsogoodblog289079317.wordpress.com/2020/07/13/life-a-bizarre-occurrence/",
+    url: "https://notsogoodblog289079317.wordpress.com/2020/08/26/life-a-bizarre-occurrence/",
   },
   {
     id: 3,
