@@ -3,32 +3,31 @@ import profileImage from '@/assets/samyuctaa.png';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 sm:py-20 bg-gradient-subtle">
+    <section id="about" className="py-12 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="relative">
             <div className="relative z-10">
               <img
                 src={profileImage}
                 alt="Samyuctaa Sriram"
-                className="w-full max-w-sm mx-auto rounded-2xl shadow-card hover:shadow-primary transition-all duration-300"
+                className="w-full max-w-xs mx-auto rounded-2xl shadow-card hover:shadow-primary transition-all duration-300"
               />
             </div>
-            {/* Background decoration */}
-            <div className="absolute top-8 left-8 w-full h-full bg-gradient-primary opacity-20 rounded-2xl -z-10" />
+            <div className="absolute top-6 left-6 w-full h-full bg-gradient-primary opacity-20 rounded-2xl -z-10" />
           </div>
 
           {/* Content */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div>
-              <h2 className="text-4xl font-bold text-foreground mb-4">
+              <h2 className="text-3xl font-semibold text-foreground mb-2">
                 About Me
               </h2>
-              <div className="w-20 h-1 bg-gradient-primary rounded-full" />
+              <div className="w-16 h-1 bg-gradient-primary rounded-full" />
             </div>
 
-            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-3 text-[15px] text-muted-foreground leading-relaxed">
               <p>
                 I’m a final-year Computer Science student at CEG who enjoys solving messy, cross-disciplinary problems—technical, human, or somewhere in between.
               </p>
@@ -40,31 +39,31 @@ const AboutSection = () => {
               </p>
             </div>
 
-            {/* Key facts */}
-            <div className="mx-auto">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 max-w-3xl">
+            {/* Key Facts - Cards */}
+            <div className="pt-4">
+              <div className="grid grid-cols-4 gap-2 max-w-3xl">
                 <Card className="text-center">
-                  <CardContent className="p-4">
-                    <div className="text-2xl font-bold text-primary">4th Year</div>
-                    <div className="text-sm text-muted-foreground">CS Student</div>
+                  <CardContent className="p-3">
+                    <div className="text-xl font-bold text-primary">4th Year</div>
+                    <div className="text-xs text-muted-foreground">CS Student</div>
                   </CardContent>
                 </Card>
                 <Card className="text-center">
-                  <CardContent className="p-4">
-                    <div className="text-2xl font-bold text-accent">5</div>
-                    <div className="text-sm text-muted-foreground">Languages Spoken</div>
+                  <CardContent className="p-3">
+                    <div className="text-xl font-bold text-accent">5</div>
+                    <div className="text-xs text-muted-foreground">Languages Spoken</div>
                   </CardContent>
                 </Card>
                 <Card className="text-center">
-                  <CardContent className="p-4">
-                    <div className="text-2xl font-bold text-primary">0</div>
-                    <div className="text-sm text-muted-foreground">Visa Applications for US</div>
+                  <CardContent className="p-3">
+                    <div className="text-xl font-bold text-primary">0</div>
+                    <div className="text-xs text-muted-foreground">Visa Applications (US)</div>
                   </CardContent>
                 </Card>
                 <Card className="text-center">
-                  <CardContent className="p-4">
-                    <div className="text-2xl font-bold text-accent">1</div>
-                    <div className="text-sm text-muted-foreground">Mentoring App (Shipped!)</div>
+                  <CardContent className="p-3">
+                    <div className="text-xl font-bold text-accent">1</div>
+                    <div className="text-xs text-muted-foreground">Mentoring App (Shipped!)</div>
                   </CardContent>
                 </Card>
               </div>
