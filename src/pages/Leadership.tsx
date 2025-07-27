@@ -45,29 +45,6 @@ const Leadership = () => {
     }
   ];
 
-  const awards = [
-    {
-      title: "Dean's List",
-      description: "Academic Excellence Award for maintaining top 5% CGPA",
-      year: "2023-2024"
-    },
-    {
-      title: "Best Innovation Award",
-      description: "College hackathon winner for fintech solution",
-      year: "2023"
-    },
-    {
-      title: "Outstanding Volunteer",
-      description: "Recognition for community service and leadership",
-      year: "2022"
-    },
-    {
-      title: "Programming Competition",
-      description: "Regional level coding competition - 2nd place",
-      year: "2022"
-    }
-  ];
-
   return (
     <section id="leadership" className="py-20 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,36 +117,6 @@ const Leadership = () => {
             );
           })}
         </div>
-
-        {/* Awards & Recognition */}
-        <div>
-          <h3 className="text-2xl font-bold text-foreground mb-8 text-center flex items-center justify-center gap-2">
-            <TrendingUp className="w-6 h-6 text-primary" />
-            Awards & Recognition
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {awards.map((award, index) => (
-              <Card key={index} className="text-center group hover:shadow-card transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="mb-4">
-                    <Award className="w-8 h-8 text-accent mx-auto mb-2" />
-                    <h4 className="font-bold text-foreground group-hover:text-primary transition-colors">
-                      {award.title}
-                    </h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                    {award.description}
-                  </p>
-                  <Badge variant="outline" className="bg-primary/5 text-primary border-primary/20">
-                    {award.year}
-                  </Badge>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
         {/* Leadership Philosophy */}
         <div className="mt-16 bg-gradient-primary p-8 rounded-2xl text-center">
           <h3 className="text-xl font-bold text-primary-foreground mb-4">
