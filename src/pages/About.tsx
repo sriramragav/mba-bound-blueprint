@@ -6,11 +6,14 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-foreground mb-2">About Me</h1>
-      </div>
       <section id="about" className="py-12 bg-gradient-subtle scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Heading */}
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-semibold text-foreground mb-2">About Me</h2>
+            <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto" />
+          </div>
+
           {/* Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left Column: Image */}
