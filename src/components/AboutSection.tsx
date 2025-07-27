@@ -30,21 +30,15 @@ const AboutSection = () => {
 
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I'm a final-year Computer Science student at College of Engineering, Guindy with a passion for 
-                tech, leadership, and product thinking. I've worked on production systems, built communities 
-                at college, and love blending technical and creative work.
+              I’m a final-year Computer Science student at CEG who enjoys solving messy, cross-disciplinary problems—technical, human, or somewhere in between.
               </p>
-              
               <p>
-                My journey spans from winning the <span className="text-primary font-medium">NASA Space Settlement Contest (2nd Place Internationally)</span> to 
-                leading cross-functional teams as Product Manager for the CEGian Mentoring App. Currently working as a 
-                Data Analyst at GR Network while pursuing my degree.
+              I’ve led student communities, built a mentoring app that’s actually being used, and spent the summer tackling real-world production issues during 
+              an internship at Visa. That experience confirmed I love working where engineering, product, and strategy overlap.
               </p>
-
               <p>
-                Through my diverse experience as Associate Head of Hacks at Computer Society Anna University, 
-                Head of Contents at ACM CEG, and various tech roles, I've developed strong leadership and 
-                technical skills. I'm now preparing for MBA programs to further develop my strategic thinking.
+              Though I’ve spent most of my life in India, my roots stretch across continents—and I plan to bring that global perspective to a deferred MBA program 
+              in a few years. I’m most at home where logic meets empathy (and deadlines meet coffee).
               </p>
             </div>
 
