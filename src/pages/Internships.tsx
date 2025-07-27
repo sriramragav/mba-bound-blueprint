@@ -8,25 +8,25 @@ const Internships = () => {
     {
       title: "Software Engineering Intern",
       company: "Visa",
-      location: "Austin, TX",
-      duration: "Summer 2024",
+      location: "Bengaluru, India",
+      duration: "Jun - Aug 2025",
       description: "Designated as a 'Must Hire' by her Director for outstanding performance. Entrusted with production code access and solved critical real-world issues — a rare responsibility for an intern.",
       skills: ["Java", "Spring Boot", "REST APIs", "Microservices", "PostgreSQL"]
     },
     {
-      title: "Software Development Intern",
-      company: "Build Club, CEG",
-      location: "Chennai, India",
-      duration: "2023",
-      description: "Built a web-based mentoring platform for the campus's innovation hub. Managed user workflows and admin dashboards; app is currently used by students and mentors.",
-      skills: ["React", "Node.js", "MongoDB", "Express", "TypeScript"]
-    },
-    {
       title: "Data Analyst Intern",
       company: "GR Network",
-      location: "Bangalore, India", 
-      duration: "3 Months",
-      description: "Analyzed large datasets to identify trends and patterns. Created dashboards and reports for business stakeholders. Improved data processing efficiency by 40%.",
+      location: "Chennai, India", 
+      duration: "March - April 2024",
+      description: "Performed Data Mining and Analysis, Applied Machine Learning and Predictive Models for Student Performane Forecasting.",
+      skills: ["Python", "SQL", "Tableau", "Excel", "Power BI"]
+    }
+    {
+      title: "Tech Intern",
+      company: "The Internet Generation",
+      location: "Chennai, India", 
+      duration: "Sep - Oct 2023",
+      description: "Collaborated with cross-functional teams, gathered and analyzed data, trained LLM on creative queries; implemented sentiment analysis resulting in a reduction in time spent on updating training data.",
       skills: ["Python", "SQL", "Tableau", "Excel", "Power BI"]
     }
   ];
