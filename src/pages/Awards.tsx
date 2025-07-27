@@ -23,7 +23,7 @@ const awards = [
     description:
       "Entrusted with production-level access and debugging responsibilities — rare among interns.",
     year: "2025",
-  },
+  }
   ];
 
 const Awards = () => {
