@@ -6,6 +6,9 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-foreground mb-2">About Me</h1>
+      </div>
       <section id="about" className="py-12 bg-gradient-subtle scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Two Column Layout */}
