@@ -40,17 +40,17 @@ const Awards = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {awards.map((award, index) => (
+          {about.map((about, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
               <CardHeader className="flex flex-row items-start gap-3 pb-2">
                 <div className="text-primary mt-1">{award.icon}</div>
                 <CardTitle className="text-base font-semibold text-foreground leading-tight">
-                  {award.title}
+                  {about.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-0 text-sm text-muted-foreground">
-                <p>{award.description}</p>
-                <p className="mt-2 text-xs text-right text-muted-foreground italic">{award.year}</p>
+                <p>{about.description}</p>
+                <p className="mt-2 text-xs text-right text-muted-foreground italic">{about.year}</p>
               </CardContent>
             </Card>
           ))}
