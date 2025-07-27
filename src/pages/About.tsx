@@ -11,7 +11,7 @@ const About = () => {
           {/* Heading */}
           <div className="text-center mt-8">
             <h2 className="text-3xl font-semibold text-foreground mb-2">About Me</h2>
-            <div className="text-center" w-16 h-1 bg-gradient-primary rounded-full" />  
+            <div className="text-center w-16 h-1 bg-gradient-primary rounded-full" />  
           </div>
           <div className="mt-8">
     </div>
