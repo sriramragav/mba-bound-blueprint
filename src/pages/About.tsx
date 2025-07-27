@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { MapPin, Calendar, Building } from 'lucide-react';
 import profileImage from '@/assets/samyuctaa.png';
 
-const AboutSection = () => {
+const about = () => {
   return (
     <section id="about" className="py-12 bg-gradient-subtle scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
