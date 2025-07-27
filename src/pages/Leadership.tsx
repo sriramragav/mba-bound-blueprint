@@ -8,7 +8,11 @@ const Leadership = () => {
     {
       role: "Deputy Director Of Photography",
       organization: "The Guindy Times",
-      period: "Aug 2024 - Jun 2025 <br /> 11 mos",
+      period: (
+      <>
+        Aug 2024 – Jun 2025<br />11 mos
+      </>
+      ),
       description: "Supporting the creative vision of the publication through visual storytelling. Managed event photography and editorial shoots.",
       achievements: [
         "Led coverage for 5+ university-wide events with 1000+ attendees",
