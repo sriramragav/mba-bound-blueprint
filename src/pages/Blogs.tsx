@@ -11,7 +11,7 @@ const curatedBlogs = [
     category: "Reflections",
     excerpt:
       "A tribute to frontline workers and the small acts of courage that define everyday heroism—written during the COVID-19 lockdown.",
-    url: "https://notsogoodblog289079317.wordpress.com/2020/07/16/everyday-superheroes/",
+    url: "https://notsogoodblog289079317.wordpress.com/2020/08/24/example-post-3/",
   },
   {
     id: 2,
