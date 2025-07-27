@@ -78,4 +78,4 @@ const about = () => {
   );
 };
 
-export default AboutSection;
+export default About;
