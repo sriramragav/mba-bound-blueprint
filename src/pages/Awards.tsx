@@ -16,14 +16,14 @@ const awards = [
     description:
       "Awarded Second Place Internationally in the NASA Space Society Settlement Contest.",
     year: "2019",
-  },
+  }/*,
   {
     icon: <Award size={20} />,
     title: "Visa 'Must Hire' Intern",
     description:
       "Entrusted with production-level access and debugging responsibilities — rare among interns.",
     year: "2025",
-  }
+  }*/
   ];
 
 const Awards = () => {
