@@ -19,7 +19,7 @@ const Navigation = () => {
     { label: 'Internships', href: '/internships' },
     { label: 'Projects', href: '/projects' },
     { label: 'Awards', href: '/awards' },
-    { label: 'Leadership', href: '#leadership' },
+    { label: 'Leadership', href: '/leadership' },
     { label: 'Blog', href: '#blog' },
     { label: 'Contact', href: '#contact' },
   ];
