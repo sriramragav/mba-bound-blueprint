@@ -1,4 +1,7 @@
-import { Card, CardContent } from '@/components/ui/card';
+import Navigation from '@/components/Navigation';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { MapPin, Calendar, Building } from 'lucide-react';
 import profileImage from '@/assets/samyuctaa.png';
 
 const AboutSection = () => {
