@@ -1,79 +1,108 @@
 import Navigation from '@/components/Navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Github } from 'lucide-react';
 
 const Projects = () => {
-  const projectsByCategory = {
-    "Full Stack": [
-      {
-        title: "Campus Mentoring App",
-        description: "Built a mentoring platform with matching logic, secure login, and feedback workflows."
-      },
-      {
-        title: "E-commerce Platform",
-        description: "Designed a full-featured online store with payments, authentication, and product catalog."
-      }
-    ],
-    "Blockchain": [
-      {
-        title: "Web3 Wallet Explorer",
-        description: "Visualized Ethereum wallet activity using Web3.js and decentralized APIs."
-      },
-      {
-        title: "Token Ownership Tracker",
-        description: "Tracked and rendered ERC-721/1155 token balances from wallet addresses."
-      }
-    ],
-    "Machine Learning": [
-      {
-        title: "Pneumonia Detection from X-rays",
-        description: "Built a CNN model to classify medical images using transfer learning."
-      },
-      {
-        title: "ML Pipeline for Missing Data",
-        description: "Compared imputation techniques and trained regressors on synthetic datasets."
-      }
-    ]
-  };
+  const projectCategories = [
+    {
+      category: "Full Stack",
+      projects: [
+        {
+          title: "Campus Mentoring App",
+          description:
+            "End-to-end mentoring platform with secure login, matching logic, and feedback tracking.",
+          technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
+        },
+        {
+          title: "E-commerce Platform",
+          description:
+            "Online store with product catalog, authentication, and Stripe payment integration.",
+          technologies: ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
+        },
+      ],
+    },
+    {
+      category: "Blockchain",
+      projects: [
+        {
+          title: "Web3 Wallet Explorer",
+          description:
+            "Frontend tool to inspect Ethereum wallets and visualize token activity.",
+          technologies: ["React", "Web3.js", "Ethereum", "REST APIs"],
+        },
+        {
+          title: "Decentralized Voting Prototype",
+          description:
+            "Built a minimal dApp for secure, transparent voting on the Ethereum testnet.",
+          technologies: ["Solidity", "Hardhat", "React", "Ethers.js"],
+        },
+      ],
+    },
+    {
+      category: "Machine Learning",
+      projects: [
+        {
+          title: "Facial Expression Classifier",
+          description:
+            "Trained a CNN to classify facial emotions from images using the FER dataset.",
+          technologies: ["Python", "TensorFlow", "OpenCV", "Keras"],
+        },
+        {
+          title: "Personalized Book Recommender",
+          description:
+            "Built a content-based book recommender using NLP techniques on user reviews.",
+          technologies: ["Python", "Scikit-learn", "Pandas", "NLP"],
+        },
+      ],
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <div className="pt-20 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-10">
-          <h1 className="text-3xl font-bold text-foreground mb-4">Projects</h1>
-          <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto" />
-        </div>
+      <div className="pt-20 pb-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-foreground mb-2">Projects</h1>
+            <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto" />
+          </div>
 
-        {/* Project Categories in Columns */}
-        <div className="grid md:grid-cols-3 gap-6 text-sm">
-          {Object.entries(projectsByCategory).map(([category, projects]) => (
-            <Card key={category} className="hover:shadow-md transition-shadow duration-300">
-              <CardHeader className="pb-2">
-                <Badge variant="outline" className="text-xs">{category}</Badge>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {projects.map((project, index) => (
-                  <div key={index}>
-                    <CardTitle className="text-base font-semibold mb-1">{project.title}</CardTitle>
-                    <p className="text-muted-foreground">{project.description}</p>
-                  </div>
+          {projectCategories.map((category, catIdx) => (
+            <div key={catIdx} className="mb-12">
+              <h2 className="text-2xl font-semibold text-foreground mb-6 text-center">
+                {category.category}
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-6">
+                {category.projects.map((project, index) => (
+                  <Card key={index} className="hover:shadow-md transition-shadow duration-300">
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-lg font-semibold">{project.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <p className="text-muted-foreground text-sm mb-2">{project.description}</p>
+                      <p className="text-muted-foreground text-xs italic">
+                        {project.technologies.join(', ')}
+                      </p>
+                    </CardContent>
+                  </Card>
                 ))}
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
-        </div>
 
-        {/* GitHub Button */}
-        <div className="text-center mt-10">
-          <Button variant="outline" size="sm" asChild>
-            <a href="https://github.com/not-a-coding-genius" target="_blank" rel="noopener noreferrer">
-              <Github size={18} className="mr-2" />
-              For more projects, visit my GitHub
-            </a>
-          </Button>
+          <div className="text-center mt-8">
+            <Button variant="outline" asChild>
+              <a
+                href="https://github.com/not-a-coding-genius"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github size={18} className="mr-2" />
+                For more projects, visit my GitHub
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </div>
