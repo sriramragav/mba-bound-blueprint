@@ -1,3 +1,4 @@
+import Navigation from '@/components/Navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
