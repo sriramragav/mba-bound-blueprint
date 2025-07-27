@@ -5,7 +5,7 @@ import { Award, Rocket, School, Lightbulb, Star } from "lucide-react";
 const about = [
   {
     icon: <Lightbulb size={20} />,
-    title: "Budding Scientist Contest",
+    title: "This is about page",
     description:
       "Developed a hydroponics-based farming system; won the State Level Science Competition.",
     year: "2013",
