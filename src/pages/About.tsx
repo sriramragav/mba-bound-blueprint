@@ -26,7 +26,7 @@ const about = [
   }*/
   ];
 
-const Awards = () => {
+const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
