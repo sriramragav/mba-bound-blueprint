@@ -21,7 +21,7 @@ const Navigation = () => {
     { label: 'Awards', href: '/awards' },
     { label: 'Leadership', href: '/leadership' },
     { label: 'Blog', href: '/blogs' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   const handleNavigation = (href: string) => {
