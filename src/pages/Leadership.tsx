@@ -120,6 +120,7 @@ const Leadership = () => {
             );
           })}
         </div>
+       </div>
     </section>
    </div>
   );
