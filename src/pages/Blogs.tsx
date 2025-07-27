@@ -37,7 +37,7 @@ const Blogs = () => {
         {/* Section Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Blog & Reflections
+            Personal Writings
           </h2>
           <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto" />
           <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
