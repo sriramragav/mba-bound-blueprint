@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +38,11 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
+  const isActiveRoute = (href: string) => {
+    if (href === '/' && location.pathname === '/') return true;
+    return location.pathname === href;
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -45,7 +52,7 @@ const Navigation = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 w-full">
           {/* Logo */}
           <div className="flex-shrink-0">
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
@@ -60,7 +67,11 @@ const Navigation = () => {
                 <button
                   key={item.label}
                   onClick={() => handleNavigation(item.href)}
-                  className="text-foreground hover:text-primary transition-colors duration-200 px-3 py-2 text-sm font-medium"
+                  className={`transition-colors duration-200 px-3 py-2 text-sm font-medium ${
+                    isActiveRoute(item.href)
+                      ? 'text-primary font-semibold'
+                      : 'text-foreground hover:text-primary'
+                  }`}
                 >
                   {item.label}
                 </button>
@@ -69,11 +80,12 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex-shrink-0">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="h-10 w-10"
             >
               {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </Button>
@@ -88,7 +100,11 @@ const Navigation = () => {
                 <button
                   key={item.label}
                   onClick={() => handleNavigation(item.href)}
-                  className="text-foreground hover:text-primary block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200"
+                  className={`block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200 ${
+                    isActiveRoute(item.href)
+                      ? 'text-primary font-semibold'
+                      : 'text-foreground hover:text-primary'
+                  }`}
                 >
                   {item.label}
                 </button>
