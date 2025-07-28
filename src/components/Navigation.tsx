@@ -55,9 +55,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16 w-full">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <button
+              onClick={() => handleNavigation('/')}
+              className="text-xl font-bold text-foreground hover:text-primary transition-colors duration-200"
+            >
               Portfolio
-            </span>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
