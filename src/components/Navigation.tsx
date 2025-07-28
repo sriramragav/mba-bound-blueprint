@@ -58,7 +58,7 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <button
               onClick={() => handleNavigation('/')}
-              className="text-xl font-bold text-foreground hover:text-primary transition-colors duration-200"
+              className="flex flex-row items-center gap-2 text-xl font-bold text-foreground hover:text-primary transition-colors duration-200"
             >
               <Home className="w-5 h-5" />
               Portfolio
