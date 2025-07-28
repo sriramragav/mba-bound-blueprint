@@ -59,6 +59,7 @@ const Navigation = () => {
               onClick={() => handleNavigation('/')}
               className="text-xl font-bold text-foreground hover:text-primary transition-colors duration-200"
             >
+              <Home className="w-5 h-5" />
               Portfolio
             </button>
           </div>
