@@ -62,7 +62,7 @@ const Leadership = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <section id="leadership" className="py-20 bg-gradient-subtle" overflow-x-hidden>
+      <section id="leadership" className="py-20 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -80,8 +80,6 @@ const Leadership = () => {
               const IconComponent = exp.icon;
               return (
                 <Card key={index} className="group hover:shadow-primary transition-all duration-300 overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-accent opacity-10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500" />
-                  
                   <CardHeader className="relative z-10">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div className="flex items-start gap-4">
