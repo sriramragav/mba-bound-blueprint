@@ -1,4 +1,3 @@
-import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ExperienceSection from '@/components/ExperienceSection';
@@ -11,20 +10,17 @@ import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
   return (
-    <>
-      <Navigation />
-      <div className="pt-16 scroll-smooth">
-        <HeroSection />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <AwardsSection />
-        <LeadershipSection />
-        <BlogSection />
-        <ContactSection />
-      </div>
-    </>
+    <div className="pt-16 scroll-smooth">
+      <HeroSection />
+      <AboutSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <SkillsSection />
+      <AwardsSection />
+      <LeadershipSection />
+      <BlogSection />
+      <ContactSection />
+    </div>
   );
 };
 
