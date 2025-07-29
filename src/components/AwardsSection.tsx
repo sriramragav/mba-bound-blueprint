@@ -4,14 +4,14 @@ import { Trophy, Award, Star, Medal,Rocket, School, Lightbulb } from 'lucide-rea
 const AwardsSection = () => {
   const awards = [
     {
-    icon: <Lightbulb size={20} />,
+    icon: Lightbulb,
     title: "Budding Scientist Contest",
     description:
       "Developed a hydroponics-based farming system; won the State Level Science Competition.",
     year: "2013",
   },
   {
-    icon: <Rocket size={20} />,
+    icon: Rocket,
     title: "NSS Space Settlement Contest",
     description:
       "Awarded Second Place Internationally in the NASA Space Society Settlement Contest.",
