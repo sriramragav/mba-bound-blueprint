@@ -4,7 +4,7 @@ import profileImage from '@/assets/samyuctaa.png';
 const About = () => {
   return (
     <section id="about" className="scroll-mt-16 py-20 bg-gradient-subtle">
-      <div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mt-2">
           <h2 className="text-3xl font-semibold text-foreground mb-2">About Me</h2>
