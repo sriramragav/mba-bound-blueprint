@@ -39,7 +39,15 @@ const HeroSection = () => {
               </Button>
             </a>
           </div>
-
+        <div className="mt-8 flex justify-center">
+          <button
+            onClick={scrollToAbout}
+            className="text-primary hover:text-foreground transition"
+            aria-label="Scroll to About"
+          >
+            <ArrowDown className="w-6 h-6 animate-bounce" />
+          </button>
+        </div>
           {/* Status */}
           <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground pt-8">
             <div className="flex items-center gap-2">
