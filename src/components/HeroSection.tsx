@@ -15,7 +15,7 @@ const HeroSection = () => {
     >
      {/* Main Content */}
       <div className="relative z-10 text-center w-full max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="space-y-8">
+        <div>
           {/* Title */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
