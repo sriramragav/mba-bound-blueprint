@@ -3,7 +3,7 @@ import profileImage from '@/assets/samyuctaa.png';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-subtle">
+    <section id="about" className="scroll-mt-16 py-20 bg-gradient-subtle">
       <div>
         {/* Heading */}
         <div className="text-center mt-2">
