@@ -1,13 +1,20 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
-import { Home } from 'lucide-react';
+import { Menu, X, Home } from 'lucide-react';
+
+const navItems = [
+  { label: 'About', href: '#about' },
+  { label: 'Internships', href: '#internships' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Awards', href: '#awards' },
+  { label: 'Leadership', href: '#leadership' },
+  { label: 'Blog', href: '#blogs' },
+  { label: 'Contact', href: '#contact' },
+];
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,42 +23,17 @@ const Navigation = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-/*
-  const navItems = [
-    { label: 'About', href: '/about' },
-    { label: 'Internships', href: '/internships' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'Awards', href: '/awards' },
-    { label: 'Leadership', href: '/leadership' },
-    { label: 'Blog', href: '/blogs' },
-    { label: 'Contact', href: '/contact' },
-  ];
-*/
-  const navItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Internships', href: '#internships' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Awards', href: '#awards' },
-    { label: 'Leadership', href: '#leadership' },
-    { label: 'Blog', href: '#blogs' },
-    { label: 'Contact', href: '#contact' },
-  ];
-  
+
   const handleNavigation = (href: string) => {
     if (href.startsWith('#')) {
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
+        setIsMenuOpen(false);
       }
     } else {
       window.location.href = href;
     }
-    setIsMenuOpen(false);
-  };
-
-  const isActiveRoute = (href: string) => {
-    if (href === '/' && location.pathname === '/') return true;
-    return location.pathname === href;
   };
 
   return (
@@ -67,7 +49,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
-              onClick={() => handleNavigation('/')}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex flex-row items-center gap-2 text-xl font-bold text-foreground hover:text-primary transition-colors duration-200"
             >
               <Home className="w-5 h-5" />
@@ -82,11 +64,7 @@ const Navigation = () => {
                 <button
                   key={item.label}
                   onClick={() => handleNavigation(item.href)}
-                  className={`transition-colors duration-200 px-3 py-2 text-sm font-medium ${
-                    isActiveRoute(item.href)
-                      ? 'text-primary font-semibold'
-                      : 'text-foreground hover:text-primary'
-                  }`}
+                  className="transition-colors duration-200 px-3 py-2 text-sm font-medium text-foreground hover:text-primary"
                 >
                   {item.label}
                 </button>
@@ -115,11 +93,7 @@ const Navigation = () => {
                 <button
                   key={item.label}
                   onClick={() => handleNavigation(item.href)}
-                  className={`block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200 ${
-                    isActiveRoute(item.href)
-                      ? 'text-primary font-semibold'
-                      : 'text-foreground hover:text-primary'
-                  }`}
+                  className="block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200 text-foreground hover:text-primary"
                 >
                   {item.label}
                 </button>
