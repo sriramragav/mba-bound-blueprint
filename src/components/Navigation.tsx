@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, Home } from 'lucide-react';
 
 const navItems = [
-  { label: 'About', href: '#hero' },
   { label: 'About', href: '#about' },
   { label: 'Internships', href: '#internships' },
   { label: 'Projects', href: '#projects' },
@@ -61,7 +60,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center w-full">
           {/* Home Icon Button */}
           <button
-            onClick={() => handleNavigation('#about')}
+            onClick={() => handleNavigation('#hero')}
             className="flex items-center gap-2 text-xl font-bold text-foreground hover:text-primary transition-colors duration-200"
           >
             <Home className="w-5 h-5" />
