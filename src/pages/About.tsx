@@ -34,7 +34,7 @@ const About = () => {
             {/* Right Column: Description */}
             <div className="space-y-4 text-[15px] text-muted-foreground leading-relaxed">
               <p>
-                I’m a final-year Computer Science student at CEG who enjoys solving messy, cross-disciplinary problems—technical, human, or somewhere in between.
+                I’m a final-year Computer Sciencee student at CEG who enjoys solving messy, cross-disciplinary problems—technical, human, or somewhere in between.
               </p>
               <p>
                 I’ve led student communities, built a mentoring app that’s actually being used, and spent the summer tackling real-world production issues during an internship at Visa. That experience confirmed I love working where engineering, product, and strategy overlap.
