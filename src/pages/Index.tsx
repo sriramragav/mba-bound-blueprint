@@ -11,7 +11,7 @@ import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="pt-16">
       <Navigation />
       <HeroSection />
       <AboutSection />
