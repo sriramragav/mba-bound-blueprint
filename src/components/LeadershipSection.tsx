@@ -60,78 +60,78 @@ const LeadershipSection = () => {
 
   return (
     <section id="leadership" className="py-12 bg-background scroll-mt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Leadership & Impact
-          </h2>
-          <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto" />
-          <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
-            Driving positive change through technology, teamwork, and community engagement
-          </p>
-        </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-foreground mb-4">
+        Leadership & Impact
+      </h2>
+      <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto" />
+      <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
+        Driving positive change through technology, teamwork, and community engagement
+      </p>
+    </div>
 
-        {/* Leadership Experiences */}
-        <div className="space-y-8 mb-16">
-          {experiences.map((exp, index) => {
-            const IconComponent = exp.icon;
-            return (
-              <Card key={index} className="group hover:shadow-primary transition-all duration-300 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-accent opacity-10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500" />
-                
-                <CardHeader className="relative z-10">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
-                        <IconComponent className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-xl text-foreground">
-                          {exp.role}
-                        </CardTitle>
-                        <p className="text-primary font-medium">{exp.organization}</p>
-                      </div>
-                    </div>
-                    <Badge variant="outline" className="w-fit">
-                      {exp.period}
+    {/* Leadership Experiences */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      {experiences.map((exp, index) => {
+        const IconComponent = exp.icon;
+        return (
+          <Card key={index} className="group hover:shadow-primary transition-all duration-300 overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-accent opacity-10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500" />
+
+            <CardHeader className="relative z-10">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <IconComponent className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl text-foreground">
+                      {exp.role}
+                    </CardTitle>
+                    <p className="text-primary font-medium">{exp.organization}</p>
+                  </div>
+                </div>
+                <Badge variant="outline" className="w-fit">
+                  {exp.period}
+                </Badge>
+              </div>
+            </CardHeader>
+
+            <CardContent className="relative z-10 space-y-6">
+              <p className="text-muted-foreground leading-relaxed">
+                {exp.description}
+              </p>
+
+              <div>
+                <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
+                <ul className="space-y-2">
+                  {exp.achievements.map((achievement, achIndex) => (
+                    <li key={achIndex} className="flex items-start gap-2 text-muted-foreground">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="font-semibold text-foreground mb-3">Skills Developed:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {exp.skills.map((skill) => (
+                    <Badge key={skill} variant="secondary" className="bg-accent/10 text-accent">
+                      {skill}
                     </Badge>
-                  </div>
-                </CardHeader>
-
-                <CardContent className="relative z-10 space-y-6">
-                  <p className="text-muted-foreground leading-relaxed">
-                    {exp.description}
-                  </p>
-
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
-                    <ul className="space-y-2">
-                      {exp.achievements.map((achievement, achIndex) => (
-                        <li key={achIndex} className="flex items-start gap-2 text-muted-foreground">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                          <span>{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-3">Skills Developed:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.skills.map((skill) => (
-                        <Badge key={skill} variant="secondary" className="bg-accent/10 text-accent">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
-      </div>
-    </section>
+                  ))}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        );
+      })}
+    </div>
+  </div>
+</section>
   );
 };
 
