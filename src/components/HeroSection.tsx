@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <section
   id="hero"
-  className="relative min-h-screen bg-background overflow-hidden pt-20 px-4 sm:flex sm:items-center sm:justify-center sm:pt-20 sm:px-0"
+  className="relative bg-background overflow-hidden pt-20 pb-20 px-4"
     >
 
      {/* Main Content */}
