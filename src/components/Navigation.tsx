@@ -16,7 +16,7 @@ const Navigation = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+/*
   const navItems = [
     { label: 'About', href: '/about' },
     { label: 'Internships', href: '/internships' },
@@ -26,7 +26,17 @@ const Navigation = () => {
     { label: 'Blog', href: '/blogs' },
     { label: 'Contact', href: '/contact' },
   ];
-
+*/
+  const navItems = [
+    { label: 'About', href: '#about' },
+    { label: 'Internships', href: '#internships' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Awards', href: '#awards' },
+    { label: 'Leadership', href: '#leadership' },
+    { label: 'Blog', href: '#blogs' },
+    { label: 'Contact', href: '#contact' },
+  ];
+  
   const handleNavigation = (href: string) => {
     if (href.startsWith('#')) {
       const element = document.querySelector(href);
