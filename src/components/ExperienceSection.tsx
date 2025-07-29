@@ -3,103 +3,80 @@ import { Badge } from '@/components/ui/badge';
 import { MapPin, Calendar, Building } from 'lucide-react';
 
 const ExperienceSection = () => {
+  const internships = [
+    {
+      title: "Software Engineering Intern",
+      company: "Visa",
+      location: "Bengaluru, India",
+      duration: "Jun - Aug 2025",
+      description: "Designated as a 'Must Hire' by her Director for outstanding performance. Entrusted with production code access and solved critical real-world issues — a rare responsibility for an intern.",
+      skills: ["Java", "Spring Boot", "REST APIs", "Microservices", "PostgreSQL"]
+    },
+    {
+      title: "Data Analyst Intern",
+      company: "GR Network",
+      location: "Chennai, India", 
+      duration: "March - April 2024",
+      description: "Performed Data Mining and Analysis, Applied Machine Learning and Predictive Models for Student Performane Forecasting.",
+      skills: ["Python", "SQL", "Tableau", "Excel", "Power BI"]
+    },
+    {
+      title: "Tech Intern",
+      company: "The Internet Generation",
+      location: "Chennai, India", 
+      duration: "Sep - Oct 2023",
+      description: "Collaborated with cross-functional teams, gathered and analyzed data, trained LLM on creative queries; implemented sentiment analysis resulting in a reduction in time spent on updating training data.",
+      skills: ["Python", "SQL", "Tableau", "Excel", "Power BI"]
+    }
+  ];
+
   return (
-    <section id="experience" className="py-20">
+    <section id="internships" className="py-12 bg-gradient-subtle scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Professional Experience
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-foreground mb-3">
+            Internship Experience
           </h2>
-          <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto" />
-          <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
-            Building expertise at the intersection of technology and finance
+          <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto mb-4" />
+          <p className="text-base text-muted-foreground max-w-3xl mx-auto">
+            Professional internship experiences that shaped my career journey and technical expertise.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Visa Internship */}
-          <Card className="relative overflow-hidden group hover:shadow-primary transition-all duration-300 border-l-4 border-l-primary">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-primary opacity-10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500" />
-            
-            <CardHeader className="relative z-10">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {internships.map((internship, index) => (
+            <Card key={index} className="hover:shadow-md transition-shadow duration-200 h-full">
+              <CardHeader className="pb-2">
                 <div>
-                  <CardTitle className="text-2xl text-foreground">
-                    Data Analyst
-                  </CardTitle>
-                  <div className="flex items-center gap-2 text-primary font-medium text-lg mt-1">
-                    <Building className="w-5 h-5" />
-                    GR Network
+                  <CardTitle className="text-lg mb-1">{internship.title}</CardTitle>
+                  <div className="flex flex-col gap-1 text-muted-foreground text-sm">
+                    <div className="flex items-center gap-1">
+                      <Building size={14} />
+                      <span>{internship.company}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <MapPin size={14} />
+                      <span>{internship.location}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar size={14} />
+                      <span>{internship.duration}</span>
+                    </div>
                   </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <Badge variant="outline" className="w-fit">
-                    <Calendar className="w-3 h-3 mr-1" />
-                    3 Months
-                  </Badge>
-                  <Badge variant="secondary" className="w-fit">
-                    <MapPin className="w-3 h-3 mr-1" />
-                    Bangalore, India
-                  </Badge>
-                </div>
-              </div>
-            </CardHeader>
-
-            <CardContent className="relative z-10 space-y-6">
-              <p className="text-muted-foreground leading-relaxed">
-                Gained hands-on experience in fintech innovation at one of the world's 
-                leading digital payments companies. Worked on critical systems that 
-                process millions of transactions daily, contributing to the digital 
-                transformation of global financial services.
-              </p>
-
-              {/* Key Achievements */}
-              <div>
-                <h4 className="font-semibold text-foreground mb-3">Key Contributions:</h4>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                    <span>Developed and optimized payment processing modules improving transaction efficiency</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                    <span>Collaborated with cross-functional teams on security and compliance initiatives</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                    <span>Contributed to API development and integration testing for merchant services</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                    <span>Gained insights into global fintech operations and regulatory compliance</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Technologies Used */}
-              <div>
-                <h4 className="font-semibold text-foreground mb-3">Technologies & Skills:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {['Java', 'Spring Boot', 'REST APIs', 'MySQL', 'Microservices', 'Git', 'Agile', 'Financial Systems'].map((tech) => (
-                    <Badge key={tech} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
-                      {tech}
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground">
+                <p className="mb-3">{internship.description}</p>
+                <div className="flex flex-wrap gap-1">
+                  {internship.skills.map((skill, skillIndex) => (
+                    <Badge key={skillIndex} variant="secondary" className="text-xs px-2 py-1">
+                      {skill}
                     </Badge>
                   ))}
                 </div>
-              </div>
-
-              {/* Impact */}
-              <div className="bg-gradient-subtle p-4 rounded-lg border">
-                <h4 className="font-semibold text-foreground mb-2">Business Impact:</h4>
-                <p className="text-muted-foreground">
-                  This experience deepened my understanding of how technology drives financial 
-                  innovation and the importance of scalable, secure systems in global commerce. 
-                  It reinforced my passion for pursuing an MBA to bridge technical expertise 
-                  with business strategy.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
