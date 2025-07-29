@@ -11,13 +11,12 @@ const HeroSection = () => {
 
   return (
     <section
-      id="hero"
-      className="py-20 bg-background scroll-mt-16"
+  id="hero"
+  className="relative min-h-screen bg-background overflow-hidden pt-14 px-4 sm:flex sm:items-center sm:justify-center sm:pt-0 sm:px-0"
     >
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Content */}
-        <div className="text-center max-w-4xl mx-auto">
+     {/* Main Content */}
+      <div className="relative z-10 text-center w-full max-w-4xl px-4 sm:px-6 lg:px-8">
         <div>
           {/* Title */}
           <div>
