@@ -31,7 +31,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact"   className="relative min-h-screen bg-background overflow-hidden pt-14 px-4 sm:flex sm:items-center sm:justify-center sm:pt-0 sm:px-0">
+    <section id="contact" className="py-12 bg-background scroll-mt-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
