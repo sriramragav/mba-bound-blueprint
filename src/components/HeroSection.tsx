@@ -10,8 +10,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero"
-      className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden"
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden pt-14 px-4 sm:pt-0 sm:px-0"
     >
      {/* Main Content */}
       <div className="relative z-10 text-center w-full max-w-4xl px-4 sm:px-6 lg:px-8">
