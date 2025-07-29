@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, Home } from 'lucide-react';
 
 const navItems = [
+  { label: 'About', href: '#hero' },
   { label: 'About', href: '#about' },
   { label: 'Internships', href: '#internships' },
   { label: 'Projects', href: '#projects' },
