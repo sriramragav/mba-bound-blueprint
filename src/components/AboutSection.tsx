@@ -3,10 +3,10 @@ import profileImage from '@/assets/samyuctaa.png';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-subtle scroll-mt-16">
+    <section id="about" className="py-20 bg-gradient-subtle">
       <div>
         {/* Heading */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-16">
           <h2 className="text-3xl font-semibold text-foreground mb-2">About Me</h2>
           <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto" />
         </div>
