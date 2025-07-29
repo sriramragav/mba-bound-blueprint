@@ -11,17 +11,20 @@ import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
   return (
-    <div className="pt-16">
+    <>
       <Navigation />
-      <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <AwardsSection />
-      <LeadershipSection />
-      <BlogSection />
-      <ContactSection />
-    </div>
+      <div className="pt-16 scroll-smooth">
+        <HeroSection />
+        <AboutSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <AwardsSection />
+        <LeadershipSection />
+        <BlogSection />
+        <ContactSection />
+      </div>
+    </>
   );
 };
 
