@@ -26,6 +26,7 @@ const HeroSection = () => {
                 Computer Science Engineering Student
               </span>
             </h1>
+            <br />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               <em>"I forgot who I was. So I decided to become who I am."</em>
               <br />– Hoshi Takayuki
