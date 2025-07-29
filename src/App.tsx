@@ -23,7 +23,6 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Navigation />
-        <div className="pt-16">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
@@ -35,7 +34,6 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
