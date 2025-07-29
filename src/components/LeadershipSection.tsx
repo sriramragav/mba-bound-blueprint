@@ -45,29 +45,6 @@ const LeadershipSection = () => {
     }
   ];
 
-  const awards = [
-    {
-      title: "Dean's List",
-      description: "Academic Excellence Award for maintaining top 5% CGPA",
-      year: "2023-2024"
-    },
-    {
-      title: "Best Innovation Award",
-      description: "College hackathon winner for fintech solution",
-      year: "2023"
-    },
-    {
-      title: "Outstanding Volunteer",
-      description: "Recognition for community service and leadership",
-      year: "2022"
-    },
-    {
-      title: "Programming Competition",
-      description: "Regional level coding competition - 2nd place",
-      year: "2022"
-    }
-  ];
-
   return (
     <section id="leadership" className="py-20 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
