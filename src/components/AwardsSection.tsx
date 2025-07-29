@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Trophy, Award, Star, Medal } from 'lucide-react';
-import { Award, Rocket, School, Lightbulb, Star } from "lucide-react";
+import { Rocket, School, Lightbulb, Star } from "lucide-react";
 
 const AwardsSection = () => {
   const awards = [
