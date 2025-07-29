@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navigation from "./components/Navigation"; // <-- Import Navigation
+import Navigation from "@/components/Navigation";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Leadership from "./pages/Leadership";
@@ -22,18 +22,20 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Navigation /> {/* ✅ Move Navigation here */}
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/internships" element={<Internships />} />
-          <Route path="/leadership" element={<Leadership />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/awards" element={<Awards />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Navigation />
+        <div className="pt-16">
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/internships" element={<Internships />} />
+            <Route path="/leadership" element={<Leadership />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/awards" element={<Awards />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
