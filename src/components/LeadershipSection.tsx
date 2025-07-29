@@ -117,35 +117,6 @@ const LeadershipSection = () => {
             );
           })}
         </div>
-
-        {/* Awards & Recognition */}
-        <div>
-          <h3 className="text-2xl font-bold text-foreground mb-8 text-center flex items-center justify-center gap-2">
-            <TrendingUp className="w-6 h-6 text-primary" />
-            Awards & Recognition
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {awards.map((award, index) => (
-              <Card key={index} className="text-center group hover:shadow-card transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="mb-4">
-                    <Award className="w-8 h-8 text-accent mx-auto mb-2" />
-                    <h4 className="font-bold text-foreground group-hover:text-primary transition-colors">
-                      {award.title}
-                    </h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                    {award.description}
-                  </p>
-                  <Badge variant="outline" className="bg-primary/5 text-primary border-primary/20">
-                    {award.year}
-                  </Badge>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
