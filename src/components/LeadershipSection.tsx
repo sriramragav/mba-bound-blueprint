@@ -5,43 +5,56 @@ import { Users, Award, Target, TrendingUp } from 'lucide-react';
 const LeadershipSection = () => {
   const experiences = [
     {
-      role: "Technical Team Lead",
-      organization: "College Final Year Project",
-      period: "2024",
-      description: "Leading a 4-member team in developing a comprehensive web application for academic management. Responsible for project planning, code reviews, and ensuring timely delivery.",
+      role: "Deputy Director Of Photography",
+      organization: "The Guindy Times",
+      period: "Aug 2024 - Jun 2025",
+      description: "Supporting the creative vision of the publication through visual storytelling. Managed event photography and editorial shoots.",
       achievements: [
-        "Coordinated sprint planning and daily standups using Agile methodology",
-        "Mentored junior team members in React and Node.js development",
-        "Delivered project 2 weeks ahead of schedule with 100% feature completion"
+        "Led coverage for 5+ university-wide events with 1000+ attendees",
+        "Introduced a new editing workflow, reducing turnaround time by 30%",
+        "Mentored 3 junior photographers"
       ],
-      skills: ["Team Management", "Agile", "Mentoring", "Project Planning"],
+      skills: ["Photography", "Team Coordination", "Media Production"],
       icon: Users
     },
     {
-      role: "Student Representative",
-      organization: "Computer Science Department",
-      period: "2023-2024",
-      description: "Elected representative for the CS department, serving as a liaison between students and faculty. Organized academic events and addressed student concerns.",
+      role: "Associate Head Of Hacks",
+      organization: "CSAU - Computer Society of Anna University",
+      period: "Jul 2024 - Jun 2025",
+      description: "Co-led university-wide hackathons and coding events, enhancing tech engagement across departments.",
       achievements: [
-        "Organized department's first-ever tech symposium with 500+ attendees",
-        "Facilitated curriculum feedback sessions improving course satisfaction by 30%",
-        "Established peer tutoring program helping 50+ struggling students"
+        "Spearheaded 2 flagship hackathons with 300+ participants each",
+        "Designed problem statements in collaboration with sponsors",
+        "Built outreach plan to double registrations YOY"
       ],
-      skills: ["Event Management", "Communication", "Problem Solving", "Advocacy"],
+      skills: ["Hackathon Planning", "Collaboration", "Marketing"],
       icon: Award
     },
     {
-      role: "Volunteer Coordinator",
-      organization: "Local NGO - Education Initiative",
-      period: "2022-2023",
-      description: "Coordinated volunteer activities for an education-focused NGO, managing a team of 15 volunteers to provide coding workshops for underprivileged students.",
+      role: "Head of Operations",
+      organization: "Literary Club of Anna University",
+      period: "Sep 2023 - Jun 2024",
+      description: "Managed club logistics, event operations, and coordination with university stakeholders.",
       achievements: [
-        "Trained 100+ students in basic programming concepts",
-        "Increased volunteer retention rate by 40% through better engagement",
-        "Developed curriculum for beginner-friendly coding workshops"
+        "Streamlined event planning process, improving efficiency by 40%",
+        "Organized 10+ literary and debate events",
+        "Instituted onboarding for new members"
       ],
-      skills: ["Social Impact", "Curriculum Design", "Volunteer Management", "Teaching"],
+      skills: ["Operations", "Event Management", "Leadership"],
       icon: Target
+    },
+    {
+      role: "Junior Co-Ordinator Contents",
+      organization: "ACM Student Chapter of CEG",
+      period: "Jun 2023 - Jun 2024",
+      description: "Handled technical content creation and knowledge-sharing initiatives within the ACM student chapter.",
+      achievements: [
+        "Published 15+ educational blogs and resources",
+        "Led 3 technical writeup campaigns for internal workshops",
+        "Contributed to increasing blog traffic by 50%"
+      ],
+      skills: ["Technical Writing", "Content Strategy", "Team Collaboration"],
+      icon: TrendingUp
     }
   ];
 
