@@ -20,7 +20,7 @@ const AwardsSection = () => {
   ];
 
   return (
-    <section id="awards"   className="relative min-h-screen bg-background overflow-hidden pt-14 px-4 sm:flex sm:items-center sm:justify-center sm:pt-0 sm:px-0">
+    <section id="awards"   className="relative min-h-screen bg-background overflow-hidden pt-20 px-4 sm:flex sm:items-center sm:justify-center sm:pt-20 sm:px-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-3">
