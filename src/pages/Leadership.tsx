@@ -62,7 +62,7 @@ const Leadership = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <section id="leadership" className="py-20 bg-gradient-subtle">
+      <section id="leadership" className="pt-20 pb-12 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
