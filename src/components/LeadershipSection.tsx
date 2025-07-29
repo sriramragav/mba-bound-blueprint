@@ -169,19 +169,6 @@ const LeadershipSection = () => {
             ))}
           </div>
         </div>
-
-        {/* Leadership Philosophy */}
-        <div className="mt-16 bg-gradient-primary p-8 rounded-2xl text-center">
-          <h3 className="text-xl font-bold text-primary-foreground mb-4">
-            Leadership Philosophy
-          </h3>
-          <p className="text-primary-foreground/90 leading-relaxed max-w-3xl mx-auto">
-            I believe great leaders inspire others to achieve their potential while driving meaningful impact. 
-            Through my experiences in technical teams, academic representation, and community service, 
-            I've learned that effective leadership combines clear vision, empathetic communication, 
-            and the ability to empower others to succeed.
-          </p>
-        </div>
       </div>
     </section>
   );
