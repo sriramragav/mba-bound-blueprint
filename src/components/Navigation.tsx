@@ -13,7 +13,6 @@ const navItems = [
 ];
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
@@ -45,7 +44,6 @@ const Navigation = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false);
   };
 
   return (
@@ -83,39 +81,18 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex-shrink-0">
+          {/* Mobile menu button - hidden on all screen sizes */}
+          <div className="hidden">
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {}}
               className="h-10 w-10"
             >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              <Menu size={20} />
             </Button>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 mt-1 z-50">
-            <div className="mx-4 px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md border border-border rounded-lg shadow-lg">
-              {navItems.map((item) => (
-                <button
-                  key={item.label}
-                  onClick={() => handleNavigation(item.href)}
-                  className={`block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200 ${
-                    activeSection === item.href
-                      ? 'text-primary font-semibold'
-                      : 'text-foreground hover:text-primary'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );
