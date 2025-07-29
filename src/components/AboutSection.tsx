@@ -6,7 +6,7 @@ const About = () => {
     <section id="about" className="py-20 bg-gradient-subtle">
       <div>
         {/* Heading */}
-        <div className="text-center>
+        <div className="text-center">
           <h2 className="text-3xl font-semibold text-foreground mb-2">About Me</h2>
           <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto" />
         </div>
