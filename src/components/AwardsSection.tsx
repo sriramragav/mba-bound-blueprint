@@ -4,29 +4,26 @@ import { Trophy, Award, Star, Medal } from 'lucide-react';
 const AwardsSection = () => {
   const awards = [
     {
-      icon: Trophy,
-      title: "Outstanding Leadership Award",
-      description: "Recognized for exceptional leadership in student community initiatives and mentoring programs.",
-      year: "2024"
-    },
-    {
-      icon: Award,
-      title: "Academic Excellence",
-      description: "Maintained consistent high performance throughout computer science coursework.",
-      year: "2021-2024"
-    },
-    {
-      icon: Star,
-      title: "Innovation in Technology",
-      description: "Developed innovative solutions during internship that improved system efficiency.",
-      year: "2024"
-    },
-    {
-      icon: Medal,
-      title: "Community Impact Recognition",
-      description: "Acknowledged for contributions to student welfare and community development.",
-      year: "2023"
-    }
+    icon: <Lightbulb size={20} />,
+    title: "Budding Scientist Contest",
+    description:
+      "Developed a hydroponics-based farming system; won the State Level Science Competition.",
+    year: "2013",
+  },
+  {
+    icon: <Rocket size={20} />,
+    title: "NSS Space Settlement Contest",
+    description:
+      "Awarded Second Place Internationally in the NASA Space Society Settlement Contest.",
+    year: "2019",
+  }/*,
+  {
+    icon: <Award size={20} />,
+    title: "Visa 'Must Hire' Intern",
+    description:
+      "Entrusted with production-level access and debugging responsibilities — rare among interns.",
+    year: "2025",
+  }*/
   ];
 
   return (
