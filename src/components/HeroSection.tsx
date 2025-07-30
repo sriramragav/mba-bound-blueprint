@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <section
   id="hero"
-  className="relative py-20 bg-background overflow-hidden scroll-mt-16"
+  className="relative py-12 bg-background overflow-hidden scroll-mt-16"
     >
 
      {/* Main Content */}

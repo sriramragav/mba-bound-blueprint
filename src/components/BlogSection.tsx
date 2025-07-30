@@ -32,7 +32,7 @@ const curatedBlogs = [
 
 const BlogSection = () => {
   return (
-    <section id="blog" className="py-20 bg-background scroll-mt-16">
+    <section id="blog" className="py-12 bg-background scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-16">
