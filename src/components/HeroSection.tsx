@@ -12,11 +12,12 @@ const HeroSection = () => {
   return (
     <section
   id="hero"
-  className="relative min-h-screen bg-background overflow-hidden pt-14 px-4 sm:flex sm:items-center sm:justify-center sm:pt-0 sm:px-0"
+  className="relative py-20 bg-background overflow-hidden scroll-mt-16"
     >
 
      {/* Main Content */}
-      <div className="relative z-10 text-center w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 text-center w-full max-w-4xl mx-auto">
         <div>
           {/* Title */}
           <div>
@@ -62,6 +63,7 @@ const HeroSection = () => {
               <span>Leader in Training</span>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

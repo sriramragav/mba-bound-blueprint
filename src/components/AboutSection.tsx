@@ -3,7 +3,7 @@ import profileImage from '@/assets/samyuctaa.png';
 
 const About = () => {
   return (
-    <section id="about"   className="relative min-h-screen bg-background overflow-hidden pt-14 px-4 sm:flex sm:items-center sm:justify-center sm:pt-0 sm:px-0">
+    <section id="about" className="py-20 bg-background scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mt-2">
