@@ -1,29 +1,35 @@
+import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Trophy, Award, Star, Medal,Rocket, School, Lightbulb } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Trophy, Award, Star, Medal, Rocket, School, Lightbulb } from 'lucide-react';
 
 const AwardsSection = () => {
+  const schoolCertificates = [
+    '/certificates/school/cert1.jpg',
+    '/certificates/school/cert2.jpg',
+    '/certificates/school/cert3.jpg',
+    '/certificates/school/cert4.jpg',
+    '/certificates/school/cert5.jpg',
+    // Add more paths as needed
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const awards = [
     {
-    icon: Lightbulb,
-    title: "Budding Scientist Contest",
-    description:
-      "Developed a hydroponics-based farming system; won the State Level Science Competition.",
-    year: "2013",
-  },
-  {
-    icon: Rocket,
-    title: "NSS Space Settlement Contest",
-    description:
-      "Awarded Second Place Internationally in the NASA Space Society Settlement Contest.",
-    year: "2019",
-  },
-  {
-    icon: Star,
-    title: "Visa UPLIFT Award – Lead Courageously",
-    description: 
-       "Samyuctaa has been an outstanding addition to our team as an intern. Her initiative and teamwork are truly appreciated. - Rahul Mittal, Visa",
-    year: "2025",
-  }
+      icon: Rocket,
+      title: "NSS Space Settlement Contest",
+      description:
+        "Awarded Second Place Internationally in the NASA Space Society Settlement Contest.",
+      year: "2019",
+    },
+    {
+      icon: Star,
+      title: "Visa UPLIFT Award – Lead Courageously",
+      description:
+        "Samyuctaa has been an outstanding addition to our team as an intern. Her initiative and teamwork are truly appreciated. – Rahul Mittal, Visa",
+      year: "2025",
+    },
   ];
 
   return (
@@ -40,6 +46,34 @@ const AwardsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* School Certificate Carousel Card */}
+          <Card className="text-center group hover:shadow-primary transition-all duration-300">
+            <CardContent className="p-4">
+              <h3 className="font-semibold text-foreground mb-2 text-sm">School Achievements (2010–2016)</h3>
+              <div className="relative w-full aspect-[4/3] bg-muted rounded-lg overflow-hidden">
+                <img
+                  src={schoolCertificates[currentIndex]}
+                  alt={`Certificate ${currentIndex + 1}`}
+                  className="w-full h-full object-contain transition-all duration-300"
+                />
+                <button
+                  onClick={() => setCurrentIndex((currentIndex - 1 + schoolCertificates.length) % schoolCertificates.length)}
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-background/80 rounded-full p-1"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <button
+                  onClick={() => setCurrentIndex((currentIndex + 1) % schoolCertificates.length)}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-background/80 rounded-full p-1"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+              <div className="mt-2 text-xs text-muted-foreground">{`Certificate ${currentIndex + 1} of ${schoolCertificates.length}`}</div>
+            </CardContent>
+          </Card>
+
+          {/* Other Awards */}
           {awards.map((award, index) => {
             const IconComponent = award.icon;
             return (
