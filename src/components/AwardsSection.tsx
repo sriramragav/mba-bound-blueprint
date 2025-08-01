@@ -52,7 +52,7 @@ const AwardsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* School Certificates Carousel Card */}
           <Card className="text-center group hover:shadow-primary transition-all duration-300">
             <CardContent className="p-4">
