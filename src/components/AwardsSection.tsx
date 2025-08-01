@@ -5,7 +5,7 @@ import { Trophy, Award, Star, Medal, Rocket, School, Lightbulb } from 'lucide-re
 
 const AwardsSection = () => {
   const schoolCertificates = [
-    '/public/certificates/school/cert1.jpeg',
+    '/certificates/school/cert1.jpeg',
     '/public/certificates/school/cert2.jpeg',
     '/public/certificates/school/cert3.jpeg',
     '/public/certificates/school/cert4.jpeg',
