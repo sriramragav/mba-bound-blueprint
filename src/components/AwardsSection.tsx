@@ -1,19 +1,27 @@
-import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Trophy, Award, Star, Medal, Rocket, School, Lightbulb } from 'lucide-react';
+import { useState } from 'react';
+
+const schoolCertificates = [
+  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/main/public/certificates/school/cert1.jpeg',
+  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/main/public/certificates/school/cert2.jpeg',
+  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/main/public/certificates/school/cert3.jpeg',
+  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/main/public/certificates/school/cert4.jpeg',
+  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/main/public/certificates/school/cert5.jpeg',
+];
 
 const AwardsSection = () => {
-  const schoolCertificates = [
-    'certificates/school/cert1.jpeg',
-    'public/certificates/school/cert2.jpeg',
-    'public/certificates/school/cert3.jpeg',
-    'public/certificates/school/cert4.jpeg',
-    'public/certificates/school/cert5.jpeg',
-    // Add more paths as needed
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % schoolCertificates.length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? schoolCertificates.length - 1 : prevIndex - 1
+    );
+  };
 
   const awards = [
     {
@@ -27,7 +35,7 @@ const AwardsSection = () => {
       icon: Star,
       title: "Visa UPLIFT Award – Lead Courageously",
       description:
-        "Samyuctaa has been an outstanding addition to our team as an intern. Her initiative and teamwork are truly appreciated. – Rahul Mittal, Visa",
+        "Samyuctaa has been an outstanding addition to our team as an intern. Her initiative and teamwork are truly appreciated. - Rahul Mittal, Visa",
       year: "2025",
     },
   ];
@@ -46,38 +54,44 @@ const AwardsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* School Certificate Carousel Card */}
+          {/* School Certificates Carousel Card */}
           <Card className="text-center group hover:shadow-primary transition-all duration-300">
             <CardContent className="p-4">
-              <h3 className="font-semibold text-foreground mb-2 text-sm">School Achievements (2010–2016)</h3>
-              <div className="relative w-full aspect-[4/3] bg-muted rounded-lg overflow-hidden">
+              <div className="w-full mb-2 text-center font-semibold text-sm text-foreground">
+                School Achievements
+              </div>
+              <div className="relative">
                 <img
                   src={schoolCertificates[currentIndex]}
                   alt={`Certificate ${currentIndex + 1}`}
-                  className="w-full h-full object-contain transition-all duration-300"
+                  className="w-full h-48 object-contain rounded"
                 />
-                <button
-                  onClick={() => setCurrentIndex((currentIndex - 1 + schoolCertificates.length) % schoolCertificates.length)}
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-background/80 rounded-full p-1"
-                >
-                  <ChevronLeft size={20} />
-                </button>
-                <button
-                  onClick={() => setCurrentIndex((currentIndex + 1) % schoolCertificates.length)}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-background/80 rounded-full p-1"
-                >
-                  <ChevronRight size={20} />
-                </button>
+                <div className="flex justify-between mt-2">
+                  <button
+                    onClick={prevImage}
+                    className="text-xs text-primary hover:underline"
+                  >
+                    ← Prev
+                  </button>
+                  <button
+                    onClick={nextImage}
+                    className="text-xs text-primary hover:underline"
+                  >
+                    Next →
+                  </button>
+                </div>
               </div>
-              <div className="mt-2 text-xs text-muted-foreground">{`Certificate ${currentIndex + 1} of ${schoolCertificates.length}`}</div>
             </CardContent>
           </Card>
 
-          {/* Other Awards */}
+          {/* Remaining Awards */}
           {awards.map((award, index) => {
             const IconComponent = award.icon;
             return (
-              <Card key={index} className="text-center group hover:shadow-primary transition-all duration-300">
+              <Card
+                key={index}
+                className="text-center group hover:shadow-primary transition-all duration-300"
+              >
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                     <IconComponent className="w-8 h-8 text-primary" />
