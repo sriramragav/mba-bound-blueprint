@@ -15,6 +15,7 @@ const navItems = [
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,6 +52,7 @@ const Navigation = () => {
         behavior: 'smooth'
       });
     }
+    setIsMobileMenuOpen(false); // Close mobile menu after navigation
   };
 
   return (
@@ -88,19 +90,40 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile menu button - hidden on all screen sizes */}
-          <div className="hidden">
+          {/* Mobile menu button */}
+          <div className="md:hidden">
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => {}}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="h-10 w-10"
             >
-              <Menu size={20} />
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </Button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed inset-x-0 top-16 z-40 bg-background/95 backdrop-blur-md border-b border-border">
+          <div className="px-4 py-4 space-y-2 max-w-full overflow-hidden">
+            {navItems.map((item) => (
+              <button
+                key={item.label}
+                onClick={() => handleNavigation(item.href)}
+                className={`block w-full text-left px-3 py-3 text-base font-medium transition-colors duration-200 rounded-md ${
+                  activeSection === item.href
+                    ? 'text-primary bg-primary/10 font-semibold'
+                    : 'text-foreground hover:text-primary hover:bg-primary/5'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
