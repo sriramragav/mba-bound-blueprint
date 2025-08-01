@@ -5,11 +5,11 @@ import { Trophy, Award, Star, Medal, Rocket, School, Lightbulb } from 'lucide-re
 
 const AwardsSection = () => {
   const schoolCertificates = [
-    '/public/certificates/school/cert1.jpg',
-    '/public/certificates/school/cert2.jpg',
-    '/public/certificates/school/cert3.jpg',
-    '/public/certificates/school/cert4.jpg',
-    '/public/certificates/school/cert5.jpg',
+    '/public/certificates/school/cert1.jpeg',
+    '/public/certificates/school/cert2.jpeg',
+    '/public/certificates/school/cert3.jpeg',
+    '/public/certificates/school/cert4.jpeg',
+    '/public/certificates/school/cert5.jpeg',
     // Add more paths as needed
   ];
 
