@@ -16,6 +16,18 @@ const AwardsSection = () => {
     description:
       "Awarded Second Place Internationally in the NASA Space Society Settlement Contest.",
     year: "2019",
+  },
+  {
+    icon: <Star size={20} />,
+    title: "Visa UPLIFT Award – 'Lead Courageously'",
+    description: (
+    <>
+      Recognized by Rahul Mittal, Director at Visa, for exceptional initiative and impact.
+      <br />
+      *“Samyuctaa’s initiative and teamwork are truly appreciated.”*
+    </>
+    ),
+    year: "2025",
   }
   ];
 
