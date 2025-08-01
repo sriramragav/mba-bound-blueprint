@@ -21,7 +21,7 @@ const AwardsSection = () => {
     icon: Star,
     title: "Visa UPLIFT Award – Lead Courageously",
     description: 
-       "Recognized by Rahul Mittal, Manager for exceptional initiative and impact.  Samyuctaa's initiative and teamwork are truly appreciated.",
+       "Samyuctaa has been an outstanding addition to our team as an intern… Her initiative and teamwork are truly appreciated." — Rahul Mittal, Visa",
     year: "2025",
   }
   ];
