@@ -3,10 +3,10 @@ import { Trophy, Award, Star, Medal, Rocket, School, Lightbulb } from 'lucide-re
 import { useState } from 'react';
 
 const schoolCertificates = [
-  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/main/public/certificates/school/cert1.jpeg
   'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/main/public/certificates/school/cert1.jpeg',
   'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/main/public/certificates/school/cert2.jpeg',
-  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/main/public/certificates/school/cert3.jpeg'
+  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/main/public/certificates/school/cert3.jpeg',
+  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/main/public/certificates/school/cert4.jpeg'
 ];
 
 const AwardsSection = () => {
