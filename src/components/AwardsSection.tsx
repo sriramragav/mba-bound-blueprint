@@ -3,10 +3,10 @@ import { Trophy, Award, Star, Medal, Rocket, School, Lightbulb } from 'lucide-re
 import { useState } from 'react';
 
 const schoolCertificates = [
-  '/cert1.jpeg',
-  '/cert2.jpeg',
-  '/cert1.jpeg',
-  '/cert2.jpeg'
+  '/certificates/school/cert1.jpeg',
+  '/certificates/school/cert2.jpeg',
+  '/certificates/school/cert1.jpeg',
+  '/certificates/school/cert2.jpeg'
 ];
 
 const AwardsSection = () => {
