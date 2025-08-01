@@ -3,12 +3,11 @@ import { Trophy, Award, Star, Medal, Rocket, School, Lightbulb } from 'lucide-re
 import { useState } from 'react';
 
 const schoolCertificates = [
-  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/refs/heads/main/public/certificates/school/cert1.jpeg',
-  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/refs/heads/main/public/certificates/school/cert2.jpeg',
-  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/refs/heads/main/public/certificates/school/cert3.jpeg',
-  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/refs/heads/main/public/certificates/school/cert4.jpeg',
-  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/refs/heads/main/public/certificates/school/cert5.jpeg',
-  'https://raw.githubusercontent.com/sriramragav/mba-bound-blueprint/refs/heads/main/public/certificates/school/cert6.jpeg'
+  'https://71a63fed-31dc-4a6f-961d-e77d56385291.lovableproject.com/certificates/school/cert1.jpg',
+  'https://71a63fed-31dc-4a6f-961d-e77d56385291.lovableproject.com/certificates/school/cert2.jpg',
+  'https://71a63fed-31dc-4a6f-961d-e77d56385291.lovableproject.com/certificates/school/cert3.jpg',
+  'https://71a63fed-31dc-4a6f-961d-e77d56385291.lovableproject.com/certificates/school/cert4.jpg',
+  'https://71a63fed-31dc-4a6f-961d-e77d56385291.lovableproject.com/certificates/school/cert5.jpg'
 ];
 
 const AwardsSection = () => {
