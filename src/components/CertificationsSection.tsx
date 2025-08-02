@@ -13,7 +13,7 @@ const midCerts = [
 
 const advancedCerts = [
   '/certificates/CourseEra/2025-DataEngFromDeepLearning.jpg',
-  '/certificates/CourseEra/2025-ETLfromDeepLearning.jpg'
+  '/certificates/CourseEra/2025-ETLfromDeepLearning.jpg',
   '/certificates/CourseEra/2025-SpringBootFromaPackt.jpg'
 ];
 
