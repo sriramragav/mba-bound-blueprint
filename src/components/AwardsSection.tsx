@@ -80,11 +80,13 @@ const AwardsSection = () => {
                 School Achievements
               </div>
               <div className="relative">
-                <img
-                  src={schoolCertificates[currentIndex]}
-                  alt={`Certificate ${currentIndex + 1}`}
-                  className="w-full h-48 object-contain rounded"
-                />
+                <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
+                  <img
+                    src={schoolCertificates[currentIndex]}
+                    alt={`Certificate ${currentIndex + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+              </div>
                 <div className="flex justify-between mt-2">
                   <button
                     onClick={prevImage}
