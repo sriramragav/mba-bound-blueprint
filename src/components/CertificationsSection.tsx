@@ -8,7 +8,7 @@ const earlyCerts = [
 ];
 
 const midCerts = [
-  '/certificates/CourseEra/2024-MLFromStanford.jpg',
+  '/certificates/CourseEra/2024-MLFromStanford.jpg'
 ];
 
 const advancedCerts = [
