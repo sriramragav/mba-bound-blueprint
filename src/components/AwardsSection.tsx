@@ -76,83 +76,70 @@ const AwardsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* School Achievements */}
-          <Card className="group hover:shadow-primary transition-all duration-300">
-            <CardContent className="p-4">
-              <div className="flex justify-between items-center mb-2">
-                <div className="font-semibold text-sm text-foreground text-left">
-                  Roots and Wings
-                </div>
-                <div className="text-xs text-muted-foreground text-right">
-                  {`Certificate ${schoolIndex + 1} of ${schoolCertificates.length}`}
-                </div>
-              </div>
-              <div className="relative w-full aspect-[3/2] rounded overflow-hidden">
-                {schoolLoading && (
-                  <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
-                )}
+          {/* School Achievements Card */}
+        <Card className="text-center group hover:shadow-primary transition-all duration-300">
+          <CardContent className="p-4">
+            <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
+              <span>Roots and Wings</span>
+              <span className="text-xs text-muted-foreground">
+                Certificate {schoolIndex + 1} of {schoolCertificates.length}
+              </span>
+            </div>
+        
+            {/* Scrollable container */}
+            <div className="relative h-64 overflow-y-auto rounded border">
+              <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
                 <img
                   src={schoolCertificates[schoolIndex]}
                   alt={`Certificate ${schoolIndex + 1}`}
-                  loading="eager"
-                  onLoad={() => setSchoolLoading(false)}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
-                    schoolLoading ? 'opacity-0' : 'opacity-100'
-                  }`}
-                />
-                {/* Preload next and previous */}
-                <link
-                  rel="preload"
-                  as="image"
-                  href={schoolCertificates[(schoolIndex + 1) % schoolCertificates.length]}
-                />
-                <link
-                  rel="preload"
-                  as="image"
-                  href={schoolCertificates[(schoolIndex - 1 + schoolCertificates.length) % schoolCertificates.length]}
+                  className="absolute inset-0 w-full h-full object-contain"
                 />
               </div>
-              <div className="flex justify-between mt-2">
-                <button onClick={prevSchoolImage} className="text-xs text-primary hover:underline">
-                  ← Prev
-                </button>
-                <button onClick={nextSchoolImage} className="text-xs text-primary hover:underline">
-                  Next →
-                </button>
+            </div>
+        
+            <div className="flex justify-between mt-2">
+              <button onClick={prevSchoolImage} className="text-xs text-primary hover:underline">
+                ← Prev
+              </button>
+              <button onClick={nextSchoolImage} className="text-xs text-primary hover:underline">
+                Next →
+              </button>
+            </div>
+          </CardContent>
+        </Card>
+        
+        {/* After High School Card */}
+        <Card className="text-center group hover:shadow-primary transition-all duration-300">
+          <CardContent className="p-4">
+            <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
+              <span>Where Purpose Took Hold</span>
+              <span className="text-xs text-muted-foreground">
+                Certificate {afterIndex + 1} of {afterHighSchoolCertificates.length}
+              </span>
+            </div>
+        
+            {/* Scrollable container */}
+            <div className="relative h-64 overflow-y-auto rounded border">
+              <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
+                <img
+                  src={afterHighSchoolCertificates[afterIndex]}
+                  alt={`Certificate ${afterIndex + 1}`}
+                  className="absolute inset-0 w-full h-full object-contain"
+                />
               </div>
-            </CardContent>
-          </Card>
+            </div>
+        
+            <div className="flex justify-between mt-2">
+              <button onClick={prevAfterImage} className="text-xs text-primary hover:underline">
+                ← Prev
+              </button>
+              <button onClick={nextAfterImage} className="text-xs text-primary hover:underline">
+                Next →
+              </button>
+            </div>
+          </CardContent>
+        </Card>
 
-          {/* After High School */}
-          <Card className="text-center group hover:shadow-primary transition-all duration-300">
-            <CardContent className="p-4">
-              <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
-                <span>Where Purpose Took Hold</span>
-                <span className="text-xs text-muted-foreground">
-                  Certificate {afterIndex + 1} of {afterHighSchoolCertificates.length}
-                </span>
-              </div>
-          
-              {/* Scrollable Container */}
-              <div className="relative h-64 overflow-y-auto rounded border">
-                <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
-                  <img
-                    src={afterHighSchoolCertificates[afterIndex]}
-                    alt={`Certificate ${afterIndex + 1}`}
-                    className="absolute inset-0 w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-          
-              <div className="flex justify-between mt-2">
-                <button onClick={prevAfterImage} className="text-xs text-primary hover:underline">
-                  ← Prev
-                </button>
-                <button onClick={nextAfterImage} className="text-xs text-primary hover:underline">
-                  Next →
-                </button>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
