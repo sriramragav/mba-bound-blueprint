@@ -8,6 +8,7 @@ const earlyCerts = [
 ];
 
 const midCerts = [
+  '/certificates/CourseEra/2024-MLFromStanford.jpg',
   '/certificates/CourseEra/2024-MLFromStanford.jpg'
 ];
 
@@ -90,13 +91,13 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
 
         <div className="flex justify-between items-center mt-2">
           <button onClick={prev} className={buttonStyle(index === 0)} disabled={index === 0}>
-            â† Prev
+            Prev
           </button>
           <button onClick={toggleAutoplay} className="text-xs text-muted-foreground hover:underline">
             {isAutoplaying ? 'Pause' : 'Resume'}
           </button>
           <button onClick={next} className={buttonStyle(index === certs.length - 1)} disabled={index === certs.length - 1}>
-            Next â†’
+            Next 
           </button>
         </div>
       </CardContent>
@@ -112,7 +113,7 @@ const CertificationsSection = () => {
           <h2 className="text-3xl font-bold text-foreground mb-3">Certifications</h2>
           <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto mb-4" />
           <p className="text-base text-muted-foreground max-w-3xl mx-auto">
-            A journey in learning â€” from early curiosity to technical depth.
+            A journey in learning - from early curiosity to technical depth.
           </p>
         </div>
 
