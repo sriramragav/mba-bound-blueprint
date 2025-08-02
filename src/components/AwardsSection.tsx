@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 const schoolCertificates = Array.from({ length: 24 }, (_, i) => `/certificates/school/cert${i + 1}.jpeg`);
 const afterHighSchoolCertificates = [
   '/certificates/afterschool/NASA.jpeg',
-  '/certificates/after-high-school/visa.jpeg',
+  '/certificates/afterschool/visa.jpeg',
 ];
 
 const AwardsSection = () => {
