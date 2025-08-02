@@ -29,29 +29,35 @@ const schoolCertificates = [
 ];
 
 const afterHighSchoolCertificates = [
-  '/certificates/afterschool/NASA.jpeg',
-  '/certificates/after-high-school/cert2.jpeg'
+  '/certificates/after-high-school/NASA.jpeg',
+  '/certificates/after-high-school/cert2.jpeg',
 ];
 
 const AwardsSection = () => {
   const [schoolIndex, setSchoolIndex] = useState(0);
   const [afterIndex, setAfterIndex] = useState(0);
+  const [schoolLoading, setSchoolLoading] = useState(true);
+  const [afterLoading, setAfterLoading] = useState(true);
 
   const nextSchoolImage = () => {
+    setSchoolLoading(true);
     setSchoolIndex((prevIndex) => (prevIndex + 1) % schoolCertificates.length);
   };
 
   const prevSchoolImage = () => {
+    setSchoolLoading(true);
     setSchoolIndex((prevIndex) =>
       prevIndex === 0 ? schoolCertificates.length - 1 : prevIndex - 1
     );
   };
 
   const nextAfterImage = () => {
+    setAfterLoading(true);
     setAfterIndex((prevIndex) => (prevIndex + 1) % afterHighSchoolCertificates.length);
   };
 
   const prevAfterImage = () => {
+    setAfterLoading(true);
     setAfterIndex((prevIndex) =>
       prevIndex === 0 ? afterHighSchoolCertificates.length - 1 : prevIndex - 1
     );
@@ -61,9 +67,7 @@ const AwardsSection = () => {
     <section id="awards" className="py-12 bg-background scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-3">
-            Awards & Recognition
-          </h2>
+          <h2 className="text-3xl font-bold text-foreground mb-3">Awards & Recognition</h2>
           <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto mb-4" />
           <p className="text-base text-muted-foreground max-w-3xl mx-auto">
             Recognition for academic excellence, leadership, and contributions to technology and community.
@@ -71,22 +75,40 @@ const AwardsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* School Achievements - The Climb Begins */}
+          {/* School Achievements */}
           <Card className="group hover:shadow-primary transition-all duration-300">
             <CardContent className="p-4">
               <div className="flex justify-between items-center mb-2">
-                <div className="font-semibold text-sm text-left text-foreground">
+                <div className="font-semibold text-sm text-foreground text-left">
                   The Climb Begins
                 </div>
                 <div className="text-xs text-muted-foreground text-right">
-                  Certificate {schoolIndex + 1} of {schoolCertificates.length}
+                  {`Certificate ${schoolIndex + 1} of ${schoolCertificates.length}`}
                 </div>
               </div>
-              <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
+              <div className="relative w-full aspect-[3/2] rounded overflow-hidden">
+                {schoolLoading && (
+                  <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+                )}
                 <img
                   src={schoolCertificates[schoolIndex]}
                   alt={`Certificate ${schoolIndex + 1}`}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="eager"
+                  onLoad={() => setSchoolLoading(false)}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+                    schoolLoading ? 'opacity-0' : 'opacity-100'
+                  }`}
+                />
+                {/* Preload next and previous */}
+                <link
+                  rel="preload"
+                  as="image"
+                  href={schoolCertificates[(schoolIndex + 1) % schoolCertificates.length]}
+                />
+                <link
+                  rel="preload"
+                  as="image"
+                  href={schoolCertificates[(schoolIndex - 1 + schoolCertificates.length) % schoolCertificates.length]}
                 />
               </div>
               <div className="flex justify-between mt-2">
@@ -100,22 +122,40 @@ const AwardsSection = () => {
             </CardContent>
           </Card>
 
-          {/* After High School - Breaking Orbits */}
+          {/* After High School */}
           <Card className="group hover:shadow-primary transition-all duration-300">
             <CardContent className="p-4">
               <div className="flex justify-between items-center mb-2">
-                <div className="font-semibold text-sm text-left text-foreground">
+                <div className="font-semibold text-sm text-foreground text-left">
                   Breaking Orbits
                 </div>
                 <div className="text-xs text-muted-foreground text-right">
-                  Certificate {afterIndex + 1} of {afterHighSchoolCertificates.length}
+                  {`Certificate ${afterIndex + 1} of ${afterHighSchoolCertificates.length}`}
                 </div>
               </div>
-              <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
+              <div className="relative w-full aspect-[3/2] rounded overflow-hidden">
+                {afterLoading && (
+                  <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+                )}
                 <img
                   src={afterHighSchoolCertificates[afterIndex]}
                   alt={`Certificate ${afterIndex + 1}`}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="eager"
+                  onLoad={() => setAfterLoading(false)}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+                    afterLoading ? 'opacity-0' : 'opacity-100'
+                  }`}
+                />
+                {/* Preload next and previous */}
+                <link
+                  rel="preload"
+                  as="image"
+                  href={afterHighSchoolCertificates[(afterIndex + 1) % afterHighSchoolCertificates.length]}
+                />
+                <link
+                  rel="preload"
+                  as="image"
+                  href={afterHighSchoolCertificates[(afterIndex - 1 + afterHighSchoolCertificates.length) % afterHighSchoolCertificates.length]}
                 />
               </div>
               <div className="flex justify-between mt-2">
