@@ -80,26 +80,35 @@ const AwardsSection = () => {
                 School Achievements
               </div>
               <div className="relative">
-                <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
-                  <img
-                    src={schoolCertificates[currentIndex]}
-                    alt={`Certificate ${currentIndex + 1}`}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-              </div>
-                <div className="flex justify-between mt-2">
-                  <button
-                    onClick={prevImage}
-                    className="text-xs text-primary hover:underline"
-                  >
-                    ← Prev
-                  </button>
-                  <button
-                    onClick={nextImage}
-                    className="text-xs text-primary hover:underline"
-                  >
-                    Next →
-                  </button>
+                <div className="relative">
+                  <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
+                    <img
+                      src={schoolCertificates[currentIndex]}
+                      alt={`Certificate ${currentIndex + 1}`}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                
+                  {/* Position Indicator */}
+                  <div className="text-xs text-muted-foreground mt-2">
+                    Certificate {currentIndex + 1} of {schoolCertificates.length}
+                  </div>
+                
+                  {/* Navigation Buttons */}
+                  <div className="flex justify-between mt-1">
+                    <button
+                      onClick={prevImage}
+                      className="text-xs text-primary hover:underline"
+                    >
+                      ← Prev
+                    </button>
+                    <button
+                      onClick={nextImage}
+                      className="text-xs text-primary hover:underline"
+                    >
+                      Next →
+                    </button>
+                  </div>
                 </div>
               </div>
             </CardContent>
