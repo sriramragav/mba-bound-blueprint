@@ -1,5 +1,4 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Trophy, Award, Star, Medal, Rocket, School, Lightbulb } from 'lucide-react';
 import { useState } from 'react';
 
 const schoolCertificates = [
@@ -29,35 +28,34 @@ const schoolCertificates = [
   '/certificates/school/cert24.jpeg'
 ];
 
-const AwardsSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const afterHighSchoolCertificates = [
+  '/certificates/after-high-school/cert1.jpeg',
+  '/certificates/after-high-school/cert2.jpeg'
+];
 
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % schoolCertificates.length);
+const AwardsSection = () => {
+  const [schoolIndex, setSchoolIndex] = useState(0);
+  const [afterIndex, setAfterIndex] = useState(0);
+
+  const nextSchoolImage = () => {
+    setSchoolIndex((prevIndex) => (prevIndex + 1) % schoolCertificates.length);
   };
 
-  const prevImage = () => {
-    setCurrentIndex((prevIndex) =>
+  const prevSchoolImage = () => {
+    setSchoolIndex((prevIndex) =>
       prevIndex === 0 ? schoolCertificates.length - 1 : prevIndex - 1
     );
   };
 
-  const awards = [
-    {
-      icon: Rocket,
-      title: "NSS Space Settlement Contest",
-      description:
-        "Awarded Second Place Internationally in the NASA Space Society Settlement Contest.",
-      year: "2019",
-    },
-    {
-      icon: Star,
-      title: "Visa UPLIFT Award – Lead Courageously",
-      description:
-        "Samyuctaa has been an outstanding addition to our team as an intern. Her initiative and teamwork are truly appreciated. - Rahul Mittal, Visa",
-      year: "2025",
-    },
-  ];
+  const nextAfterImage = () => {
+    setAfterIndex((prevIndex) => (prevIndex + 1) % afterHighSchoolCertificates.length);
+  };
+
+  const prevAfterImage = () => {
+    setAfterIndex((prevIndex) =>
+      prevIndex === 0 ? afterHighSchoolCertificates.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <section id="awards" className="py-12 bg-background scroll-mt-16">
@@ -72,67 +70,64 @@ const AwardsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* School Certificates Carousel Card */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* School Achievements */}
           <Card className="text-center group hover:shadow-primary transition-all duration-300">
             <CardContent className="p-4">
               <div className="w-full mb-2 text-center font-semibold text-sm text-foreground">
                 School Achievements
               </div>
               <div className="relative">
-                <div className="relative">
-                  <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
-                    <img
-                      src={schoolCertificates[currentIndex]}
-                      alt={`Certificate ${currentIndex + 1}`}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  </div>
-                
-                  {/* Position Indicator */}
-                  <div className="text-xs text-muted-foreground mt-2">
-                    Certificate {currentIndex + 1} of {schoolCertificates.length}
-                  </div>
-                
-                  {/* Navigation Buttons */}
-                  <div className="flex justify-between mt-1">
-                    <button
-                      onClick={prevImage}
-                      className="text-xs text-primary hover:underline"
-                    >
-                      ← Prev
-                    </button>
-                    <button
-                      onClick={nextImage}
-                      className="text-xs text-primary hover:underline"
-                    >
-                      Next →
-                    </button>
-                  </div>
+                <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
+                  <img
+                    src={schoolCertificates[schoolIndex]}
+                    alt={`Certificate ${schoolIndex + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                <div className="text-xs text-muted-foreground mt-2">
+                  Certificate {schoolIndex + 1} of {schoolCertificates.length}
+                </div>
+                <div className="flex justify-between mt-1">
+                  <button onClick={prevSchoolImage} className="text-xs text-primary hover:underline">
+                    ← Prev
+                  </button>
+                  <button onClick={nextSchoolImage} className="text-xs text-primary hover:underline">
+                    Next →
+                  </button>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          {/* Remaining Awards */}
-          {awards.map((award, index) => {
-            const IconComponent = award.icon;
-            return (
-              <Card
-                key={index}
-                className="text-center group hover:shadow-primary transition-all duration-300"
-              >
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                    <IconComponent className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2 text-sm">{award.title}</h3>
-                  <p className="text-muted-foreground text-xs mb-2">{award.description}</p>
-                  <div className="text-primary font-medium text-xs">{award.year}</div>
-                </CardContent>
-              </Card>
-            );
-          })}
+          {/* After High School */}
+          <Card className="text-center group hover:shadow-primary transition-all duration-300">
+            <CardContent className="p-4">
+              <div className="w-full mb-2 text-center font-semibold text-sm text-foreground">
+                After High School
+              </div>
+              <div className="relative">
+                <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
+                  <img
+                    src={afterHighSchoolCertificates[afterIndex]}
+                    alt={`Certificate ${afterIndex + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                <div className="text-xs text-muted-foreground mt-2">
+                  Certificate {afterIndex + 1} of {afterHighSchoolCertificates.length}
+                </div>
+                <div className="flex justify-between mt-1">
+                  <button onClick={prevAfterImage} className="text-xs text-primary hover:underline">
+                    ← Prev
+                  </button>
+                  <button onClick={nextAfterImage} className="text-xs text-primary hover:underline">
+                    Next →
+                  </button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
