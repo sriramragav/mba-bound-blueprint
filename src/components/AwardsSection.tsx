@@ -22,28 +22,37 @@ const AwardsSection = () => {
   }, []);
 
   const nextSchoolImage = () => {
-    setSchoolLoading(true);
-    setSchoolIndex((prevIndex) => (prevIndex + 1) % schoolCertificates.length);
+    if (schoolIndex < schoolCertificates.length - 1) {
+      setSchoolLoading(true);
+      setSchoolIndex((prev) => prev + 1);
+    }
   };
 
   const prevSchoolImage = () => {
-    setSchoolLoading(true);
-    setSchoolIndex((prevIndex) =>
-      prevIndex === 0 ? schoolCertificates.length - 1 : prevIndex - 1
-    );
+    if (schoolIndex > 0) {
+      setSchoolLoading(true);
+      setSchoolIndex((prev) => prev - 1);
+    }
   };
 
   const nextAfterImage = () => {
-    setAfterLoading(true);
-    setAfterIndex((prevIndex) => (prevIndex + 1) % afterHighSchoolCertificates.length);
+    if (afterIndex < afterHighSchoolCertificates.length - 1) {
+      setAfterLoading(true);
+      setAfterIndex((prev) => prev + 1);
+    }
   };
 
   const prevAfterImage = () => {
-    setAfterLoading(true);
-    setAfterIndex((prevIndex) =>
-      prevIndex === 0 ? afterHighSchoolCertificates.length - 1 : prevIndex - 1
-    );
+    if (afterIndex > 0) {
+      setAfterLoading(true);
+      setAfterIndex((prev) => prev - 1);
+    }
   };
+
+  const buttonStyle = (disabled: boolean) =>
+    `text-xs hover:underline ${
+      disabled ? 'text-muted-foreground opacity-50 cursor-not-allowed' : 'text-primary'
+    }`;
 
   return (
     <section id="awards" className="py-12 bg-background scroll-mt-16">
@@ -57,7 +66,7 @@ const AwardsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* School Achievements Card */}
+          {/* School Achievements */}
           <Card className="text-center group hover:shadow-primary transition-all duration-300">
             <CardContent className="p-4">
               <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
@@ -86,17 +95,25 @@ const AwardsSection = () => {
               </div>
 
               <div className="flex justify-between mt-2">
-                <button onClick={prevSchoolImage} className="text-xs text-primary hover:underline">
+                <button
+                  onClick={prevSchoolImage}
+                  className={buttonStyle(schoolIndex === 0)}
+                  disabled={schoolIndex === 0}
+                >
                   ← Prev
                 </button>
-                <button onClick={nextSchoolImage} className="text-xs text-primary hover:underline">
+                <button
+                  onClick={nextSchoolImage}
+                  className={buttonStyle(schoolIndex === schoolCertificates.length - 1)}
+                  disabled={schoolIndex === schoolCertificates.length - 1}
+                >
                   Next →
                 </button>
               </div>
             </CardContent>
           </Card>
 
-          {/* After High School Card */}
+          {/* After High School Achievements */}
           <Card className="text-center group hover:shadow-primary transition-all duration-300">
             <CardContent className="p-4">
               <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
@@ -125,10 +142,18 @@ const AwardsSection = () => {
               </div>
 
               <div className="flex justify-between mt-2">
-                <button onClick={prevAfterImage} className="text-xs text-primary hover:underline">
+                <button
+                  onClick={prevAfterImage}
+                  className={buttonStyle(afterIndex === 0)}
+                  disabled={afterIndex === 0}
+                >
                   ← Prev
                 </button>
-                <button onClick={nextAfterImage} className="text-xs text-primary hover:underline">
+                <button
+                  onClick={nextAfterImage}
+                  className={buttonStyle(afterIndex === afterHighSchoolCertificates.length - 1)}
+                  disabled={afterIndex === afterHighSchoolCertificates.length - 1}
+                >
                   Next →
                 </button>
               </div>
