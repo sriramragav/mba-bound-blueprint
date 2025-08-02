@@ -7,18 +7,21 @@ const afterHighSchoolCertificates = [
   '/certificates/afterschool/visa.jpeg',
 ];
 
+const preloadImage = (src: string) => {
+  const img = new Image();
+  img.src = src;
+};
+
 const AwardsSection = () => {
   const [schoolIndex, setSchoolIndex] = useState(0);
   const [afterIndex, setAfterIndex] = useState(0);
   const [schoolLoading, setSchoolLoading] = useState(true);
   const [afterLoading, setAfterLoading] = useState(true);
 
-  // Preload all images once on mount
+  // Preload all certificate images once when page loads
   useEffect(() => {
-    [...schoolCertificates, ...afterHighSchoolCertificates].forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
+    schoolCertificates.forEach(preloadImage);
+    afterHighSchoolCertificates.forEach(preloadImage);
   }, []);
 
   const nextSchoolImage = () => {
@@ -76,7 +79,7 @@ const AwardsSection = () => {
                 </span>
               </div>
 
-              <div className="relative h-64 overflow-y-auto rounded border hover:scrollbar-thin hover:scrollbar-thumb-muted scrollbar-thumb-rounded">
+              <div className="relative h-64 overflow-y-auto rounded border hover:scrollbar-thin hover:scrollbar-thumb-muted scrollbar-thumb-rounded transition-all duration-300">
                 <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
                   {schoolLoading && (
                     <div className="absolute inset-0 flex items-center justify-center bg-background/70 z-10">
@@ -123,7 +126,7 @@ const AwardsSection = () => {
                 </span>
               </div>
 
-              <div className="relative h-64 overflow-y-auto rounded border hover:scrollbar-thin hover:scrollbar-thumb-muted scrollbar-thumb-rounded">
+              <div className="relative h-64 overflow-y-auto rounded border hover:scrollbar-thin hover:scrollbar-thumb-muted scrollbar-thumb-rounded transition-all duration-300">
                 <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
                   {afterLoading && (
                     <div className="absolute inset-0 flex items-center justify-center bg-background/70 z-10">
