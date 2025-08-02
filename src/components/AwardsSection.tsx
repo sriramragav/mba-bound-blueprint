@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const schoolCertificates = [
   '/certificates/school/cert1.jpeg',
@@ -25,13 +25,18 @@ const schoolCertificates = [
   '/certificates/school/cert21.jpeg',
   '/certificates/school/cert22.jpeg',
   '/certificates/school/cert23.jpeg',
-  '/certificates/school/cert24.jpeg'
+  '/certificates/school/cert24.jpeg',
 ];
 
 const afterHighSchoolCertificates = [
   '/certificates/afterschool/NASA.jpeg',
   '/certificates/after-high-school/cert2.jpeg',
 ];
+
+const preloadImage = (src: string) => {
+  const img = new Image();
+  img.src = src;
+};
 
 const AwardsSection = () => {
   const [schoolIndex, setSchoolIndex] = useState(0);
@@ -63,6 +68,13 @@ const AwardsSection = () => {
     );
   };
 
+  useEffect(() => {
+    const nextIndex = (schoolIndex + 1) % schoolCertificates.length;
+    const prevIndex = (schoolIndex - 1 + schoolCertificates.length) % schoolCertificates.length;
+    preloadImage(schoolCertificates[nextIndex]);
+    preloadImage(schoolCertificates[prevIndex]);
+  }, [schoolIndex]);
+
   return (
     <section id="awards" className="py-12 bg-background scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,7 +97,6 @@ const AwardsSection = () => {
                 </span>
               </div>
 
-              {/* Scrollable container */}
               <div className="relative h-64 overflow-y-auto rounded border hover:scrollbar-thin hover:scrollbar-thumb-muted scrollbar-thumb-rounded">
                 <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
                   {schoolLoading && (
@@ -125,7 +136,6 @@ const AwardsSection = () => {
                 </span>
               </div>
 
-              {/* Scrollable container */}
               <div className="relative h-64 overflow-y-auto rounded border hover:scrollbar-thin hover:scrollbar-thumb-muted scrollbar-thumb-rounded">
                 <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
                   {afterLoading && (
