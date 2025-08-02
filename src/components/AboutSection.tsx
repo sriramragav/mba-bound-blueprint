@@ -7,8 +7,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mt-2">
-          <h2 className="text-3xl font-semibold text-foreground mb-2">About Me</h2>
-          <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto" />
+          <h2 className="text-3xl font-semibold text-foreground mb-2 relative section-divider pb-4">About Me</h2>
         </div>
 
         {/* Two Column Layout */}
@@ -42,25 +41,25 @@ const About = () => {
         {/* Full-width Cards Section */}
         <div className="pt-12">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            <Card className="text-center">
+            <Card className="text-center card-enhanced">
               <CardContent className="p-4">
                 <div className="text-xl font-bold text-primary">4th Year</div>
                 <div className="text-xs text-muted-foreground">CS Student</div>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center card-enhanced">
               <CardContent className="p-4">
                 <div className="text-xl font-bold text-accent">5</div>
                 <div className="text-xs text-muted-foreground">Languages Spoken</div>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center card-enhanced">
               <CardContent className="p-4">
                 <div className="text-xl font-bold text-primary">0</div>
                 <div className="text-xs text-muted-foreground">Visa Applications (US)</div>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center card-enhanced">
               <CardContent className="p-4">
                 <div className="text-xl font-bold text-accent">1</div>
                 <div className="text-xs text-muted-foreground">Mentoring App (Shipped!)</div>

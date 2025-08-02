@@ -34,10 +34,9 @@ const ExperienceSection = () => {
     <section id="internships" className="py-12 bg-background scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-foreground mb-3">
+          <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">
             Internship Experience
           </h2>
-          <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto mb-4" />
           <p className="text-base text-muted-foreground max-w-3xl mx-auto">
             Professional internship experiences that shaped my career journey and technical expertise.
           </p>
@@ -45,7 +44,7 @@ const ExperienceSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {internships.map((internship, index) => (
-            <Card key={index} className="hover:shadow-md transition-shadow duration-200 h-full">
+            <Card key={index} className="card-enhanced h-full">
               <CardHeader className="pb-2">
                 <div>
                   <CardTitle className="text-lg mb-1">{internship.title}</CardTitle>

@@ -61,8 +61,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-12 bg-background scroll-mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-2">Projects</h2>
-          <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto" />
+          <h2 className="text-4xl font-bold text-foreground mb-2 relative section-divider pb-4">Projects</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -73,7 +72,7 @@ const ProjectsSection = () => {
               </h3>
               <div className="space-y-4">
                 {category.projects.map((project, index) => (
-                  <Card key={index} className="hover:shadow-md transition-shadow duration-300">
+                  <Card key={index} className="card-enhanced">
                     <CardHeader className="pb-2">
                       <CardTitle className="text-base font-semibold">{project.title}</CardTitle>
                     </CardHeader>

@@ -77,11 +77,10 @@ const AwardsSection = () => {
     }`;
 
   return (
-    <section id="awards" className="py-12 bg-background scroll-mt-16">
+    <section id="awards" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-3">Awards & Recognition</h2>
-          <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto mb-4" />
+          <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">Awards & Recognition</h2>
           <p className="text-base text-muted-foreground max-w-3xl mx-auto">
             Recognition for academic excellence, leadership, and contributions to technology and community.
           </p>
@@ -89,7 +88,7 @@ const AwardsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* School Achievements */}
-          <Card className="text-center group hover:shadow-primary transition-all duration-300">
+          <Card className="text-center card-enhanced">
             <CardContent className="p-4">
               <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
                 <span>Roots and Wings</span>
@@ -142,7 +141,7 @@ const AwardsSection = () => {
           </Card>
 
           {/* After High School Achievements */}
-          <Card className="text-center group hover:shadow-primary transition-all duration-300">
+          <Card className="text-center card-enhanced">
             <CardContent className="p-4">
               <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
                 <span>Where Purpose Took Hold</span>

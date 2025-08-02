@@ -17,10 +17,10 @@ All colors MUST be HSL for consistency across light/dark modes.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
 
-    /* Tech-focused primary colors - Professional Blue */
-    --primary: 221 83% 53%;
+    /* Indigo-focused primary colors - Calm & Modern */
+    --primary: 231 48% 48%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 221 100% 70%;
+    --primary-glow: 231 100% 65%;
 
     /* Secondary - Refined Gray */
     --secondary: 215 16% 97%;
@@ -29,8 +29,8 @@ All colors MUST be HSL for consistency across light/dark modes.
     --muted: 215 16% 97%;
     --muted-foreground: 215 13% 65%;
 
-    /* Accent - Modern Purple for highlights */
-    --accent: 262 83% 58%;
+    /* Accent - Complementary Indigo for highlights */
+    --accent: 231 48% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,7 +38,7 @@ All colors MUST be HSL for consistency across light/dark modes.
 
     --border: 215 12% 92%;
     --input: 215 12% 92%;
-    --ring: 221 83% 53%;
+    --ring: 231 48% 48%;
 
     /* Custom portfolio colors */
     --success: 142 71% 45%;
@@ -46,8 +46,10 @@ All colors MUST be HSL for consistency across light/dark modes.
     
     /* Gradients for modern tech feel */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(262 100% 70%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(231 100% 70%));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(215 20% 98%));
+    --gradient-text: linear-gradient(135deg, hsl(231 48% 48%), hsl(231 100% 65%));
+    --gradient-tinted: linear-gradient(180deg, hsl(231 30% 98%), hsl(var(--background)));
     
     /* Shadows for depth */
     --shadow-primary: 0 10px 40px -10px hsl(var(--primary) / 0.3);
@@ -128,5 +130,50 @@ All colors MUST be HSL for consistency across light/dark modes.
   body {
     @apply bg-background text-foreground;
     overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Gradient text utilities */
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Section dividers */
+  .section-divider::after {
+    content: '';
+    @apply absolute left-0 bottom-0 h-0.5 w-16 bg-primary;
+  }
+
+  /* Enhanced card styles */
+  .card-enhanced {
+    @apply transition-all duration-300 hover:shadow-primary border-border/50;
+  }
+
+  .card-enhanced:hover {
+    @apply border-primary/20 shadow-lg;
+    box-shadow: var(--shadow-primary);
+  }
+
+  /* Smooth link transitions */
+  .link-elegant {
+    @apply relative transition-all duration-300 hover:text-primary;
+  }
+
+  .link-elegant::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300;
+  }
+
+  .link-elegant:hover::after {
+    @apply w-full;
+  }
+
+  /* Tinted background section */
+  .section-tinted {
+    background: var(--gradient-tinted);
   }
 }

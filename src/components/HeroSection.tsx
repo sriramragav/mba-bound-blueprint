@@ -21,8 +21,8 @@ const HeroSection = () => {
         <div>
           {/* Title */}
           <div>
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-              Samyuctaa Sriram
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+              <span className="gradient-text">Samyuctaa Sriram</span>
               <span className="block text-3xl md:text-4xl text-primary font-normal mt-2">
                 Computer Science Engineering Student
               </span>
