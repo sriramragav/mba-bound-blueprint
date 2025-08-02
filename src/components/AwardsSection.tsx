@@ -80,7 +80,7 @@ const AwardsSection = () => {
             <CardContent className="p-4">
               <div className="flex justify-between items-center mb-2">
                 <div className="font-semibold text-sm text-foreground text-left">
-                  The Climb Begins
+                  Roots and Wings
                 </div>
                 <div className="text-xs text-muted-foreground text-right">
                   {`Certificate ${schoolIndex + 1} of ${schoolCertificates.length}`}
@@ -127,7 +127,7 @@ const AwardsSection = () => {
             <CardContent className="p-4">
               <div className="flex justify-between items-center mb-2">
                 <div className="font-semibold text-sm text-foreground text-left">
-                  Breaking Orbits
+                  Where Purpose Took Hold
                 </div>
                 <div className="text-xs text-muted-foreground text-right">
                   {`Certificate ${afterIndex + 1} of ${afterHighSchoolCertificates.length}`}
