@@ -4,7 +4,27 @@ import { useState } from 'react';
 const schoolCertificates = [
   '/certificates/school/cert1.jpeg',
   '/certificates/school/cert2.jpeg',
-  // ... add all up to cert24.jpeg
+  '/certificates/school/cert3.jpeg',
+  '/certificates/school/cert4.jpeg',
+  '/certificates/school/cert5.jpeg',
+  '/certificates/school/cert6.jpeg',
+  '/certificates/school/cert7.jpeg',
+  '/certificates/school/cert8.jpeg',
+  '/certificates/school/cert9.jpeg',
+  '/certificates/school/cert10.jpeg',
+  '/certificates/school/cert11.jpeg',
+  '/certificates/school/cert12.jpeg',
+  '/certificates/school/cert13.jpeg',
+  '/certificates/school/cert14.jpeg',
+  '/certificates/school/cert15.jpeg',
+  '/certificates/school/cert16.jpeg',
+  '/certificates/school/cert17.jpeg',
+  '/certificates/school/cert18.jpeg',
+  '/certificates/school/cert19.jpeg',
+  '/certificates/school/cert20.jpeg',
+  '/certificates/school/cert21.jpeg',
+  '/certificates/school/cert22.jpeg',
+  '/certificates/school/cert23.jpeg',
   '/certificates/school/cert24.jpeg'
 ];
 
