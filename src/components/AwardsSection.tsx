@@ -1,48 +1,25 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-const schoolCertificates = [
-  '/certificates/school/cert1.jpeg',
-  '/certificates/school/cert2.jpeg',
-  '/certificates/school/cert3.jpeg',
-  '/certificates/school/cert4.jpeg',
-  '/certificates/school/cert5.jpeg',
-  '/certificates/school/cert6.jpeg',
-  '/certificates/school/cert7.jpeg',
-  '/certificates/school/cert8.jpeg',
-  '/certificates/school/cert9.jpeg',
-  '/certificates/school/cert10.jpeg',
-  '/certificates/school/cert11.jpeg',
-  '/certificates/school/cert12.jpeg',
-  '/certificates/school/cert13.jpeg',
-  '/certificates/school/cert14.jpeg',
-  '/certificates/school/cert15.jpeg',
-  '/certificates/school/cert16.jpeg',
-  '/certificates/school/cert17.jpeg',
-  '/certificates/school/cert18.jpeg',
-  '/certificates/school/cert19.jpeg',
-  '/certificates/school/cert20.jpeg',
-  '/certificates/school/cert21.jpeg',
-  '/certificates/school/cert22.jpeg',
-  '/certificates/school/cert23.jpeg',
-  '/certificates/school/cert24.jpeg',
-];
-
+const schoolCertificates = Array.from({ length: 24 }, (_, i) => `/certificates/school/cert${i + 1}.jpeg`);
 const afterHighSchoolCertificates = [
   '/certificates/afterschool/NASA.jpeg',
   '/certificates/after-high-school/cert2.jpeg',
 ];
-
-const preloadImage = (src: string) => {
-  const img = new Image();
-  img.src = src;
-};
 
 const AwardsSection = () => {
   const [schoolIndex, setSchoolIndex] = useState(0);
   const [afterIndex, setAfterIndex] = useState(0);
   const [schoolLoading, setSchoolLoading] = useState(true);
   const [afterLoading, setAfterLoading] = useState(true);
+
+  // Preload all images once on mount
+  useEffect(() => {
+    [...schoolCertificates, ...afterHighSchoolCertificates].forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   const nextSchoolImage = () => {
     setSchoolLoading(true);
@@ -67,13 +44,6 @@ const AwardsSection = () => {
       prevIndex === 0 ? afterHighSchoolCertificates.length - 1 : prevIndex - 1
     );
   };
-
-  useEffect(() => {
-    const nextIndex = (schoolIndex + 1) % schoolCertificates.length;
-    const prevIndex = (schoolIndex - 1 + schoolCertificates.length) % schoolCertificates.length;
-    preloadImage(schoolCertificates[nextIndex]);
-    preloadImage(schoolCertificates[prevIndex]);
-  }, [schoolIndex]);
 
   return (
     <section id="awards" className="py-12 bg-background scroll-mt-16">
