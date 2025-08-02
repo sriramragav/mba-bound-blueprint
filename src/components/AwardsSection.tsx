@@ -12,6 +12,7 @@ const AwardsSection = () => {
   const [afterIndex, setAfterIndex] = useState(0);
   const [schoolLoading, setSchoolLoading] = useState(true);
   const [afterLoading, setAfterLoading] = useState(true);
+  const [isAutoplaying, setIsAutoplaying] = useState(true);
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
   // Preload all images
@@ -22,16 +23,25 @@ const AwardsSection = () => {
     });
   }, []);
 
-  // Autoplay school certificates every 3 seconds
+  // Autoplay school certificates every 8 seconds
   useEffect(() => {
-    autoplayRef.current = setInterval(() => {
-      setSchoolIndex((prev) =>
-        prev < schoolCertificates.length - 1 ? prev + 1 : 0
-      );
-      setSchoolLoading(true);
-    }, 3000);
+    if (isAutoplaying) {
+      autoplayRef.current = setInterval(() => {
+        setSchoolIndex((prev) =>
+          prev < schoolCertificates.length - 1 ? prev + 1 : 0
+        );
+        setSchoolLoading(true);
+      }, 8000);
+    } else {
+      clearInterval(autoplayRef.current!);
+    }
+
     return () => clearInterval(autoplayRef.current!);
-  }, []);
+  }, [isAutoplaying]);
+
+  const toggleAutoplay = () => {
+    setIsAutoplaying((prev) => !prev);
+  };
 
   const nextSchoolImage = () => {
     if (schoolIndex < schoolCertificates.length - 1) {
@@ -106,13 +116,19 @@ const AwardsSection = () => {
                 </div>
               </div>
 
-              <div className="flex justify-between mt-2">
+              <div className="flex justify-between items-center mt-2">
                 <button
                   onClick={prevSchoolImage}
                   className={buttonStyle(schoolIndex === 0)}
                   disabled={schoolIndex === 0}
                 >
                   ← Prev
+                </button>
+                <button
+                  onClick={toggleAutoplay}
+                  className="text-xs text-muted-foreground hover:underline"
+                >
+                  {isAutoplaying ? 'Pause' : 'Resume'}
                 </button>
                 <button
                   onClick={nextSchoolImage}
