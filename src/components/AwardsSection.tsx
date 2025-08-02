@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const schoolCertificates = Array.from({ length: 24 }, (_, i) => `/certificates/school/cert${i + 1}.jpeg`);
 const afterHighSchoolCertificates = [
@@ -7,21 +7,30 @@ const afterHighSchoolCertificates = [
   '/certificates/afterschool/visa.jpeg',
 ];
 
-const preloadImage = (src: string) => {
-  const img = new Image();
-  img.src = src;
-};
-
 const AwardsSection = () => {
   const [schoolIndex, setSchoolIndex] = useState(0);
   const [afterIndex, setAfterIndex] = useState(0);
   const [schoolLoading, setSchoolLoading] = useState(true);
   const [afterLoading, setAfterLoading] = useState(true);
+  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Preload all certificate images once when page loads
+  // Preload all images
   useEffect(() => {
-    schoolCertificates.forEach(preloadImage);
-    afterHighSchoolCertificates.forEach(preloadImage);
+    [...schoolCertificates, ...afterHighSchoolCertificates].forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
+  // Autoplay school certificates every 3 seconds
+  useEffect(() => {
+    autoplayRef.current = setInterval(() => {
+      setSchoolIndex((prev) =>
+        prev < schoolCertificates.length - 1 ? prev + 1 : 0
+      );
+      setSchoolLoading(true);
+    }, 3000);
+    return () => clearInterval(autoplayRef.current!);
   }, []);
 
   const nextSchoolImage = () => {
@@ -79,7 +88,7 @@ const AwardsSection = () => {
                 </span>
               </div>
 
-              <div className="relative h-64 overflow-y-auto rounded border hover:scrollbar-thin hover:scrollbar-thumb-muted scrollbar-thumb-rounded transition-all duration-300">
+              <div className="relative h-64 overflow-y-auto rounded border hover:scrollbar-thin hover:scrollbar-thumb-muted scrollbar-thumb-rounded">
                 <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
                   {schoolLoading && (
                     <div className="absolute inset-0 flex items-center justify-center bg-background/70 z-10">
@@ -126,7 +135,7 @@ const AwardsSection = () => {
                 </span>
               </div>
 
-              <div className="relative h-64 overflow-y-auto rounded border hover:scrollbar-thin hover:scrollbar-thumb-muted scrollbar-thumb-rounded transition-all duration-300">
+              <div className="relative h-64 overflow-y-auto rounded border hover:scrollbar-thin hover:scrollbar-thumb-muted scrollbar-thumb-rounded">
                 <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
                   {afterLoading && (
                     <div className="absolute inset-0 flex items-center justify-center bg-background/70 z-10">
