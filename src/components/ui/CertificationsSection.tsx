@@ -104,7 +104,7 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
   );
 };
 
-const CertificationsPage = () => {
+const CertificationsSection = () => {
   return (
     <section id="certifications" className="py-12 bg-background scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,4 +126,4 @@ const CertificationsPage = () => {
   );
 };
 
-export default CertificationsPage;
+export default CertificationsSection;
