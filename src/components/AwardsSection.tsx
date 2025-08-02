@@ -123,41 +123,26 @@ const AwardsSection = () => {
           </Card>
 
           {/* After High School */}
-          <Card className="group hover:shadow-primary transition-all duration-300">
+          <Card className="text-center group hover:shadow-primary transition-all duration-300">
             <CardContent className="p-4">
-              <div className="flex justify-between items-center mb-2">
-                <div className="font-semibold text-sm text-foreground text-left">
-                  Where Purpose Took Hold
-                </div>
-                <div className="text-xs text-muted-foreground text-right">
-                  {`Certificate ${afterIndex + 1} of ${afterHighSchoolCertificates.length}`}
+              <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
+                <span>Where Purpose Took Hold</span>
+                <span className="text-xs text-muted-foreground">
+                  Certificate {afterIndex + 1} of {afterHighSchoolCertificates.length}
+                </span>
+              </div>
+          
+              {/* Scrollable Container */}
+              <div className="relative h-64 overflow-y-auto rounded border">
+                <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
+                  <img
+                    src={afterHighSchoolCertificates[afterIndex]}
+                    alt={`Certificate ${afterIndex + 1}`}
+                    className="absolute inset-0 w-full h-full object-contain"
+                  />
                 </div>
               </div>
-              <div className="relative w-full aspect-[3/2] rounded overflow-hidden">
-                {afterLoading && (
-                  <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
-                )}
-                <img
-                  src={afterHighSchoolCertificates[afterIndex]}
-                  alt={`Certificate ${afterIndex + 1}`}
-                  loading="eager"
-                  onLoad={() => setAfterLoading(false)}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
-                    afterLoading ? 'opacity-0' : 'opacity-100'
-                  }`}
-                />
-                {/* Preload next and previous */}
-                <link
-                  rel="preload"
-                  as="image"
-                  href={afterHighSchoolCertificates[(afterIndex + 1) % afterHighSchoolCertificates.length]}
-                />
-                <link
-                  rel="preload"
-                  as="image"
-                  href={afterHighSchoolCertificates[(afterIndex - 1 + afterHighSchoolCertificates.length) % afterHighSchoolCertificates.length]}
-                />
-              </div>
+          
               <div className="flex justify-between mt-2">
                 <button onClick={prevAfterImage} className="text-xs text-primary hover:underline">
                   ← Prev
