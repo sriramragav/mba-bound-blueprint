@@ -2,19 +2,19 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useEffect, useState, useRef } from 'react';
 
 const earlyCerts = [
-  '/certificates/certifications/marketing.jpeg',
-  '/certificates/certifications/entrepreneurship1.jpeg',
-  '/certificates/certifications/entrepreneurship2.jpeg',
+  '/certificates/CourseEra/2016-IntroToMarketingFromWharton.jpg',
+  '/certificates/CourseEra/2016-Entrepreneurship1FromWharton.jpg',
+  '/certificates/CourseEra/2016-Entrepreneurship2FromWharto.jpg'
 ];
 
 const midCerts = [
-  '/certificates/certifications/ml.jpeg',
+  '/certificates/CourseEra/2024-MLFromStanford.jpg',
 ];
 
 const advancedCerts = [
-  '/certificates/certifications/dataengineering.jpeg',
-  '/certificates/certifications/etl.jpeg',
-  '/certificates/certifications/springboot.jpeg',
+  '/certificates/CourseEra/2025-DataEngFromDeepLearning.jpg',
+  '/certificates/CourseEra/2025-ETLfromDeepLearning.jpg'
+  '/certificates/CourseEra/2025-SpringBootFromaPackt.jpg'
 ];
 
 const CertificationCard = ({ title, certs }: { title: string; certs: string[] }) => {
