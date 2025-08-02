@@ -29,7 +29,7 @@ const schoolCertificates = [
 ];
 
 const afterHighSchoolCertificates = [
-  '/certificates/after-high-school/cert1.jpeg',
+  '/certificates/afterschool/NASA.jpeg',
   '/certificates/after-high-school/cert2.jpeg'
 ];
 
