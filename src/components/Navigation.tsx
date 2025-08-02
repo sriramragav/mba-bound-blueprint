@@ -7,6 +7,7 @@ const navItems = [
   { label: 'Internships', href: '#internships' },
   { label: 'Projects', href: '#projects' },
   { label: 'Awards', href: '#awards' },
+  { label: 'Certifications', href: '#certifications' },
   { label: 'Leadership', href: '#leadership' },
   { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
