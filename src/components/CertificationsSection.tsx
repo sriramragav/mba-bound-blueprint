@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 const earlyCerts = [
   '/certificates/CourseEra/2016-IntroToMarketingFromWharton.jpg',
   '/certificates/CourseEra/2016-Entrepreneurship1FromWharton.jpg',
-  '/certificates/CourseEra/2016-Entrepreneurship2FromWharton.jpg'
+  '/certificates/CourseEra/2019-Entrepreneurship2FromWharto.jpg'
 ];
 
 const midCerts = [
