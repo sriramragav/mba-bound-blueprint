@@ -54,13 +54,12 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-12 bg-gradient-subtle scroll-mt-16">
+    <section id="skills" className="py-12 bg-background scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4 relative section-divider pb-4">
             Skills & Technologies
           </h2>
-          <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto" />
           <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
             Technical expertise spanning full-stack development, cloud technologies, and business applications
           </p>

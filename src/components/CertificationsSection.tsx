@@ -146,11 +146,10 @@ const CertificationsSection = () => {
   }, []);
 
   return (
-    <section id="certifications" className="py-12 bg-background scroll-mt-16">
+    <section id="certifications" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-3">Certifications</h2>
-          <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto mb-4" />
+          <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">Certifications</h2>
           <p className="text-base text-muted-foreground max-w-3xl mx-auto">
             A journey in learning – from early curiosity to technical depth.
           </p>

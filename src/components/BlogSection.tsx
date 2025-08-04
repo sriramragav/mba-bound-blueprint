@@ -32,14 +32,13 @@ const curatedBlogs = [
 
 const BlogSection = () => {
   return (
-    <section id="blog" className="py-12 bg-background scroll-mt-16">
+    <section id="blog" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4 relative section-divider pb-4">
             Personal Writings
           </h2>
-          <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto" />
           <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
             These blog entries were written by me when I was just a teenager—well before business school was on my radar.
             Candid, raw, and honest, they reveal my reflections on society, meaning, and personal values.

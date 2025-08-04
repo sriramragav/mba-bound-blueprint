@@ -34,10 +34,9 @@ const ContactSection = () => {
     <section id="contact" className="py-12 bg-background scroll-mt-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4 relative section-divider pb-4">
             Let's Connect
           </h2>
-          <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto" />
           <p className="text-xl text-muted-foreground mt-6">
             Open to opportunities, collaborations, and meaningful conversations
           </p>

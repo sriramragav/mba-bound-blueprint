@@ -62,10 +62,9 @@ const LeadershipSection = () => {
     <section id="leadership" className="py-12 bg-background scroll-mt-16">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-foreground mb-4">
+      <h2 className="text-4xl font-bold text-foreground mb-4 relative section-divider pb-4">
         Leadership & Impact
       </h2>
-      <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto" />
       <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
         Driving positive change through technology, teamwork, and community engagement
       </p>
