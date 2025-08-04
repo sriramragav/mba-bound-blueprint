@@ -4,14 +4,14 @@ import { useEffect, useState } from 'react';
 const earlyCerts = [
   '/certificates/CourseEra/2016-IntroToMarketingFromWharton.jpg',
   '/certificates/CourseEra/2016-Entrepreneurship1FromWharton.jpg',
-  '/certificates/CourseEra/2019-Entrepreneurship2FromWharto.jpg',
+  '/certificates/CourseEra/2019-Entrepreneurship2FromWharto.jpg'
 ];
 
 const laterCerts = [
   '/certificates/CourseEra/2024-MLFromStanford.jpg',
   '/certificates/CourseEra/2025-DataEngFromDeepLearning.jpg',
   '/certificates/CourseEra/2025-ETLfromDeepLearning.jpg',
-  '/certificates/CourseEra/2025-SpringBootFromaPackt.jpg',
+  '/certificates/CourseEra/2025-SpringBootFromaPackt.jpg'
 ];
 
 // Preload all certificate images
@@ -25,7 +25,6 @@ const preloadImages = (certGroups: string[][]) => {
 const CertificationCard = ({ title, certs }: { title: string; certs: string[] }) => {
   const [index, setIndex] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [showHint, setShowHint] = useState(true);
 
   const next = () => {
     if (index < certs.length - 1) {
@@ -33,18 +32,12 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
       setIndex(index + 1);
     }
   };
-
   const prev = () => {
     if (index > 0) {
       setLoading(true);
       setIndex(index - 1);
     }
   };
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowHint(false), 4000);
-    return () => clearTimeout(timer);
-  }, []);
 
   const buttonStyle = (disabled: boolean) =>
     `text-lg font-bold px-2 ${disabled ? 'text-muted-foreground opacity-50 cursor-not-allowed' : 'text-primary'}`;
@@ -63,30 +56,27 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
             </div>
           )}
 
-          {/* Zoom Hint on Mobile */}
-          {showHint && !loading && (
-            <div className="absolute bottom-1 right-1 bg-black/60 text-white text-[10px] px-2 py-[2px] rounded pointer-events-none z-10 transition-opacity duration-1000">
-              Tap to Zoom 🔍
-            </div>
-          )}
-
           <img
             src={certs[index]}
             alt={`Certificate ${index + 1}`}
-            onClick={() => alert('Open lightbox here')}
-            className={`cursor-zoom-in transition-all duration-500 ease-in-out transform ${
+            className={`transition-all duration-500 ease-in-out transform ${
               loading ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
-            } max-h-full max-w-full object-contain`}
+            } max-h-full max-w-full object-contain cursor-zoom-in`}
             onLoad={() => setLoading(false)}
+            onClick={() => console.log('Lightbox would open here')}
           />
+
+          {/* Mobile visual cue */}
+          <div className="absolute bottom-2 right-2 text-white bg-black bg-opacity-50 rounded px-2 py-1 text-xs pointer-events-none block sm:hidden">
+            Tap to zoom
+          </div>
         </div>
 
-        {/* Navigation */}
-        <div className="flex justify-center items-center mt-4 space-x-4 text-sm">
+        <div className="flex justify-center items-center gap-2 mt-4 text-sm">
           <button onClick={prev} className={buttonStyle(index === 0)} disabled={index === 0}>
             &lt;
           </button>
-          <span className="text-xs text-muted-foreground">
+          <span className="text-muted-foreground text-xs">
             {index + 1} of {certs.length}
           </span>
           <button onClick={next} className={buttonStyle(index === certs.length - 1)} disabled={index === certs.length - 1}>
