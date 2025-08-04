@@ -186,14 +186,14 @@ const AwardsSection = () => {
                   className={buttonStyle(afterIndex === 0)}
                   disabled={afterIndex === 0}
                 >
-                  ← Prev
+                  <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={nextAfterImage}
                   className={buttonStyle(afterIndex === afterHighSchoolCertificates.length - 1)}
                   disabled={afterIndex === afterHighSchoolCertificates.length - 1}
                 >
-                  Next →
+                  <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
             </CardContent>
