@@ -18,19 +18,19 @@ All colors MUST be HSL for consistency across light/dark modes.
     --popover-foreground: 215 25% 15%;
 
     /* Indigo-focused primary colors - Calm & Modern */
-    --primary: 231 48% 48%;
+    --primary: 231 48% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 231 100% 65%;
+    --primary-glow: 231 60% 68%;
 
-    /* Secondary - Refined Gray */
-    --secondary: 215 16% 97%;
+    /* Secondary - Refined Gray with subtle indigo tint */
+    --secondary: 225 16% 97%;
     --secondary-foreground: 215 25% 15%;
 
-    --muted: 215 16% 97%;
+    --muted: 225 16% 97%;
     --muted-foreground: 215 13% 65%;
 
-    /* Accent - Complementary Indigo for highlights */
-    --accent: 231 48% 48%;
+    /* Accent - Slightly lighter indigo for variety */
+    --accent: 231 55% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,23 +38,23 @@ All colors MUST be HSL for consistency across light/dark modes.
 
     --border: 215 12% 92%;
     --input: 215 12% 92%;
-    --ring: 231 48% 48%;
+    --ring: 231 48% 52%;
 
     /* Custom portfolio colors */
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
     
     /* Gradients for modern tech feel */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(231 100% 70%));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(215 20% 98%));
-    --gradient-text: linear-gradient(135deg, hsl(231 48% 48%), hsl(231 100% 65%));
-    --gradient-tinted: linear-gradient(180deg, hsl(231 30% 98%), hsl(var(--background)));
+    --gradient-primary: linear-gradient(135deg, hsl(231 48% 52%), hsl(231 60% 68%));
+    --gradient-accent: linear-gradient(135deg, hsl(231 55% 60%), hsl(231 65% 72%));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(225 20% 98%));
+    --gradient-text: linear-gradient(135deg, hsl(231 48% 52%), hsl(231 60% 68%));
+    --gradient-tinted: linear-gradient(180deg, hsl(231 25% 98%), hsl(var(--background)));
     
     /* Shadows for depth */
-    --shadow-primary: 0 10px 40px -10px hsl(var(--primary) / 0.3);
-    --shadow-accent: 0 10px 40px -10px hsl(var(--accent) / 0.3);
-    --shadow-card: 0 4px 20px -2px hsl(215 25% 15% / 0.1);
+    --shadow-primary: 0 10px 40px -10px hsl(231 48% 52% / 0.25);
+    --shadow-accent: 0 10px 40px -10px hsl(231 55% 60% / 0.25);
+    --shadow-card: 0 4px 20px -2px hsl(215 25% 15% / 0.08);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -80,33 +80,33 @@ All colors MUST be HSL for consistency across light/dark modes.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 225 20% 6%;
+    --foreground: 225 15% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 225 20% 6%;
+    --card-foreground: 225 15% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 225 20% 6%;
+    --popover-foreground: 225 15% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 231 55% 75%;
+    --primary-foreground: 225 20% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 225 15% 15%;
+    --secondary-foreground: 225 15% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 225 15% 15%;
+    --muted-foreground: 225 10% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 231 60% 70%;
+    --accent-foreground: 225 20% 8%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 225 15% 20%;
+    --input: 225 15% 20%;
+    --ring: 231 55% 75%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
