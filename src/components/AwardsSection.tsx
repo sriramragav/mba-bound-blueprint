@@ -180,7 +180,8 @@ const AwardsSection = () => {
                 </div>
               </div>
 
-              <div className="flex justify-between mt-2">
+              /*<div className="flex justify-between mt-2">*/
+              <div className="flex justify-center items-center gap-4 mt-4">  
                 <button
                   onClick={prevAfterImage}
                   className={buttonStyle(afterIndex === 0)}
