@@ -17,16 +17,17 @@ const advancedCerts = [
   '/certificates/CourseEra/2025-SpringBootFromaPackt.jpg'
 ];
 
+// Preload all certificate images
+const preloadImages = (certGroups: string[][]) => {
+  certGroups.flat().forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
+
 const CertificationCard = ({ title, certs }: { title: string; certs: string[] }) => {
   const [index, setIndex] = useState(0);
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    certs.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, [certs]);
 
   const next = () => {
     if (index < certs.length - 1) {
@@ -45,8 +46,8 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
     `text-xs hover:underline ${disabled ? 'text-muted-foreground opacity-50 cursor-not-allowed' : 'text-primary'}`;
 
   return (
-    <Card className="text-center group hover:shadow-primary transition-all duration-300">
-      <CardContent className="p-4">
+    <Card className="text-center group hover:shadow-primary transition-all duration-300 h-full flex flex-col justify-between">
+      <CardContent className="p-4 flex flex-col h-full">
         <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
           <span>{title}</span>
           <span className="text-xs text-muted-foreground">
@@ -54,31 +55,28 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
           </span>
         </div>
 
-        <div className="relative h-64 overflow-y-auto rounded border hover:scrollbar-thin hover:scrollbar-thumb-muted scrollbar-thumb-rounded">
-          <div className="w-full aspect-[3/2] relative rounded overflow-hidden">
-            {loading && (
-              <div className="absolute inset-0 flex items-center justify-center bg-background/70 z-10">
-                <div className="animate-spin h-6 w-6 border-2 border-t-transparent border-primary rounded-full" />
-              </div>
-            )}
-            <img
-              src={certs[index]}
-              alt={`Certificate ${index + 1}`}
-              className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
-                loading ? 'opacity-0' : 'opacity-100'
-              }`}
-              onLoad={() => setLoading(false)}
-            />
-          </div>
+        <div className="relative aspect-[4/3] w-full rounded border flex items-center justify-center bg-muted overflow-hidden">
+          {loading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-background/70 z-10">
+              <div className="animate-spin h-6 w-6 border-2 border-t-transparent border-primary rounded-full" />
+            </div>
+          )}
+          <img
+            src={certs[index]}
+            alt={`Certificate ${index + 1}`}
+            className={`transition-all duration-500 ease-in-out transform ${
+              loading ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+            } max-h-full max-w-full object-contain`}
+            onLoad={() => setLoading(false)}
+          />
         </div>
 
-        <div className="flex justify-between items-center mt-2">
+        <div className="flex justify-between items-center mt-4">
           <button onClick={prev} className={buttonStyle(index === 0)} disabled={index === 0}>
             Prev
           </button>
-          <div className="text-xs text-muted-foreground">Manual</div>
           <button onClick={next} className={buttonStyle(index === certs.length - 1)} disabled={index === certs.length - 1}>
-            Next 
+            Next
           </button>
         </div>
       </CardContent>
@@ -87,6 +85,10 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
 };
 
 const CertificationsSection = () => {
+  useEffect(() => {
+    preloadImages([earlyCerts, midCerts, advancedCerts]);
+  }, []);
+
   return (
     <section id="certifications" className="py-12 bg-background scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,7 +100,7 @@ const CertificationsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           <CertificationCard title="Early Curiosity (2016)" certs={earlyCerts} />
           <CertificationCard title="Foundation to Specialization (2024)" certs={midCerts} />
           <CertificationCard title="Technical Depth (2025)" certs={advancedCerts} />
