@@ -7,11 +7,8 @@ const earlyCerts = [
   '/certificates/CourseEra/2019-Entrepreneurship2FromWharto.jpg'
 ];
 
-const midCerts = [
-  '/certificates/CourseEra/2024-MLFromStanford.jpg'
-];
-
-const advancedCerts = [
+const laterCerts = [
+  '/certificates/CourseEra/2024-MLFromStanford.jpg',
   '/certificates/CourseEra/2025-DataEngFromDeepLearning.jpg',
   '/certificates/CourseEra/2025-ETLfromDeepLearning.jpg',
   '/certificates/CourseEra/2025-SpringBootFromaPackt.jpg'
@@ -35,6 +32,7 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
       setIndex(index + 1);
     }
   };
+
   const prev = () => {
     if (index > 0) {
       setLoading(true);
@@ -42,17 +40,14 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
     }
   };
 
-  const buttonStyle = (disabled: boolean) =>
-    `text-xs hover:underline ${disabled ? 'text-muted-foreground opacity-50 cursor-not-allowed' : 'text-primary'}`;
+  const iconButtonStyle = (disabled: boolean) =>
+    `text-lg font-bold px-2 ${disabled ? 'text-muted-foreground opacity-50 cursor-not-allowed' : 'text-primary hover:text-accent-foreground'}`;
 
   return (
     <Card className="text-center group hover:shadow-primary transition-all duration-300 h-full flex flex-col justify-between">
       <CardContent className="p-4 flex flex-col h-full">
         <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
           <span>{title}</span>
-          <span className="text-xs text-muted-foreground">
-            {index + 1} of {certs.length}
-          </span>
         </div>
 
         <div className="relative aspect-[4/3] w-full rounded border flex items-center justify-center bg-muted overflow-hidden">
@@ -71,12 +66,15 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
           />
         </div>
 
-        <div className="flex justify-between items-center mt-4">
-          <button onClick={prev} className={buttonStyle(index === 0)} disabled={index === 0}>
-            Prev
+        <div className="flex justify-center items-center gap-4 mt-4">
+          <button onClick={prev} className={iconButtonStyle(index === 0)} disabled={index === 0}>
+            &lt;
           </button>
-          <button onClick={next} className={buttonStyle(index === certs.length - 1)} disabled={index === certs.length - 1}>
-            Next
+          <span className="text-xs text-muted-foreground">
+            {index + 1} of {certs.length}
+          </span>
+          <button onClick={next} className={iconButtonStyle(index === certs.length - 1)} disabled={index === certs.length - 1}>
+            &gt;
           </button>
         </div>
       </CardContent>
@@ -86,7 +84,7 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
 
 const CertificationsSection = () => {
   useEffect(() => {
-    preloadImages([earlyCerts, midCerts, advancedCerts]);
+    preloadImages([earlyCerts, laterCerts]);
   }, []);
 
   return (
@@ -96,14 +94,13 @@ const CertificationsSection = () => {
           <h2 className="text-3xl font-bold text-foreground mb-3">Certifications</h2>
           <div className="w-16 h-1 bg-gradient-primary rounded-full mx-auto mb-4" />
           <p className="text-base text-muted-foreground max-w-3xl mx-auto">
-            A journey in learning - from early curiosity to technical depth.
+            A journey in learning – from early curiosity to technical depth.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          <CertificationCard title="Early Curiosity (2016)" certs={earlyCerts} />
-          <CertificationCard title="Foundation to Specialization (2024)" certs={midCerts} />
-          <CertificationCard title="Technical Depth (2025)" certs={advancedCerts} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <CertificationCard title="Early Years: 12 – 16" certs={earlyCerts} />
+          <CertificationCard title="Later Years: 19+" certs={laterCerts} />
         </div>
       </div>
     </section>
