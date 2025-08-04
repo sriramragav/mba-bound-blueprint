@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 const earlyCerts = [
   '/certificates/CourseEra/2016-IntroToMarketingFromWharton.jpg',
   '/certificates/CourseEra/2016-Entrepreneurship1FromWharton.jpg',
-  '/certificates/CourseEra/2016-Entrepreneurship2FromWharto.jpg'
+  '/certificates/CourseEra/2016-Entrepreneurship2FromWharton.jpg'
 ];
 
 const midCerts = [
-  '/certificates/CourseEra/2016-IntroToMarketingFromWharton.jpg'
+  '/certificates/CourseEra/2024-MLFromStanford.jpg'
 ];
 
 const advancedCerts = [
@@ -51,7 +51,7 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
         <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
           <span>{title}</span>
           <span className="text-xs text-muted-foreground">
-            Certificate {index + 1} of {certs.length}
+            {index + 1} of {certs.length}
           </span>
         </div>
 
