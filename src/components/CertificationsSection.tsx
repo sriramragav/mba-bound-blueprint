@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 const earlyCerts = [
   '/certificates/CourseEra/2016-IntroToMarketingFromWharton.jpg',
@@ -20,8 +20,6 @@ const advancedCerts = [
 const CertificationCard = ({ title, certs }: { title: string; certs: string[] }) => {
   const [index, setIndex] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [isAutoplaying, setIsAutoplaying] = useState(true);
-  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     certs.forEach((src) => {
@@ -30,20 +28,6 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
     });
   }, [certs]);
 
-  useEffect(() => {
-    if (isAutoplaying) {
-      autoplayRef.current = setInterval(() => {
-        setIndex((prev) => (prev < certs.length - 1 ? prev + 1 : 0));
-        setLoading(true);
-      }, 8000);
-    } else {
-      clearInterval(autoplayRef.current!);
-    }
-
-    return () => clearInterval(autoplayRef.current!);
-  }, [isAutoplaying, certs.length]);
-
-  const toggleAutoplay = () => setIsAutoplaying((prev) => !prev);
   const next = () => {
     if (index < certs.length - 1) {
       setLoading(true);
@@ -92,9 +76,7 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
           <button onClick={prev} className={buttonStyle(index === 0)} disabled={index === 0}>
             Prev
           </button>
-          <button onClick={toggleAutoplay} className="text-xs text-muted-foreground hover:underline">
-            {isAutoplaying ? 'Pause' : 'Resume'}
-          </button>
+          <div className="text-xs text-muted-foreground">Manual</div>
           <button onClick={next} className={buttonStyle(index === certs.length - 1)} disabled={index === certs.length - 1}>
             Next 
           </button>
