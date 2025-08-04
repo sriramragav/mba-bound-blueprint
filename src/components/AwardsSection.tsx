@@ -1,6 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { useEffect, useState, useRef } from 'react';
-import { Pause, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const schoolCertificates = Array.from({ length: 24 }, (_, i) => `/certificates/school/cert${i + 1}.jpeg`);
 const afterHighSchoolCertificates = [
@@ -121,32 +120,21 @@ const AwardsSection = () => {
                   onClick={prevSchoolImage}
                   className={buttonStyle(schoolIndex === 0)}
                   disabled={schoolIndex === 0}
-                  aria-label="Previous"
                 >
-                  <ChevronLeft className="w-5 h-5" />
+                  ← Prev
                 </button>
-              
-                {/* Autoplay Toggle Button */}
                 <button
                   onClick={toggleAutoplay}
-                  className="text-muted-foreground hover:text-primary transition"
-                  aria-label={isAutoplaying ? 'Pause autoplay' : 'Resume autoplay'}
+                  className="text-xs text-muted-foreground hover:underline"
                 >
-                  {isAutoplaying ? (
-                    <Pause className="w-5 h-5" />
-                  ) : (
-                    <Play className="w-5 h-5" />
-                  )}
+                  {isAutoplaying ? 'Pause' : 'Resume'}
                 </button>
-              
-                {/* Next Button */}
                 <button
                   onClick={nextSchoolImage}
                   className={buttonStyle(schoolIndex === schoolCertificates.length - 1)}
                   disabled={schoolIndex === schoolCertificates.length - 1}
-                  aria-label="Next"
                 >
-                  <ChevronRight className="w-5 h-5" />
+                  Next →
                 </button>
               </div>
               </div>
