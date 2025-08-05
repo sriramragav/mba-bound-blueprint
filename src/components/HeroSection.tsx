@@ -121,7 +121,7 @@ const HeroSection = () => {
           {/* Cartoon Sam Illustration */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-end">
             <img
-              src="/avatar/hero-sam.png"
+              src="/avatar/hero.jpg"
               alt="Cartoon Samyuctaa waving"
               className="w-64 md:w-80 lg:w-96 max-w-full h-auto"
               loading="lazy"
