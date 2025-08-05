@@ -50,12 +50,22 @@ const HeroSection = () => {
         </div>
       )}
 
-      {/* Main Content */}
+      {/* Main Content with Image on Left */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-          
-          {/* Text Block */}
-          <div className="text-center md:text-left w-full md:w-1/2">
+
+          {/* Cartoon Sam on Left */}
+          <div className="w-full md:w-1/2 flex justify-center md:justify-start md:items-end">
+            <img
+              src="/hero.jpg"
+              alt="Cartoon Samyuctaa waving"
+              className="w-40 md:w-48 lg:w-56 max-w-full h-auto mt-4 md:mt-0"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Main Text Block */}
+          <div className="text-center md:text-left w-full md:w-2/3 md:pl-8">
             {/* Title */}
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="gradient-text">Samyuctaa Sriram</span>
@@ -116,16 +126,6 @@ const HeroSection = () => {
                 <span>Leader in Training</span>
               </div>
             </div>
-          </div>
-
-          {/* Cartoon Sam Illustration */}
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-            <img
-              src="/avatar/hero.jpg"
-              alt="Cartoon Samyuctaa waving"
-              className="w-64 md:w-80 lg:w-96 max-w-full h-auto"
-              loading="lazy"
-            />
           </div>
         </div>
       </div>
