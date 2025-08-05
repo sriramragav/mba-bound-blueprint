@@ -151,7 +151,7 @@ const CertificationsSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">Certifications</h2>
           <p className="text-base text-muted-foreground max-w-3xl mx-auto">
-            A journey in learning – from early curiosity to technical depth.
+            Where I kept showing up to learn more.
           </p>
         </div>
 
