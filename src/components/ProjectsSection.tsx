@@ -62,9 +62,8 @@ const ProjectsSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-2 relative section-divider pb-4">Projects</h2>
-          {/* Introductory Quote */}
-          <p className="text-sm italic text-muted-foreground mt-2">
-            “Where I showed up to build on my own.”
+          <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
+            "Where I showed up to build on my own."
           </p>
         </div>
 
