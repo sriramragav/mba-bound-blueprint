@@ -34,8 +34,18 @@ const ExperienceSection = () => {
       title: "Data Analyst Intern",
       company: "GR Network",
       location: "Chennai, India",
-      duration: "March - April 2024",
-      description: "Performed Data Mining and Analysis, Applied Machine Learning and Predictive Models for Student Performane Forecasting.",
+      duration: "Mar - Apr 2024",
+      description: (
+        <div className="h-64 overflow-y-auto pr-2 space-y-2">
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Performed data mining and analysis to identify trends in student performance.</li>
+            <li>Developed interactive dashboards for monitoring academic progress and risk indicators.</li>
+            <li>Applied machine learning and predictive models to forecast student outcomes.</li>
+            <li>Improved student retention through data-driven early warning systems.</li>
+            <li>Enabled personalized learning paths and targeted interventions based on performance analytics.</li>
+          </ul>
+        </div>
+      ),
       skills: ["Python", "SQL", "Tableau", "Excel", "Power BI"]
     },
     {
@@ -43,7 +53,8 @@ const ExperienceSection = () => {
       company: "The Internet Generation",
       location: "Chennai, India",
       duration: "Sep - Oct 2023",
-      description: "Collaborated with cross-functional teams, gathered and analyzed data, trained LLM on creative queries; implemented sentiment analysis resulting in a reduction in time spent on updating training data.",
+      description:
+        "Collaborated with cross-functional teams, gathered and analyzed data, trained LLM on creative queries; implemented sentiment analysis resulting in a reduction in time spent on updating training data.",
       skills: ["Python", "SQL", "Tableau", "Excel", "Power BI"]
     }
   ];
