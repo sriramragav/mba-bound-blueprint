@@ -27,13 +27,13 @@ const About = () => {
           {/* Right Column: Description */}
           <div className="space-y-4 text-[15px] text-muted-foreground leading-relaxed">
             <p>
-              I’m a final-year Computer Science student at CEG who enjoys solving messy, cross-disciplinary problems—technical, human, or somewhere in between.
+              I was a child of energy and expression — from frog races and karate medals to singing contests and relay races, I loved to explore everything outside the classroom. But in Grade VII, I made a quiet decision: to direct that same energy into academics. At the time, I was in the bottom third of my class. By Class X, I graduated sixth in my school.
             </p>
             <p>
-              I’ve led student communities, built a mentoring app that’s actually being used, and spent the summer tackling real-world production issues during an internship at Visa. That experience confirmed I love working where engineering, product, and strategy overlap.
+              Since then, I’ve kept building — not just marks, but mindset. Today, I’m a computer science student at one of India’s top engineering colleges, with a CGPA of 8.65, leadership roles on campus, and a “Must Hire” rating from my Visa internship.
             </p>
             <p>
-              Though I’ve spent most of my life in India, I’m a U.S. citizen gearing up for a return—hopefully as an MBA student in a few years. I’m most at home where logic meets empathy (and deadlines meet coffee).
+              This portfolio is a map of that journey — from early spark to steady fire, from joyful curiosity to focused intent.
             </p>
           </div>
         </div>
