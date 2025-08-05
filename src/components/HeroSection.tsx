@@ -52,8 +52,10 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative z-10 text-center w-full max-w-4xl mx-auto">
-          <div>
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+          
+          {/* Text Block */}
+          <div className="text-center md:text-left w-full md:w-1/2">
             {/* Title */}
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="gradient-text">Samyuctaa Sriram</span>
@@ -62,56 +64,68 @@ const HeroSection = () => {
               </span>
             </h1>
             <br />
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto md:mx-0 leading-relaxed">
               <em>"Eighty percent of success is showing up."</em>
               <br />– Woody Allen
             </p>
-          </div>
 
-          {/* Buttons */}
-           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <a href="/Samyuctaa_Resume.pdf" download="Samyuctaa_Resume.pdf">
-              <Button variant="default" size="lg" className="group">
-                <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                Download Resume
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center pt-4">
+              <a href="/Samyuctaa_Resume.pdf" download="Samyuctaa_Resume.pdf">
+                <Button variant="default" size="lg" className="group">
+                  <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+                  Download Resume
+                </Button>
+              </a>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => {
+                  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                  const isInApp = /FBAN|FBAV|Instagram|Line|Twitter|MicroMessenger|LinkedInApp|Edge/i.test(navigator.userAgent);
+                  if (isMobile || isInApp) {
+                    window.open('/Samyuctaa_Resume.pdf', '_blank');
+                  } else {
+                    setIsModalOpen(true);
+                  }
+                }}
+              >
+                View Resume
               </Button>
-            </a>
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={() => {
-              const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-              const isInApp = /FBAN|FBAV|Instagram|Line|Twitter|MicroMessenger|LinkedInApp|Edge/i.test(navigator.userAgent);
-              if (isMobile || isInApp) {
-                window.open('/Samyuctaa_Resume.pdf', '_blank');
-              } else {
-                setIsModalOpen(true);
-              }
-            }}
-          >
-            View Resume
-          </Button></div>
-          {/* Arrow Down */}
-          <div className="mt-8 flex justify-center">
-            <button
-              onClick={scrollToAbout}
-              className="text-primary hover:text-foreground transition"
-              aria-label="Scroll to About"
-            >
-              <ArrowDown className="w-6 h-6 animate-bounce" />
-            </button>
+            </div>
+
+            {/* Arrow Down */}
+            <div className="mt-8 flex justify-center md:justify-start">
+              <button
+                onClick={scrollToAbout}
+                className="text-primary hover:text-foreground transition"
+                aria-label="Scroll to About"
+              >
+                <ArrowDown className="w-6 h-6 animate-bounce" />
+              </button>
+            </div>
+
+            {/* Status */}
+            <div className="flex flex-wrap justify-center md:justify-start items-center gap-6 text-sm text-muted-foreground pt-8">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
+                <span>Engineer in Progress</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-primary rounded-full" />
+                <span>Leader in Training</span>
+              </div>
+            </div>
           </div>
 
-          {/* Status */}
-          <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground pt-8">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
-              <span>Engineer in Progress</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-primary rounded-full" />
-              <span>Leader in Training</span>
-            </div>
+          {/* Cartoon Sam Illustration */}
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+            <img
+              src="/avatar/hero-sam.png"
+              alt="Cartoon Samyuctaa waving"
+              className="w-64 md:w-80 lg:w-96 max-w-full h-auto"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
