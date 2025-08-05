@@ -53,29 +53,35 @@ const About = () => {
 
         {/* Full-width Cards Section */}
         <div className="pt-12">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 max-w-6xl mx-auto">
             <Card className="text-center card-enhanced">
               <CardContent className="p-4">
-                <div className="text-xl font-bold text-primary">4th Year</div>
-                <div className="text-xs text-muted-foreground">CS Student</div>
+                <div className="text-base text-muted-foreground mb-1">Production App</div>
+                <div className="text-xl font-bold text-primary">Deployed at Visa</div>
               </CardContent>
             </Card>
             <Card className="text-center card-enhanced">
               <CardContent className="p-4">
-                <div className="text-xl font-bold text-accent">5</div>
-                <div className="text-xs text-muted-foreground">Languages Spoken</div>
+                <div className="text-base text-muted-foreground mb-1">Dual Identity</div>
+                <div className="text-xl font-bold text-accent">US Citizen • Indian Resident</div>
               </CardContent>
             </Card>
             <Card className="text-center card-enhanced">
               <CardContent className="p-4">
-                <div className="text-xl font-bold text-primary">0</div>
-                <div className="text-xs text-muted-foreground">Visa Applications (US)</div>
+                <div className="text-base text-muted-foreground mb-1">Internships Completed</div>
+                <div className="text-xl font-bold text-primary">3</div>
               </CardContent>
             </Card>
             <Card className="text-center card-enhanced">
               <CardContent className="p-4">
-                <div className="text-xl font-bold text-accent">1</div>
-                <div className="text-xs text-muted-foreground">Mentoring App (Shipped!)</div>
+                <div className="text-base text-muted-foreground mb-1">Currently</div>
+                <div className="text-xl font-bold text-accent">Final Year Student</div>
+              </CardContent>
+            </Card>
+            <Card className="text-center card-enhanced">
+              <CardContent className="p-4">
+                <div className="text-base text-muted-foreground mb-1">Languages Spoken</div>
+                <div className="text-xl font-bold text-primary">5</div>
               </CardContent>
             </Card>
           </div>
