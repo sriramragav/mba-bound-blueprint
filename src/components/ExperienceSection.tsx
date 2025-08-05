@@ -9,13 +9,31 @@ const ExperienceSection = () => {
       company: "Visa",
       location: "Bengaluru, India",
       duration: "Jun - Aug 2025",
-      description: "Designated as a 'Must Hire' by her Director for outstanding performance. Entrusted with production code access and solved critical real-world issues — a rare responsibility for an intern.",
+      description: (
+        <div className="h-64 overflow-y-auto pr-2 space-y-2">
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Built a custom security issue dashboard using multiple APIs with advanced filtering, partial-text search, CSV/JSON export, and visual analytics for faster issue triage.</li>
+            <li>Re-designed Splunk email logging and query tracking for 16 common errors, improving debugging across both production and non-production environments.</li>
+            <li>Developed an interactive log analysis dashboard:
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Parses Splunk logs into Mermaid flow diagrams and summarizes key fields.</li>
+                <li>Includes an NLP-powered log retriever, log classifier with dropdowns, and customizable GenAI queries for quick analysis.</li>
+                <li>Supports loading multiple logs within a session.</li>
+              </ul>
+            </li>
+            <li>Proposed a patent idea on optimizing semantic prompting for LLMs in log analysis.</li>
+            <li>Explored multi-agent architectures and AST-based RAG models to enhance code understanding and trace execution chains.</li>
+            <li>Contributed to team documentation (FX New Member Onboarding Wiki) and supported testing of internal tools (React19 portal).</li>
+            <li>Resolved 18 production bugs and supported data migration between SQL and MySQL environments.</li>
+          </ul>
+        </div>
+      ),
       skills: ["Java", "Spring Boot", "REST APIs", "Microservices", "PostgreSQL"]
     },
     {
       title: "Data Analyst Intern",
       company: "GR Network",
-      location: "Chennai, India", 
+      location: "Chennai, India",
       duration: "March - April 2024",
       description: "Performed Data Mining and Analysis, Applied Machine Learning and Predictive Models for Student Performane Forecasting.",
       skills: ["Python", "SQL", "Tableau", "Excel", "Power BI"]
@@ -23,7 +41,7 @@ const ExperienceSection = () => {
     {
       title: "Tech Intern",
       company: "The Internet Generation",
-      location: "Chennai, India", 
+      location: "Chennai, India",
       duration: "Sep - Oct 2023",
       description: "Collaborated with cross-functional teams, gathered and analyzed data, trained LLM on creative queries; implemented sentiment analysis resulting in a reduction in time spent on updating training data.",
       skills: ["Python", "SQL", "Tableau", "Excel", "Power BI"]
@@ -65,7 +83,11 @@ const ExperienceSection = () => {
                 </div>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground">
-                <p className="mb-3">{internship.description}</p>
+                <div className="mb-3">
+                  {typeof internship.description === "string"
+                    ? <p>{internship.description}</p>
+                    : internship.description}
+                </div>
                 <div className="flex flex-wrap gap-1">
                   {internship.skills.map((skill, skillIndex) => (
                     <Badge key={skillIndex} variant="secondary" className="text-xs px-2 py-1">
