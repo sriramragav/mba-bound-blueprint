@@ -12,8 +12,14 @@ const About = () => {
 
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-8">
-          {/* Left Column: Image */}
-          <div className="relative">
+          {/* Left Column: Image with quote overlays */}
+          <div className="relative text-center lg:text-left">
+            {/* Top Left Quote */}
+            <p className="absolute -top-6 left-0 text-xs italic text-muted-foreground hidden lg:block">
+              “I’ve always shown up — on stage, on track, on the mat.”
+            </p>
+
+            {/* Image */}
             <div className="relative z-10">
               <img
                 src={profileImage}
@@ -21,7 +27,14 @@ const About = () => {
                 className="w-full max-w-[200px] mx-auto rounded-2xl shadow-card"
               />
             </div>
+
+            {/* Background Tint */}
             <div className="absolute top-6 left-6 w-full h-full bg-gradient-primary opacity-20 rounded-2xl -z-10" />
+
+            {/* Bottom Right Identity Note */}
+            <p className="absolute -bottom-6 right-0 text-xs italic text-muted-foreground hidden lg:block">
+              Born in the U.S. • Living in India • OCI Holder
+            </p>
           </div>
 
           {/* Right Column: Description */}
