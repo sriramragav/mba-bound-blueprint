@@ -38,7 +38,7 @@ const ContactSection = () => {
             Let's Connect
           </h2>
           <p className="text-xl text-muted-foreground mt-6">
-            Open to opportunities, collaborations, and meaningful conversations
+            Where you can show up too.
           </p>
         </div>
 
