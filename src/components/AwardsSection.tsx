@@ -92,9 +92,9 @@ const AwardsSection = () => {
           <Card className="text-center card-enhanced">
             <CardContent className="p-4">
               <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
-                <span>Roots and Wings</span>
+                <span>On Stage, On Track, On Mat</span>
                 <span className="text-xs text-muted-foreground">
-                  Certificate {schoolIndex + 1} of {schoolCertificates.length}
+                  {schoolIndex + 1} of {schoolCertificates.length}
                 </span>
               </div>
 
@@ -156,9 +156,9 @@ const AwardsSection = () => {
           <Card className="text-center card-enhanced">
             <CardContent className="p-4">
               <div className="w-full mb-2 flex justify-between items-center text-sm text-foreground font-semibold">
-                <span>Where Purpose Took Hold</span>
+                <span>At the White Board</span>
                 <span className="text-xs text-muted-foreground">
-                  Certificate {afterIndex + 1} of {afterHighSchoolCertificates.length}
+                  {afterIndex + 1} of {afterHighSchoolCertificates.length}
                 </span>
               </div>
 
