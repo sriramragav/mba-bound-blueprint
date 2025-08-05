@@ -56,22 +56,28 @@ const HeroSection = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <a href="/Samyuctaa_Resume.pdf" download="Samyuctaa_Resume.pdf">
               <Button variant="default" size="lg" className="group">
                 <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                 Download Resume
               </Button>
             </a>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => setIsModalOpen(true)}
-            >
-              View Resume
-            </Button>
-          </div>
-
+          <Button
+            variant="outline"
+            size="lg"
+            onClick={() => {
+              const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+              const isInApp = /FBAN|FBAV|Instagram|Line|Twitter|MicroMessenger|LinkedInApp|Edge/i.test(navigator.userAgent);
+              if (isMobile || isInApp) {
+                window.open('/Samyuctaa_Resume.pdf', '_blank');
+              } else {
+                setIsModalOpen(true);
+              }
+            }}
+          >
+            View Resume
+          </Button></div>
           {/* Arrow Down */}
           <div className="mt-8 flex justify-center">
             <button
