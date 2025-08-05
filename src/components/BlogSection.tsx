@@ -40,8 +40,7 @@ const BlogSection = () => {
             Personal Writings
           </h2>
           <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
-            These blog entries were written by me when I was just a teenager—well before business school was on my radar.
-            Candid, raw, and honest, they reveal my reflections on society, meaning, and personal values.
+            Where I showed up to share, when I was just a teenager—well before business school was on my radar.
           </p>
         </div>
 
