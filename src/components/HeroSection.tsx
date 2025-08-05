@@ -28,11 +28,24 @@ const HeroSection = () => {
             >
               <X className="w-6 h-6" />
             </button>
-            <iframe
-              src="/Samyuctaa_Resume.pdf"
-              title="Samyuctaa Resume"
+            <object
+              data="/Samyuctaa_Resume.pdf"
+              type="application/pdf"
               className="w-full h-full rounded-md"
-            />
+            >
+              <p className="text-center mt-4">
+                Your device does not support embedded PDFs.
+                <br />
+                <a
+                  href="/Samyuctaa_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline"
+                >
+                  Click here to open the resume in a new tab
+                </a>
+              </p>
+            </object>
           </div>
         </div>
       )}
