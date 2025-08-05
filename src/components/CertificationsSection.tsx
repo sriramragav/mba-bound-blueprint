@@ -156,8 +156,8 @@ const CertificationsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-          <CertificationCard title="Early Years: 12 – 16" certs={earlyCerts} />
-          <CertificationCard title="Later Years: 19+" certs={laterCerts} />
+          <CertificationCard title="Early Years: Ages 12 – 16" certs={earlyCerts} />
+          <CertificationCard title="Later Years: Ages 19+" certs={laterCerts} />
         </div>
       </div>
     </section>
