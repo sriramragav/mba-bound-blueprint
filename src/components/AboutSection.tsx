@@ -7,19 +7,19 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mt-2">
-          <h2 className="text-3xl font-semibold text-foreground mb-2 relative section-divider pb-4">About Me</h2>
+          <h2 className="text-3xl font-semibold text-foreground mb-2 relative section-divider pb-4">
+            About Me
+          </h2>
+          {/* Introductory Quote */}
+          <p className="text-sm italic text-muted-foreground mt-2">
+            “I’ve always shown up — on stage, on track, on the mat. I later learned to show up at the whiteboard too.”
+          </p>
         </div>
 
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-8">
-          {/* Left Column: Image with quote overlays */}
+          {/* Left Column: Image */}
           <div className="relative text-center lg:text-left">
-            {/* Top Left Quote */}
-            <p className="absolute -top-6 left-0 text-xs italic text-muted-foreground hidden lg:block">
-              “I’ve always shown up — on stage, on track, on the mat.”
-            </p>
-
-            {/* Image */}
             <div className="relative z-10">
               <img
                 src={profileImage}
@@ -31,8 +31,8 @@ const About = () => {
             {/* Background Tint */}
             <div className="absolute top-6 left-6 w-full h-full bg-gradient-primary opacity-20 rounded-2xl -z-10" />
 
-            {/* Bottom Right Identity Note */}
-            <p className="absolute -bottom-6 right-0 text-xs italic text-muted-foreground hidden lg:block">
+            {/* Citizenship Note */}
+            <p className="mt-4 text-xs italic text-muted-foreground text-center hidden md:block">
               Born in the U.S. • Living in India • OCI Holder
             </p>
           </div>
