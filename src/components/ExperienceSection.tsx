@@ -37,7 +37,7 @@ const ExperienceSection = () => {
           <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">
             Internship Experience
           </h2>
-          <p className="text-base text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
             Where I showed up to solve real-world problems.
           </p>
         </div>

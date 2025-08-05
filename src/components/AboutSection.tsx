@@ -10,9 +10,8 @@ const About = () => {
           <h2 className="text-3xl font-semibold text-foreground mb-2 relative section-divider pb-4">
             About Me
           </h2>
-          {/* Introductory Quote */}
-          <p className="text-sm italic text-muted-foreground mt-2">
-            “I’ve always shown up — on stage, on track, on the mat. I later learned to show up at the whiteboard too.”
+          <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
+            "I've always shown up — on stage, on track, on the mat. I later learned to show up at the whiteboard too."
           </p>
         </div>
 
@@ -43,7 +42,7 @@ const About = () => {
               I was a child of energy and expression — from frog races and karate medals to singing contests and relay races, I loved to explore everything outside the classroom. But in Grade VII, I made a quiet decision: to direct that same energy into academics. At the time, I was in the bottom third of my class. By Class X, I graduated sixth in my school.
             </p>
             <p>
-              Since then, I’ve kept building — not just marks, but mindset. Today, I’m a computer science student at one of India’s top engineering colleges, with a CGPA of 8.65, leadership roles on campus, and a “Must Hire” rating from my Visa internship.
+              Since then, I've kept building — not just marks, but mindset. Today, I'm a computer science student at one of India's top engineering colleges, with a CGPA of 8.65, leadership roles on campus, and a "Must Hire" rating from my Visa internship.
             </p>
             <p>
               This portfolio is a map of that journey — from early spark to steady fire, from joyful curiosity to focused intent.

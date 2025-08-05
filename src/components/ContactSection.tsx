@@ -37,7 +37,7 @@ const ContactSection = () => {
           <h2 className="text-4xl font-bold text-foreground mb-4 relative section-divider pb-4">
             Let's Connect
           </h2>
-          <p className="text-xl text-muted-foreground mt-6">
+          <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
             Where you can show up too.
           </p>
         </div>
