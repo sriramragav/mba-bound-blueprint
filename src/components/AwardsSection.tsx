@@ -83,7 +83,7 @@ const AwardsSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">Awards & Recognition</h2>
           <p className="text-base text-muted-foreground max-w-3xl mx-auto">
-            Recognition for academic excellence, leadership, and contributions to technology and community.
+            Where showing up got noticed.
           </p>
         </div>
 
