@@ -36,13 +36,18 @@ All colors MUST be HSL for consistency across light/dark modes.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 12% 92%;
-    --input: 215 12% 92%;
+    --border: 210 20% 85%;
+    --input: 210 20% 85%;
     --ring: 231 48% 52%;
 
     /* Custom portfolio colors */
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
+    
+    /* Accessible hover states */
+    --primary-hover: 231 50% 45%;
+    --muted-hover: 210 25% 20%;
+    --accent-hover: 231 58% 52%;
     
     /* Gradients for modern tech feel */
     --gradient-primary: linear-gradient(135deg, hsl(231 48% 52%), hsl(231 60% 68%));
@@ -158,9 +163,14 @@ All colors MUST be HSL for consistency across light/dark modes.
     box-shadow: var(--shadow-primary);
   }
 
-  /* Smooth link transitions */
+  /* Smooth link transitions with accessible hover */
   .link-elegant {
-    @apply relative transition-all duration-300 hover:text-primary;
+    @apply relative transition-all duration-300;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .link-elegant:hover {
+    color: hsl(var(--muted-hover));
   }
 
   .link-elegant::after {
@@ -170,6 +180,25 @@ All colors MUST be HSL for consistency across light/dark modes.
 
   .link-elegant:hover::after {
     @apply w-full;
+  }
+
+  /* Enhanced hover states for better accessibility */
+  .button-accessible-hover {
+    @apply transition-all duration-300;
+  }
+
+  .button-accessible-hover:hover {
+    background-color: hsl(var(--primary-hover));
+  }
+
+  /* Accessible navigation link hover */
+  .nav-link-hover {
+    @apply transition-colors duration-300;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .nav-link-hover:hover {
+    color: hsl(var(--muted-hover));
   }
 
   /* Tinted background section */
