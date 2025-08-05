@@ -66,7 +66,7 @@ const LeadershipSection = () => {
         Leadership & Impact
       </h2>
       <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
-        Driving positive change through technology, teamwork, and community engagement
+        Where I showed up for others too.
       </p>
     </div>
 
