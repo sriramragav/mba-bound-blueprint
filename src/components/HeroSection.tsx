@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Download, ArrowDown } from 'lucide-react';
+import { Download, ArrowDown, X } from 'lucide-react';
 
 const HeroSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
     if (aboutSection) {
@@ -11,16 +14,34 @@ const HeroSection = () => {
 
   return (
     <section
-  id="hero"
-  className="relative py-12 bg-background overflow-hidden scroll-mt-16"
+      id="hero"
+      className="relative py-12 bg-background overflow-hidden scroll-mt-16"
     >
+      {/* Modal for Viewing Resume */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+          <div className="relative bg-white rounded-xl shadow-2xl w-[90%] max-w-4xl h-[90%] p-4">
+            <button
+              className="absolute top-4 right-4 text-gray-600 hover:text-black transition"
+              onClick={() => setIsModalOpen(false)}
+              aria-label="Close Modal"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <iframe
+              src="/Samyuctaa_Resume.pdf"
+              title="Samyuctaa Resume"
+              className="w-full h-full rounded-md"
+            />
+          </div>
+        </div>
+      )}
 
-     {/* Main Content */}
+      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 text-center w-full max-w-4xl mx-auto">
-        <div>
-          {/* Title */}
           <div>
+            {/* Title */}
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="gradient-text">Samyuctaa Sriram</span>
               <span className="block text-3xl md:text-4xl text-primary font-normal mt-2">
@@ -42,16 +63,26 @@ const HeroSection = () => {
                 Download Resume
               </Button>
             </a>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => setIsModalOpen(true)}
+            >
+              View Resume
+            </Button>
           </div>
-        <div className="mt-8 flex justify-center">
-          <button
-            onClick={scrollToAbout}
-            className="text-primary hover:text-foreground transition"
-            aria-label="Scroll to About"
-          >
-            <ArrowDown className="w-6 h-6 animate-bounce" />
-          </button>
-        </div>
+
+          {/* Arrow Down */}
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={scrollToAbout}
+              className="text-primary hover:text-foreground transition"
+              aria-label="Scroll to About"
+            >
+              <ArrowDown className="w-6 h-6 animate-bounce" />
+            </button>
+          </div>
+
           {/* Status */}
           <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground pt-8">
             <div className="flex items-center gap-2">
@@ -63,7 +94,6 @@ const HeroSection = () => {
               <span>Leader in Training</span>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
