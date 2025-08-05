@@ -38,7 +38,7 @@ const ExperienceSection = () => {
             Internship Experience
           </h2>
           <p className="text-base text-muted-foreground max-w-3xl mx-auto">
-            Professional internship experiences that shaped my career journey and technical expertise.
+            Where I showed up to solve real-world problems.
           </p>
         </div>
 
