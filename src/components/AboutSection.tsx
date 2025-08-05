@@ -39,7 +39,7 @@ const About = () => {
           {/* Right Column: Description */}
           <div className="space-y-4 text-[15px] text-muted-foreground leading-relaxed">
             <p>
-              I was a child of energy and expression — from frog races and karate medals to singing contests and relay races, I loved to explore everything outside the classroom. But in Grade VII, I made a quiet decision: to direct that same energy into academics. At the time, I was in the bottom third of my class. By Class X, I graduated sixth in my school.
+              I was a child of energy and expression — from frog races and karate medals to singing contests and relay races, I loved to explore everything outside the classroom. But in Grade VII, I made a quiet decision: to direct that same energy into academics. At the time, I was in the bottom third of my class. By Class X, I graduated fifth in my school.
             </p>
             <p>
               Since then, I've kept building — not just marks, but mindset. Today, I'm a computer science student at one of India's top engineering colleges, with a CGPA of 8.65, leadership roles on campus, and a "Must Hire" rating from my Visa internship.
