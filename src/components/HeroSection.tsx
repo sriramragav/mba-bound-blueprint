@@ -29,8 +29,8 @@ const HeroSection = () => {
             </h1>
             <br />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              <em>"I forgot who I was. So I decided to become who I am."</em>
-              <br />– Hoshi Takayuki
+              <em>"Eighty percent of success is showing up."</em>
+              <br />– Woody Allen
             </p>
           </div>
 
