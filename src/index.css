@@ -9,13 +9,13 @@ All colors MUST be HSL for consistency across light/dark modes.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    --foreground: 210 25% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 210 25% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 210 25% 10%;
 
     /* Indigo-focused primary colors - Calm & Modern */
     --primary: 231 48% 52%;
@@ -24,10 +24,10 @@ All colors MUST be HSL for consistency across light/dark modes.
 
     /* Secondary - Refined Gray with subtle indigo tint */
     --secondary: 225 16% 97%;
-    --secondary-foreground: 215 25% 15%;
+    --secondary-foreground: 210 25% 17%;
 
     --muted: 225 16% 97%;
-    --muted-foreground: 215 13% 65%;
+    --muted-foreground: 210 25% 25%;
 
     /* Accent - Slightly lighter indigo for variety */
     --accent: 231 55% 60%;
