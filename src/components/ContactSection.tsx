@@ -32,7 +32,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-12 section-tinted scroll-mt-16">
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-center md:text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* header starts */}
         {/* Sam image */}
           <div className="flex justify-center w-full md:w-auto">
