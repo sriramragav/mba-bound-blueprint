@@ -63,6 +63,7 @@ const ContactSection = () => {
               Where you can show up too.
             </p>
           </div>
+        </div>
       
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {contactInfo.map((info, index) => {
