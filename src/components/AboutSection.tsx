@@ -13,9 +13,9 @@ const About = () => {
             About Me
           </h2>
           {/* Introductory Quote */}
-          <p className="text-sm italic text-muted-foreground mt-2">
-            “I’ve always shown up — on stage, on track, on the mat. I later learned to show up at the whiteboard too.”
-          </p>
+          <p className="text-lg text-muted-foreground mt-2">
+              I’ve always shown up — on stage, on track, on the mat. I later learned to show up at the whiteboard too.
+            </p>
         </div>
 
         {/* Two Column Layout */}
