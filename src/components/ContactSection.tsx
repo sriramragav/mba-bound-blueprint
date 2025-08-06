@@ -32,9 +32,9 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-12 section-tinted scroll-mt-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Sam image */}
-          <div className="flex justify-center w-full md:w-auto">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-center md:text-left">
             <img
               src="/lovable-uploads/6d3685c0-e65a-4cd2-a633-6610881b144f.png"
               alt="Sam showing project blueprints"
