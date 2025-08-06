@@ -148,13 +148,17 @@ const CertificationsSection = () => {
   return (
     <section id="certifications" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* old code here 
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">Certifications</h2>
           <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
             Where I kept showing up to learn more.
           </p>
         </div>
-
+        */}
+        {/* new code here */}
+        
+        {/* new code here ends*/}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           <CertificationCard title="Early Years: Ages 12 – 16" certs={earlyCerts} />
           <CertificationCard title="Later Years: Ages 19+" certs={laterCerts} />
