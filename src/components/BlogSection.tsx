@@ -33,7 +33,7 @@ const curatedBlogs = [
 const BlogSection = () => {
   return (
     <section id="blog" className="py-12 section-tinted scroll-mt-16">
-      
+      <div>
         {/* Header with Sam image */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-center md:text-left">
           
