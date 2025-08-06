@@ -33,6 +33,7 @@ const curatedBlogs = [
 const BlogSection = () => {
   return (
     <section id="blog" className="py-12 section-tinted scroll-mt-16">
+      {/*
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-16">
@@ -43,7 +44,34 @@ const BlogSection = () => {
             Where I showed up to share, when I was just a teenager—well before business school was on my radar.
           </p>
         </div>
+*/}
 
+        {/* Header with Sam image */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-center md:text-left">
+          
+          {/* Sam image */}
+          <div className="flex justify-center w-full md:w-auto">
+            <img
+              src="/lovable-uploads/6d3685c0-e65a-4cd2-a633-6610881b144f.png"
+              alt="Sam showing project blueprints"
+              className="h-28 w-auto"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Heading and Subtitle */}
+
+          {/* Title + Subtitle */}
+          <div className="flex flex-col justify-center items-center sm:items-start">
+            <h2 className="text-3xl font-bold text-foreground mb-1 relative after:content-[''] after:block after:h-1 after:w-24 after:bg-primary after:mt-2 after:absolute after:left-1/2 after:transform after:-translate-x-1/2">
+            Personal Writings
+            </h2>
+            <p className="text-lg text-muted-foreground mt-2">
+              Where I showed up to share, when I was just a teenager—well before business school was on my radar.
+            </p>
+          </div>
+        </div>
+      
         {/* Blog Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {curatedBlogs.map((post) => (
