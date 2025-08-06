@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Download, ArrowDown, X } from 'lucide-react';
+import { Download, ArrowDown, X, Eye } from 'lucide-react';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -82,14 +82,15 @@ const HeroSection = () => {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center pt-4">
               <a href="/Samyuctaa_Resume.pdf" download="Samyuctaa_Resume.pdf">
-                <Button variant="default" size="lg" className="group">
+                <Button variant="white" size="lg" className="group">
                   <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                   Download Resume
                 </Button>
               </a>
               <Button
-                variant="outline"
+                variant="white"
                 size="lg"
+                className="group"
                 onClick={() => {
                   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
                   const isInApp = /FBAN|FBAV|Instagram|Line|Twitter|MicroMessenger|LinkedInApp|Edge/i.test(navigator.userAgent);
@@ -100,6 +101,7 @@ const HeroSection = () => {
                   }
                 }}
               >
+                <Eye className="w-5 h-5 mr-2 group-hover:animate-pulse" />
                 View Resume
               </Button>
             </div>
