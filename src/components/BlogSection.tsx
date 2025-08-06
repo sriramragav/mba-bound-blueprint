@@ -35,7 +35,6 @@ const BlogSection = () => {
     <section id="blog" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/*
-        {/* Section Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4 relative section-divider pb-4">
             Personal Writings
@@ -44,7 +43,7 @@ const BlogSection = () => {
             Where I showed up to share, when I was just a teenager—well before business school was on my radar.
           </p>
         </div>
-*/}
+        */}
         {/* Blog Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {curatedBlogs.map((post) => (
