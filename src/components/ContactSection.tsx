@@ -33,7 +33,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+        <div className="flex justify-center mb-10">
         {/* Row Layout for Image + Title */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-10">
           
@@ -57,7 +57,7 @@ const ContactSection = () => {
             </p>
           </div>
         </div>
-
+        </div>
         {/* Contact Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {contactInfo.map((info, index) => {
