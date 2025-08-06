@@ -33,6 +33,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/*
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4 relative section-divider pb-4">
             Let's Connect
@@ -41,7 +42,9 @@ const ContactSection = () => {
             Where you can show up too.
           </p>
         </div>
+        */}
 
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {contactInfo.map((info, index) => {
             const IconComponent = info.icon;
