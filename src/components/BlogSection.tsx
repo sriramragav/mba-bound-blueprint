@@ -62,10 +62,10 @@ const BlogSection = () => {
           {/* Title + Subtitle */}
           <div className="flex flex-col justify-center items-center sm:items-start">
             <h2 className="text-3xl font-bold text-foreground mb-1 relative after:content-[''] after:block after:h-1 after:w-24 after:bg-primary after:mt-2 after:absolute after:left-1/2 after:transform after:-translate-x-1/2">
-            Projects
+            Personal Writings
             </h2>
             <p className="text-lg text-muted-foreground mt-2">
-              Where I showed up to build my own.
+              Where I showed up to share, when I was just a teenager—well before business school was on my radar.
             </p>
           </div>
         </div>
