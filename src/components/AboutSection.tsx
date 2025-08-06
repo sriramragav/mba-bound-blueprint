@@ -15,7 +15,7 @@ const About = () => {
                           I’ve always shown up — on stage, on track, on the mat. I later learned to show up at the whiteboard too.
             </p>
           </div>
-        </div>
+        
       {/*
         <div className="text-center mt-2">
           <h2 className="text-3xl font-semibold text-foreground mb-2 relative section-divider pb-4">
