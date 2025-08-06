@@ -49,8 +49,8 @@ const ContactSection = () => {
             </div>
 
             {/* Title + Subtitle */}
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl font-bold text-foreground mb-1 relative after:content-[''] after:block after:h-1 after:w-24 after:bg-primary after:mt-2 after:absolute after:left-1/2 md:after:left-1/2 after:transform after:-translate-x-1/2">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-foreground mb-1 relative after:content-[''] after:block after:h-1 after:w-24 after:bg-primary after:mt-2 after:absolute after:left-1/2 after:transform after:-translate-x-1/2">
                 Contact Me
               </h2>
               <p className="text-lg text-muted-foreground mt-2">
