@@ -60,23 +60,23 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Title Row */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
+
+        {/* Header with Sam image */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-center md:text-left">
           
-          {/* Left: Sam image */}
-          <div className="flex justify-center">
+          {/* Sam image */}
+          <div className="flex justify-center w-full md:w-auto">
             <img
               src="/lovable-uploads/6d3685c0-e65a-4cd2-a633-6610881b144f.png"
               alt="Sam showing project blueprints"
-              className="h-28 w-auto drop-shadow-[0_0_10px_rgba(0,123,255,0.4)] transition duration-300"
+              className="h-28 w-auto"
               loading="lazy"
             />
           </div>
 
-          {/* Right: Title + Subtitle */}
-          <div className="text-center md:text-left">
-            <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">
+          {/* Heading and Subtitle */}
+          <div className="w-full md:w-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-3 pb-4 relative section-divider text-center md:text-left">
               Projects
             </h2>
             <p className="text-xl text-muted-foreground mt-6">
@@ -85,7 +85,7 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        {/* Project Cards */}
+        {/* Project Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {projectCategories.map((category, catIdx) => (
             <div key={catIdx}>
