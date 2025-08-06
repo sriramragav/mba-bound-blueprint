@@ -64,24 +64,22 @@ const ExperienceSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Content with Image on Left */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-10">
-          
-          {/* Left Column: Image */}
-          <div className="flex justify-center">
-            <img
-              src="/lovable-uploads/fec492ee-4066-4e0c-951e-4174f8d9dd87.png"
-              alt="Cartoon Samyuctaa with tools and blueprint"
-              className="h-20 w-auto"
-              loading="lazy"
-            />
-          </div>
-
-          {/* Right Column: Heading */}
-          <div className="text-center md:text-left">
-            <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10 text-center sm:text-left">
+          {/* Sam Image */}
+          <img
+            src="/lovable-uploads/fec492ee-4066-4e0c-951e-4174f8d9dd87.png"
+            alt="Cartoon Samyuctaa with tools and blueprint"
+            className="h-28 w-auto object-contain"
+            loading="lazy"
+          />
+        
+          {/* Title + Subtitle */}
+          <div className="flex flex-col justify-center items-center sm:items-start">
+            <h2 className="text-3xl font-bold text-foreground mb-1 relative">
               Internship Experience
+              <span className="block h-1 w-24 bg-primary mt-1 mx-auto sm:mx-0"></span>
             </h2>
-            <p className="text-xl text-muted-foreground mt-6">
+            <p className="text-lg text-muted-foreground mt-2">
               Where I showed up to solve real-world problems.
             </p>
           </div>
