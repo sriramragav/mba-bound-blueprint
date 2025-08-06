@@ -76,7 +76,7 @@ const ProjectsSection = () => {
 
           {/* Heading and Subtitle */}
           <div className="w-full md:w-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-3 pb-4 relative section-divider text-center md:text-left">
+            <h2 className="text-3xl font-bold text-foreground mb-1 relative after:content-[''] after:block after:h-1 after:w-24 after:bg-primary after:mt-2 after:absolute after:left-1/2 after:transform after:-translate-x-1/2">
               Projects
             </h2>
             <p className="text-xl text-muted-foreground mt-6">
