@@ -65,18 +65,20 @@ const ProjectsSection = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
           
           {/* Left Column: Image */}
-          <div className="flex justify-center">
+          <div className="flex justify-end w-full md:w-1/3">
             <img
               src="/lovable-uploads/6d3685c0-e65a-4cd2-a633-6610881b144f.png"
               alt="Cartoon Samyuctaa with product key"
-              className="h-20 w-auto"
+              className="h-24 w-auto"
               loading="lazy"
             />
           </div>
 
           {/* Right Column: Heading */}
-          <div className="text-center md:text-left">
-            <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">Projects</h2>
+          <div className="text-center md:text-left md:w-2/3">
+            <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">
+              Projects
+            </h2>
             <p className="text-xl text-muted-foreground mt-6">
               "Where I showed up to build on my own."
             </p>
