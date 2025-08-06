@@ -54,8 +54,6 @@ const ContactSection = () => {
             />
           </div>
 
-          {/* Heading and Subtitle */}
-
           {/* Title + Subtitle */}
           <div className="flex flex-col justify-center items-center sm:items-start">
             <h2 className="text-3xl font-bold text-foreground mb-1 relative after:content-[''] after:block after:h-1 after:w-24 after:bg-primary after:mt-2 after:absolute after:left-1/2 after:transform after:-translate-x-1/2">
@@ -65,7 +63,6 @@ const ContactSection = () => {
               Where you can show up too.
             </p>
           </div>
-        </div>
       
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {contactInfo.map((info, index) => {
