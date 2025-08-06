@@ -40,7 +40,7 @@ const BlogSection = () => {
             Personal Writings
           </h2>
           <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
-            Where I showed up to share, when I was just a teenager—well before business school was on my radar.
+            Where I showed up to share, when I was just a teenager.
           </p>
         </div>
         */}
