@@ -64,24 +64,24 @@ const ExperienceSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Content with Image on Left */}
-        <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-10">
           
           {/* Left Column: Image */}
-          <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+          <div className="flex justify-center">
             <img
               src="/lovable-uploads/fec492ee-4066-4e0c-951e-4174f8d9dd87.png"
               alt="Cartoon Samyuctaa with tools and blueprint"
-              className="w-40 md:w-48 lg:w-56 max-w-full h-auto"
+              className="h-20 w-auto"
               loading="lazy"
             />
           </div>
 
           {/* Right Column: Heading */}
-          <div className="w-full md:w-2/3 text-center md:text-left">
+          <div className="text-center md:text-left">
             <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">
               Internship Experience
             </h2>
-            <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto md:mx-0">
+            <p className="text-xl text-muted-foreground mt-6">
               Where I showed up to solve real-world problems.
             </p>
           </div>

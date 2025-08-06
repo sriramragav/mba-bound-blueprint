@@ -55,7 +55,7 @@ const HeroSection = () => {
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
 
           {/* Cartoon Sam on Left */}
-          <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+          <div className="w-full md:w-1/3 flex justify-center md:justify-end">
             <img
               src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
               alt="Cartoon Samyuctaa waving"
