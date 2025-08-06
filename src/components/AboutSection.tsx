@@ -5,48 +5,44 @@ const About = () => {
   return (
     <section id="about" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
-        <div className="text-center mt-2">
-          <h2 className="text-3xl font-semibold text-foreground mb-2 relative section-divider pb-4">
-            About Me
-          </h2>
-          <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
-            "I've always shown up — on stage, on track, on the mat. I later learned to show up at the whiteboard too."
-          </p>
-        </div>
-
-        {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-8">
+        
+        {/* Main Content with Image on Left */}
+        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+          
           {/* Left Column: Image */}
-          <div className="relative text-center lg:text-left">
-            <div className="relative z-10">
-              <img
-                src={profileImage}
-                alt="Samyuctaa Sriram"
-                className="w-full max-w-[200px] mx-auto rounded-2xl shadow-card"
-              />
-            </div>
-
-            {/* Background Tint */}
-            <div className="absolute top-6 left-6 w-full h-full bg-gradient-primary opacity-20 rounded-2xl -z-10" />
-
-            {/* Citizenship Note */}
-            <p className="mt-4 text-xs italic text-muted-foreground text-center hidden md:block">
-              Born in the U.S. • Living in India • OCI Holder
-            </p>
+          <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+            <img
+              src="/lovable-uploads/05b79a04-5e6c-41cd-96bd-01ba87abe925.png"
+              alt="Cartoon Samyuctaa smiling"
+              className="w-40 md:w-48 lg:w-56 max-w-full h-auto"
+              loading="lazy"
+            />
           </div>
 
-          {/* Right Column: Description */}
-          <div className="space-y-4 text-[15px] text-muted-foreground leading-relaxed">
-            <p>
-              I was a child of energy and expression — from frog races and karate medals to singing contests and relay races, I loved to explore everything outside the classroom. But in Grade VII, I made a quiet decision: to direct that same energy into academics. At the time, I was in the bottom third of my class. By Class X, I graduated fifth in my school.
-            </p>
-            <p>
-              Since then, I've kept building — not just marks, but mindset. Today, I'm a computer science student at one of India's top engineering colleges, with a CGPA of 8.65, leadership roles on campus, and a "Must Hire" rating from my Visa internship.
-            </p>
-            <p>
-              This portfolio is a map of that journey — from early spark to steady fire, from joyful curiosity to focused intent.
-            </p>
+          {/* Right Column: Heading and Description */}
+          <div className="w-full md:w-2/3 text-center md:text-left">
+            {/* Heading */}
+            <div className="mb-6">
+              <h2 className="text-3xl font-semibold text-foreground mb-2 relative section-divider pb-4">
+                About Me
+              </h2>
+              <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto md:mx-0">
+                "I've always shown up — on stage, on track, on the mat. I later learned to show up at the whiteboard too."
+              </p>
+            </div>
+
+            {/* Description */}
+            <div className="space-y-4 text-[15px] text-muted-foreground leading-relaxed">
+              <p>
+                I was a child of energy and expression — from frog races and karate medals to singing contests and relay races, I loved to explore everything outside the classroom. But in Grade VII, I made a quiet decision: to direct that same energy into academics. At the time, I was in the bottom third of my class. By Class X, I graduated fifth in my school.
+              </p>
+              <p>
+                Since then, I've kept building — not just marks, but mindset. Today, I'm a computer science student at one of India's top engineering colleges, with a CGPA of 8.65, leadership roles on campus, and a "Must Hire" rating from my Visa internship.
+              </p>
+              <p>
+                This portfolio is a map of that journey — from early spark to steady fire, from joyful curiosity to focused intent.
+              </p>
+            </div>
           </div>
         </div>
 

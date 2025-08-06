@@ -55,17 +55,17 @@ const HeroSection = () => {
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
 
           {/* Cartoon Sam on Left */}
-          <div className="w-full md:w-1/2 flex justify-center md:justify-start md:items-end">
+          <div className="w-full md:w-1/3 flex justify-center md:justify-start">
             <img
-              src="/avatar/hero.jpg"
+              src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
               alt="Cartoon Samyuctaa waving"
-              className="w-40 md:w-48 lg:w-56 max-w-full h-auto mt-4 md:mt-0"
+              className="w-40 md:w-48 lg:w-56 max-w-full h-auto"
               loading="lazy"
             />
           </div>
 
           {/* Main Text Block */}
-          <div className="text-center md:text-left w-full md:w-2/3 md:pl-8">
+          <div className="text-center md:text-left w-full md:w-2/3">
             {/* Title */}
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="gradient-text">Samyuctaa Sriram</span>

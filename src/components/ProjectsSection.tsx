@@ -60,11 +60,27 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-2 relative section-divider pb-4">Projects</h2>
-          <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
-            "Where I showed up to build on my own."
-          </p>
+        
+        {/* Main Content with Image on Left */}
+        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+          
+          {/* Left Column: Image */}
+          <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+            <img
+              src="/lovable-uploads/6d3685c0-e65a-4cd2-a633-6610881b144f.png"
+              alt="Cartoon Samyuctaa with product key"
+              className="w-40 md:w-48 lg:w-56 max-w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Right Column: Heading */}
+          <div className="w-full md:w-2/3 text-center md:text-left">
+            <h2 className="text-4xl font-bold text-foreground mb-2 relative section-divider pb-4">Projects</h2>
+            <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto md:mx-0">
+              "Where I showed up to build on my own."
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

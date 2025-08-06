@@ -62,13 +62,29 @@ const ExperienceSection = () => {
   return (
     <section id="internships" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">
-            Internship Experience
-          </h2>
-          <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
-            Where I showed up to solve real-world problems.
-          </p>
+        
+        {/* Main Content with Image on Left */}
+        <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
+          
+          {/* Left Column: Image */}
+          <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+            <img
+              src="/lovable-uploads/fec492ee-4066-4e0c-951e-4174f8d9dd87.png"
+              alt="Cartoon Samyuctaa with tools and blueprint"
+              className="w-40 md:w-48 lg:w-56 max-w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Right Column: Heading */}
+          <div className="w-full md:w-2/3 text-center md:text-left">
+            <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">
+              Internship Experience
+            </h2>
+            <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto md:mx-0">
+              Where I showed up to solve real-world problems.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
