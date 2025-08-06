@@ -9,14 +9,12 @@ const ProjectsSection = () => {
       projects: [
         {
           title: "Campus Mentoring App",
-          description:
-            "End-to-end mentoring platform with secure login and feedback workflows.",
+          description: "End-to-end mentoring platform with secure login and feedback workflows.",
           technologies: ["React", "Node.js", "MongoDB", "Express"],
         },
         {
           title: "E-commerce Platform",
-          description:
-            "Online storefront with user authentication and Stripe payments.",
+          description: "Online storefront with user authentication and Stripe payments.",
           technologies: ["Next.js", "Prisma", "Stripe", "PostgreSQL"],
         },
       ],
@@ -26,14 +24,12 @@ const ProjectsSection = () => {
       projects: [
         {
           title: "Web3 Wallet Explorer",
-          description:
-            "Frontend interface to inspect wallet activity on Ethereum.",
+          description: "Frontend interface to inspect wallet activity on Ethereum.",
           technologies: ["React", "Web3.js", "REST APIs"],
         },
         {
           title: "Decentralized Voting Prototype",
-          description:
-            "Built a minimal voting dApp on the Ethereum testnet.",
+          description: "Built a minimal voting dApp on the Ethereum testnet.",
           technologies: ["Solidity", "Hardhat", "Ethers.js"],
         },
       ],
@@ -43,14 +39,12 @@ const ProjectsSection = () => {
       projects: [
         {
           title: "Facial Expression Classifier",
-          description:
-            "CNN model for emotion detection from facial images.",
+          description: "CNN model for emotion detection from facial images.",
           technologies: ["Python", "TensorFlow", "OpenCV"],
         },
         {
           title: "Book Recommender",
-          description:
-            "Content-based recommender using NLP on book reviews.",
+          description: "Content-based recommender using NLP on book reviews.",
           technologies: ["Python", "Scikit-learn", "Pandas"],
         },
       ],
@@ -60,10 +54,9 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Main Content with Image on Left */}
+
+        {/* Title & Sam Image */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
-          
           {/* Left Column: Image */}
           <div className="flex justify-end w-full md:w-1/3">
             <img
@@ -76,7 +69,7 @@ const ProjectsSection = () => {
 
           {/* Right Column: Heading */}
           <div className="text-center md:text-left md:w-2/3">
-            <h2 className="text-3xl font-bold text-foreground mb-3 relative section-divider pb-4">
+            <h2 className="text-3xl font-bold text-foreground mb-3 relative pb-4 section-divider">
               Projects
             </h2>
             <p className="text-xl text-muted-foreground mt-6">
@@ -85,6 +78,7 @@ const ProjectsSection = () => {
           </div>
         </div>
 
+        {/* Project Cards */}
         <div className="grid md:grid-cols-3 gap-8">
           {projectCategories.map((category, catIdx) => (
             <div key={catIdx}>
@@ -112,6 +106,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
+        {/* GitHub Button */}
         <div className="text-center mt-10">
           <Button variant="outline" asChild>
             <a
