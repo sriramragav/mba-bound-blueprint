@@ -75,16 +75,18 @@ const ProjectsSection = () => {
           </div>
 
           {/* Heading and Subtitle */}
-          <div className="w-full md:w-auto">
+
+          {/* Title + Subtitle */}
+          <div className="flex flex-col justify-center items-center sm:items-start">
             <h2 className="text-3xl font-bold text-foreground mb-1 relative after:content-[''] after:block after:h-1 after:w-24 after:bg-primary after:mt-2 after:absolute after:left-1/2 after:transform after:-translate-x-1/2">
-              Projects
+            Projects
             </h2>
-            <p className="text-xl text-muted-foreground mt-6">
-              Where I showed up to build on my own.
+            <p className="text-lg text-muted-foreground mt-2">
+              Where I showed up to build my own.
             </p>
           </div>
         </div>
-
+          
         {/* Project Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {projectCategories.map((category, catIdx) => (
