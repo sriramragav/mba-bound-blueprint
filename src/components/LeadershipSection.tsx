@@ -68,7 +68,7 @@ const LeadershipSection = () => {
           {/* Sam image */}
           <div className="flex justify-center w-full md:w-auto">
             <img
-              src="/lovable-uploads/6d3685c0-e65a-4cd2-a633-6610881b144f.png"
+              src="/avatar/Leadership.png"
               alt="Sam showing project blueprints"
               className="h-28 w-auto"
               loading="lazy"
