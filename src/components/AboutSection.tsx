@@ -9,7 +9,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mt-2">
-          <h2 className="text-3xl font-semibold text-foreground mb-2 relative section-divider pb-4">
+          <h2 className="text-3xl font-semibold text-foreground mb-2 relative after:content-[''] after:block after:h-1 after:w-24 after:bg-primary after:mt-2 after:absolute after:left-1/2 after:transform after:-translate-x-1/2 pb-4">
             About Me
           </h2>
           {/* Introductory Quote */}
@@ -19,7 +19,7 @@ const About = () => {
         </div>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mt-8 max-w-5xl mx-auto">
           {/* Left Column: Image */}
           <div className="relative text-center lg:text-left">
             <div className="relative z-10">
