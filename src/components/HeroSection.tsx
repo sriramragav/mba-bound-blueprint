@@ -106,22 +106,21 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Arrow Down */}
-            <div className="mt-8 flex justify-center">
-              <button
-                onClick={scrollToAbout}
-                className="text-primary hover:text-foreground transition"
-                aria-label="Scroll to About"
-              >
-                <ArrowDown className="w-6 h-6 animate-bounce" />
-              </button>
-            </div>
-
             {/* Status */}
             <div className="flex flex-wrap justify-center md:justify-start items-center gap-6 text-sm text-muted-foreground pt-8">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
-                <span>Engineer in Progress</span>
+              <div className="flex flex-col items-center gap-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
+                  <span>Engineer in Progress</span>
+                </div>
+                {/* Arrow Down - positioned under Engineer in Progress */}
+                <button
+                  onClick={scrollToAbout}
+                  className="text-primary hover:text-foreground transition mt-2"
+                  aria-label="Scroll to About"
+                >
+                  <ArrowDown className="w-6 h-6 animate-bounce" />
+                </button>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-primary rounded-full" />
