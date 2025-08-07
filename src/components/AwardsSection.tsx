@@ -1,4 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { useEffect, useState, useRef } from 'react';
 import { Pause, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -72,10 +73,6 @@ const AwardsSection = () => {
     }
   };
 
-  const buttonStyle = (disabled: boolean) =>
-    `text-xs hover:underline ${
-      disabled ? 'text-muted-foreground opacity-50 cursor-not-allowed' : 'text-primary'
-    }`;
 
   return (
     <section id="awards" className="py-12 section-tinted scroll-mt-16">
@@ -136,37 +133,43 @@ const AwardsSection = () => {
               </div>
               <div className="flex justify-center items-center gap-4 mt-4">
                 {/* Previous Button */}
-                <button
+                <Button
+                  variant="outline"
+                  size="sm"
                   onClick={prevSchoolImage}
-                  className={buttonStyle(schoolIndex === 0)}
                   disabled={schoolIndex === 0}
+                  className="h-8 w-8 p-0"
                   aria-label="Previous"
                 >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
+                  <ChevronLeft className="h-4 w-4" />
+                </Button>
               
                 {/* Autoplay Toggle Button */}
-                <button
+                <Button
+                  variant="outline"
+                  size="sm"
                   onClick={toggleAutoplay}
-                  className="text-muted-foreground hover:text-primary transition"
+                  className="h-8 w-8 p-0"
                   aria-label={isAutoplaying ? 'Pause autoplay' : 'Resume autoplay'}
                 >
                   {isAutoplaying ? (
-                    <Pause className="w-5 h-5" />
+                    <Pause className="h-4 w-4" />
                   ) : (
-                    <Play className="w-5 h-5" />
+                    <Play className="h-4 w-4" />
                   )}
-                </button>
+                </Button>
               
                 {/* Next Button */}
-                <button
+                <Button
+                  variant="outline"
+                  size="sm"
                   onClick={nextSchoolImage}
-                  className={buttonStyle(schoolIndex === schoolCertificates.length - 1)}
                   disabled={schoolIndex === schoolCertificates.length - 1}
+                  className="h-8 w-8 p-0"
                   aria-label="Next"
                 >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
               </div>
             </CardContent>
           </Card>
@@ -201,20 +204,24 @@ const AwardsSection = () => {
 
               {/*<div className="flex justify-between mt-2">*/}
               <div className="flex justify-center items-center gap-4 mt-4">  
-                <button
+                <Button
+                  variant="outline"
+                  size="sm"
                   onClick={prevAfterImage}
-                  className={buttonStyle(afterIndex === 0)}
                   disabled={afterIndex === 0}
+                  className="h-8 w-8 p-0"
                 >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
+                  <ChevronLeft className="h-4 w-4" />
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
                   onClick={nextAfterImage}
-                  className={buttonStyle(afterIndex === afterHighSchoolCertificates.length - 1)}
                   disabled={afterIndex === afterHighSchoolCertificates.length - 1}
+                  className="h-8 w-8 p-0"
                 >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
               </div>
             </CardContent>
           </Card>
