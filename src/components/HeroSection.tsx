@@ -107,7 +107,7 @@ const HeroSection = () => {
             </div>
 
             {/* Arrow Down */}
-            <div className="mt-8 flex justify-center md:justify-start">
+            <div className="mt-8 flex justify-center">
               <button
                 onClick={scrollToAbout}
                 className="text-primary hover:text-foreground transition"
