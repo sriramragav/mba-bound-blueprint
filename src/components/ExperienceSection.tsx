@@ -67,7 +67,7 @@ const ExperienceSection = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10 text-center sm:text-left">
           {/* Sam Image */}
           <img
-            src="/lovable-uploads/fec492ee-4066-4e0c-951e-4174f8d9dd87.png"
+            src="/avatar/Internships.png"
             alt="Cartoon Samyuctaa with tools and blueprint"
             className="h-28 w-auto object-contain"
             loading="lazy"
