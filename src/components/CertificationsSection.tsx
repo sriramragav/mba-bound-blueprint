@@ -1,4 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -81,8 +83,6 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
     setTouchStartX(null);
   };
 
-  const iconButtonStyle = (disabled: boolean) =>
-    `text-lg font-bold px-2 ${disabled ? 'text-muted-foreground opacity-50 cursor-not-allowed' : 'text-primary hover:text-accent-foreground'}`;
 
   return (
     <>
@@ -122,15 +122,27 @@ const CertificationCard = ({ title, certs }: { title: string; certs: string[] })
           </div>
 
           <div className="flex justify-center items-center gap-4 mt-4">
-            <button onClick={prev} className={iconButtonStyle(index === 0)} disabled={index === 0}>
-              &lt;
-            </button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={prev}
+              disabled={index === 0}
+              className="h-8 w-8 p-0"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
             <span className="text-xs text-muted-foreground">
               {index + 1} of {certs.length}
             </span>
-            <button onClick={next} className={iconButtonStyle(index === certs.length - 1)} disabled={index === certs.length - 1}>
-              &gt;
-            </button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={next}
+              disabled={index === certs.length - 1}
+              className="h-8 w-8 p-0"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
           </div>
         </CardContent>
       </Card>
