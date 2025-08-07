@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import profileImage from '/lovable-uploads/AboutMePic.png';
+import profileImage from '/avatar/AboutMePic.png';
 
 
 const About = () => {
