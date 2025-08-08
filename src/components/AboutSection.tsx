@@ -1,6 +1,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import profileImage from '/avatar/AboutMePic.png';
+import VideoPlayer from '@/components/VideoPlayer';
 
 
 const About = () => {
@@ -23,15 +24,8 @@ const About = () => {
           {/* Left Column: Image */}
           <div className="relative text-center lg:text-left">
             <div className="relative z-10">
-              <img
-                src={profileImage}
-                alt="Samyuctaa Sriram"
-                className="w-full max-w-[200px] mx-auto rounded-2xl shadow-card"
-              />
+              <VideoPlayer src="/videos/sample-intro.mp4" poster={profileImage} title="Samyuctaa Intro Video" />
             </div>
-
-            {/* Background Tint */}
-            <div className="absolute top-6 left-6 w-full h-full bg-gradient-primary opacity-20 rounded-2xl -z-10" />
 
             {/* Citizenship Note */}
             <p className="mt-4 text-xs italic text-muted-foreground text-center hidden md:block">
