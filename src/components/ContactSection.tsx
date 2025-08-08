@@ -41,7 +41,7 @@ const ContactSection = () => {
             {/* Sam Image */}
             <div className="flex-shrink-0">
               <img
-                src="/lovable-uploads/6d3685c0-e65a-4cd2-a633-6610881b144f.png"
+                src="/avatar/ContactMe.png"
                 alt="Sam waving to connect"
                 className="h-28 w-auto"
                 loading="lazy"
