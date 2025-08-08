@@ -97,7 +97,7 @@ export default function VideoPlayer({ src, poster, title }: VideoPlayerProps) {
       <header className="sr-only">
         <h3>{title || "Intro video"}</h3>
       </header>
-      <AspectRatio>
+      <AspectRatio ratio={16 / 9}>
         <video
           ref={videoRef}
           className="h-full w-full object-cover"
