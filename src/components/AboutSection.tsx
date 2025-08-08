@@ -23,7 +23,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mt-8 max-w-5xl mx-auto">
           {/* Left Column: Image */}
           <div className="relative text-center lg:text-left">
-            <div className="relative z-10">
+            <div className="relative z-10 w-full max-w-lg mx-auto lg:mx-0">
               <VideoPlayer src="/videos/sample-intro.mp4" poster={profileImage} title="Samyuctaa Intro Video" />
             </div>
 
