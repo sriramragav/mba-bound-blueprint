@@ -8,15 +8,27 @@ const About = () => {
   return (
     <section id="about" className="py-12 section-tinted scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
-        <div className="text-center mt-2">
-          <h2 className="text-3xl font-semibold text-foreground mb-2 relative after:content-[''] after:block after:h-1 after:w-24 after:bg-primary after:mt-2 after:absolute after:left-1/2 after:transform after:-translate-x-1/2 pb-4">
-            About Me
-          </h2>
-          {/* Introductory Quote */}
-          <p className="text-lg text-muted-foreground mt-2">
+        {/* Header with About image */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8 text-center md:text-left">
+          {/* About icon */}
+          <div className="flex justify-center w-full md:w-auto">
+            <img
+              src="/avatar/AboutMePic.png"
+              alt="About Me icon"
+              className="h-28 w-auto"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Title + Subtitle */}
+          <div className="flex flex-col justify-center items-center sm:items-start">
+            <h2 className="text-3xl font-semibold text-foreground mb-2 relative after:content-[''] after:block after:h-1 after:w-24 after:bg-primary after:mt-2 after:absolute after:left-1/2 after:transform after:-translate-x-1/2 pb-0">
+              About Me
+            </h2>
+            <p className="text-lg text-muted-foreground mt-2">
               I’ve always shown up — on stage, on track, on the mat. I later learned to show up at the whiteboard too.
             </p>
+          </div>
         </div>
 
         {/* Two Column Layout */}
