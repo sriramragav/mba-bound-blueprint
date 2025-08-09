@@ -24,7 +24,7 @@ const About = () => {
           {/* Left Column: Image */}
           <div className="relative text-center lg:text-left">
             <div className="relative z-10 w-full max-w-lg mx-auto lg:mx-0">
-              <VideoPlayer src="/videos/sample-intro.mp4" poster={profileImage} title="Samyuctaa Intro Video" />
+              <VideoPlayer src="/videos/fall.mp4" poster={profileImage} title="Samyuctaa Intro Video" />
             </div>
 
             {/* Citizenship Note */}
