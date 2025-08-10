@@ -1,22 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, ArrowDown, X, Eye } from 'lucide-react';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showVideo, setShowVideo] = useState(false);
-
-  useEffect(() => {
-    const hasPlayed = sessionStorage.getItem('heroVideoPlayed');
-    if (!hasPlayed) {
-      setShowVideo(true);
-    }
-  }, []);
-
-  const handleVideoEnd = () => {
-    setShowVideo(false);
-    sessionStorage.setItem('heroVideoPlayed', 'true');
-  };
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
@@ -63,29 +50,18 @@ const HeroSection = () => {
         </div>
       )}
 
-      {/* Main Content */}
+      {/* Main Content with Image on Left */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
 
-          {/* Video (first visit only) or Image */}
+          {/* Cartoon Sam on Left */}
           <div className="w-full md:w-1/3 flex justify-center md:justify-end">
-            {showVideo ? (
-              <video
-                src="/videos/Hero.mp4"
-                autoPlay
-                muted={false}
-                controls={false}
-                onEnded={handleVideoEnd}
-                className="border-4 border-red-500 w-[224px] h-[224px] object-contain bg-black rounded-lg"
-              />
-            ) : (
-              <img
-                src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
-                alt="Cartoon Samyuctaa waving"
-                className="border-4 border-blue-500 w-[224px] h-[224px] object-contain bg-white rounded-lg"
-                loading="lazy"
-              />
-            )}
+            <img
+              src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
+              alt="Cartoon Samyuctaa waving"
+              className="w-40 md:w-48 lg:w-56 max-w-full h-auto"
+              loading="lazy"
+            />
           </div>
 
           {/* Main Text Block */}
