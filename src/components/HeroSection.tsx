@@ -69,7 +69,6 @@ const HeroSection = () => {
               <video
                 src="/videos/Hero.mp4"
                 autoPlay
-                muted
                 playsInline
                 controls={false}
                 className="w-40 md:w-48 lg:w-56 max-w-full h-auto rounded-lg"
