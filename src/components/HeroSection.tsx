@@ -1,9 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, ArrowDown, X, Eye } from 'lucide-react';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    const hasSeenVideo = sessionStorage.getItem('heroVideoPlayed');
+    if (!hasSeenVideo) {
+      setShowVideo(true);
+      sessionStorage.setItem('heroVideoPlayed', 'true');
+    }
+  }, []);
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
@@ -50,23 +59,34 @@ const HeroSection = () => {
         </div>
       )}
 
-      {/* Main Content with Image on Left */}
+      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
 
-          {/* Cartoon Sam on Left */}
+          {/* Video or Image on Left */}
           <div className="w-full md:w-1/3 flex justify-center md:justify-end">
-            <img
-              src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
-              alt="Cartoon Samyuctaa waving"
-              className="w-40 md:w-48 lg:w-56 max-w-full h-auto"
-              loading="lazy"
-            />
+            {showVideo ? (
+              <video
+                src="/lovable-uploads/your-video.mp4"
+                autoPlay
+                muted
+                playsInline
+                controls={false}
+                className="w-40 md:w-48 lg:w-56 max-w-full h-auto rounded-lg"
+                onEnded={() => setShowVideo(false)}
+              />
+            ) : (
+              <img
+                src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
+                alt="Cartoon Samyuctaa waving"
+                className="w-40 md:w-48 lg:w-56 max-w-full h-auto"
+                loading="lazy"
+              />
+            )}
           </div>
 
           {/* Main Text Block */}
           <div className="text-center md:text-left w-full md:w-2/3">
-            {/* Title */}
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="gradient-text">Samyuctaa Sriram</span>
               <span className="block text-3xl md:text-4xl text-primary font-normal mt-2">
