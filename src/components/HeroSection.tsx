@@ -1,18 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Download, ArrowDown, X, Eye } from 'lucide-react';
+import { Download, ArrowDown, X, Eye, RotateCcw } from 'lucide-react';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showVideo, setShowVideo] = useState(false);
-
-  useEffect(() => {
-    const hasSeenVideo = sessionStorage.getItem('heroVideoPlayed');
-    if (!hasSeenVideo) {
-      setShowVideo(true);
-      sessionStorage.setItem('heroVideoPlayed', 'true');
-    }
-  }, []);
+  const [showVideo, setShowVideo] = useState(true); // always true for testing
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
@@ -64,7 +56,7 @@ const HeroSection = () => {
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
 
           {/* Video or Image on Left */}
-          <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+          <div className="w-full md:w-1/3 flex flex-col items-center md:items-end">
             {showVideo ? (
               <video
                 src="/videos/Hero.mp4"
@@ -82,6 +74,16 @@ const HeroSection = () => {
                 loading="lazy"
               />
             )}
+
+            {/* Reset Button for testing */}
+            <Button
+              variant="outline"
+              size="sm"
+              className="mt-4"
+              onClick={() => setShowVideo(true)}
+            >
+              <RotateCcw className="w-4 h-4 mr-2" /> Replay Video
+            </Button>
           </div>
 
           {/* Main Text Block */}
