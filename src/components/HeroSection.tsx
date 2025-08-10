@@ -54,33 +54,27 @@ const HeroSection = () => {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-          
-          {/* Video in place of image */}
-          <div className="w-full md:w-1/3 flex justify-center md:justify-end">
-            {showVideo ? (
-              <div
-                className="border-4 border-red-500 rounded-lg overflow-hidden"
-                style={{ width: '224px', height: '224px' }} // Fixed box size for testing
-              >
-                <video
-                  src="/videos/Hero.mp4"
-                  autoPlay
-                  playsInline
-                  muted={false}
-                  controls={false}
-                  className="w-full h-full object-cover"
-                  onEnded={() => setShowVideo(false)}
-                />
-              </div>
-            ) : (
-              <img
-                src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
-                alt="Cartoon Samyuctaa waving"
-                className="border-4 border-blue-500 w-[224px] h-[224px] object-cover rounded-lg"
-                loading="lazy"
-              />
-            )}
-          </div>
+
+        {/* Cartoon Sam on Left OR Video on First Visit */}
+        <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+          {showVideo ? (
+            <video
+              src="/videos/Hero.mp4"
+              autoPlay
+              muted={false}
+              controls={false}
+              onEnded={handleVideoEnd}
+              className="border-4 border-red-500 w-[224px] h-[224px] object-contain bg-black rounded-lg"
+            />
+          ) : (
+            <img
+              src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
+              alt="Cartoon Samyuctaa waving"
+              className="border-4 border-blue-500 w-[224px] h-[224px] object-contain bg-white rounded-lg"
+              loading="lazy"
+            />
+          )}
+        </div>
 
           {/* Main Text Block */}
           <div className="text-center md:text-left w-full md:w-2/3">
