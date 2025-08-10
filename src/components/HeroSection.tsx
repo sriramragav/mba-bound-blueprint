@@ -1,10 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, ArrowDown, X, Eye } from 'lucide-react';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showVideo, setShowVideo] = useState(true); // Always true for testing
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    const hasPlayed = sessionStorage.getItem('heroVideoPlayed');
+    if (!hasPlayed) {
+      setShowVideo(true);
+    }
+  }, []);
+
+  const handleVideoEnd = () => {
+    setShowVideo(false);
+    sessionStorage.setItem('heroVideoPlayed', 'true');
+  };
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
@@ -55,29 +67,30 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
 
-        {/* Cartoon Sam on Left OR Video on First Visit */}
-        <div className="w-full md:w-1/3 flex justify-center md:justify-end">
-          {showVideo ? (
-            <video
-              src="/videos/Hero.mp4"
-              autoPlay
-              muted={false}
-              controls={false}
-              onEnded={handleVideoEnd}
-              className="border-4 border-red-500 w-[224px] h-[224px] object-contain bg-black rounded-lg"
-            />
-          ) : (
-            <img
-              src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
-              alt="Cartoon Samyuctaa waving"
-              className="border-4 border-blue-500 w-[224px] h-[224px] object-contain bg-white rounded-lg"
-              loading="lazy"
-            />
-          )}
-        </div>
+          {/* Video (first visit only) or Image */}
+          <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+            {showVideo ? (
+              <video
+                src="/videos/Hero.mp4"
+                autoPlay
+                muted={false}
+                controls={false}
+                onEnded={handleVideoEnd}
+                className="border-4 border-red-500 w-[224px] h-[224px] object-contain bg-black rounded-lg"
+              />
+            ) : (
+              <img
+                src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
+                alt="Cartoon Samyuctaa waving"
+                className="border-4 border-blue-500 w-[224px] h-[224px] object-contain bg-white rounded-lg"
+                loading="lazy"
+              />
+            )}
+          </div>
 
           {/* Main Text Block */}
           <div className="text-center md:text-left w-full md:w-2/3">
+            {/* Title */}
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="gradient-text">Samyuctaa Sriram</span>
               <span className="block text-3xl md:text-4xl text-primary font-normal mt-2">
@@ -90,6 +103,7 @@ const HeroSection = () => {
               <br />– Woody Allen
             </p>
 
+            {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center pt-4">
               <a href="/Samyuctaa_Resume.pdf" download="Samyuctaa_Resume.pdf">
                 <Button variant="white" size="lg" className="group">
@@ -116,6 +130,7 @@ const HeroSection = () => {
               </Button>
             </div>
 
+            {/* Arrow Down */}
             <div className="mt-8 flex justify-center md:justify-start">
               <button
                 onClick={scrollToAbout}
@@ -126,6 +141,7 @@ const HeroSection = () => {
               </button>
             </div>
 
+            {/* Status */}
             <div className="flex flex-wrap justify-center md:justify-start items-center gap-6 text-sm text-muted-foreground pt-8">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
@@ -137,7 +153,6 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
