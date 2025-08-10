@@ -67,7 +67,7 @@ const HeroSection = () => {
           <div className="w-full md:w-1/3 flex justify-center md:justify-end">
             {showVideo ? (
               <video
-                src="/lovable-uploads/your-video.mp4"
+                src="/videos/Hero.mp4"
                 autoPlay
                 muted
                 playsInline
