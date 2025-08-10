@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Download, ArrowDown, X, Eye, RotateCcw } from 'lucide-react';
+import { Download, ArrowDown, X, Eye } from 'lucide-react';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showVideo, setShowVideo] = useState(true); // always true for testing
+  const [showVideo, setShowVideo] = useState(true); // Always true for testing
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
@@ -54,18 +54,21 @@ const HeroSection = () => {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-
-          {/* Video or Image on Left */}
-          <div className="w-full md:w-1/3 flex flex-col items-center md:items-end">
+          
+          {/* Video in place of image */}
+          <div className="w-full md:w-1/3 flex justify-center md:justify-end">
             {showVideo ? (
-              <video
-                src="/videos/Hero.mp4"
-                autoPlay
-                playsInline
-                controls={false}
-                className="w-40 md:w-48 lg:w-56 max-w-full h-auto rounded-lg"
-                onEnded={() => setShowVideo(false)}
-              />
+              <div className="w-40 md:w-48 lg:w-56 h-auto">
+                <video
+                  src="/videos/Hero.mp4"
+                  autoPlay
+                  playsInline
+                  muted={false}
+                  controls={false}
+                  className="w-full h-full object-cover rounded-lg"
+                  onEnded={() => setShowVideo(false)}
+                />
+              </div>
             ) : (
               <img
                 src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
@@ -74,20 +77,11 @@ const HeroSection = () => {
                 loading="lazy"
               />
             )}
-
-            {/* Reset Button for testing */}
-            <Button
-              variant="outline"
-              size="sm"
-              className="mt-4"
-              onClick={() => setShowVideo(true)}
-            >
-              <RotateCcw className="w-4 h-4 mr-2" /> Replay Video
-            </Button>
           </div>
 
           {/* Main Text Block */}
           <div className="text-center md:text-left w-full md:w-2/3">
+            {/* Title */}
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="gradient-text">Samyuctaa Sriram</span>
               <span className="block text-3xl md:text-4xl text-primary font-normal mt-2">
@@ -150,6 +144,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
