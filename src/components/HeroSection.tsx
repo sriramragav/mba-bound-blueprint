@@ -58,14 +58,17 @@ const HeroSection = () => {
           {/* Video in place of image */}
           <div className="w-full md:w-1/3 flex justify-center md:justify-end">
             {showVideo ? (
-              <div className="w-40 md:w-48 lg:w-56 h-auto">
+              <div
+                className="border-4 border-red-500 rounded-lg overflow-hidden"
+                style={{ width: '224px', height: '224px' }} // Fixed box size for testing
+              >
                 <video
                   src="/videos/Hero.mp4"
                   autoPlay
                   playsInline
                   muted={false}
                   controls={false}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover"
                   onEnded={() => setShowVideo(false)}
                 />
               </div>
@@ -73,7 +76,7 @@ const HeroSection = () => {
               <img
                 src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
                 alt="Cartoon Samyuctaa waving"
-                className="w-40 md:w-48 lg:w-56 max-w-full h-auto"
+                className="border-4 border-blue-500 w-[224px] h-[224px] object-cover rounded-lg"
                 loading="lazy"
               />
             )}
@@ -81,7 +84,6 @@ const HeroSection = () => {
 
           {/* Main Text Block */}
           <div className="text-center md:text-left w-full md:w-2/3">
-            {/* Title */}
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="gradient-text">Samyuctaa Sriram</span>
               <span className="block text-3xl md:text-4xl text-primary font-normal mt-2">
@@ -94,7 +96,6 @@ const HeroSection = () => {
               <br />– Woody Allen
             </p>
 
-            {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center pt-4">
               <a href="/Samyuctaa_Resume.pdf" download="Samyuctaa_Resume.pdf">
                 <Button variant="white" size="lg" className="group">
@@ -121,7 +122,6 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Arrow Down */}
             <div className="mt-8 flex justify-center md:justify-start">
               <button
                 onClick={scrollToAbout}
@@ -132,7 +132,6 @@ const HeroSection = () => {
               </button>
             </div>
 
-            {/* Status */}
             <div className="flex flex-wrap justify-center md:justify-start items-center gap-6 text-sm text-muted-foreground pt-8">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
