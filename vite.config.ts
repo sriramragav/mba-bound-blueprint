@@ -20,4 +20,5 @@ export default defineConfig(({ mode }) => ({
     },
     dedupe: ["react", "react-dom"],
   },
+  base: '/mba-bound-blueprint/',
 }));
