@@ -10,12 +10,12 @@ const HeroSection = () => {
     const hasPlayed = sessionStorage.getItem('heroVideoPlayed');
     if (!hasPlayed) {
       setShowVideo(true);
-      sessionStorage.setItem('heroVideoPlayed', 'true');
     }
   }, []);
 
   const handleVideoEnd = () => {
     setShowVideo(false);
+    sessionStorage.setItem('heroVideoPlayed', 'true');
   };
 
   const scrollToAbout = () => {
@@ -67,7 +67,7 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
 
-          {/* Video (first visit only) or Image on Left */}
+          {/* Video (first visit only) or Image */}
           <div className="w-full md:w-1/3 flex justify-center md:justify-end">
             {showVideo ? (
               <video
@@ -75,15 +75,14 @@ const HeroSection = () => {
                 autoPlay
                 muted={false}
                 controls={false}
-                playsInline
                 onEnded={handleVideoEnd}
-                className="w-[224px] h-[224px] object-cover rounded-lg border-2 border-red-500"
+                className="border-4 border-red-500 w-[224px] h-[224px] object-contain bg-black rounded-lg"
               />
             ) : (
               <img
                 src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
                 alt="Cartoon Samyuctaa waving"
-                className="w-[224px] h-[224px] object-cover rounded-lg border-2 border-blue-500"
+                className="border-4 border-blue-500 w-[224px] h-[224px] object-contain bg-white rounded-lg"
                 loading="lazy"
               />
             )}
