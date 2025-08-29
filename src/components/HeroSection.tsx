@@ -77,7 +77,7 @@ const HeroSection = () => {
               />
             ) : (
               <img
-                src="/lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
+                src="./lovable-uploads/6c603f0c-4c03-4127-a960-b4c370620538.png"
                 alt="Cartoon Samyuctaa waving"
                 className="w-40 md:w-48 lg:w-56 max-w-full h-auto"
                 loading="lazy"
