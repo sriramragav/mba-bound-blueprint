@@ -5,16 +5,16 @@ import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 const earlyCerts = [
-  '/certificates/CourseEra/2016-IntroToMarketingFromWharton.jpg',
-  '/certificates/CourseEra/2016-Entrepreneurship1FromWharton.jpg',
-  '/certificates/CourseEra/2019-Entrepreneurship2FromWharto.jpg'
+  '/mba-bound-blueprint/certificates/CourseEra/2016-IntroToMarketingFromWharton.jpg',
+  '/mba-bound-blueprint/certificates/CourseEra/2016-Entrepreneurship1FromWharton.jpg',
+  '/mba-bound-blueprint/certificates/CourseEra/2019-Entrepreneurship2FromWharto.jpg'
 ];
 
 const laterCerts = [
-  '/certificates/CourseEra/2024-MLFromStanford.jpg',
-  '/certificates/CourseEra/2025-DataEngFromDeepLearning.jpg',
-  '/certificates/CourseEra/2025-ETLfromDeepLearning.jpg',
-  '/certificates/CourseEra/2025-SpringBootFromaPackt.jpg'
+  '/mba-bound-blueprint/certificates/CourseEra/2024-MLFromStanford.jpg',
+  '/mba-bound-blueprint/certificates/CourseEra/2025-DataEngFromDeepLearning.jpg',
+  '/mba-bound-blueprint/certificates/CourseEra/2025-ETLfromDeepLearning.jpg',
+  '/mba-bound-blueprint/certificates/CourseEra/2025-SpringBootFromaPackt.jpg'
 ];
 
 // Preload images
