@@ -3,10 +3,10 @@ import { Button } from '@/components/ui/button';
 import { useEffect, useState, useRef } from 'react';
 import { Pause, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const schoolCertificates = Array.from({ length: 24 }, (_, i) => `/certificates/school/cert${i + 1}.jpeg`);
+const schoolCertificates = Array.from({ length: 24 }, (_, i) => `/mba-bound-blueprint/certificates/school/cert${i + 1}.jpeg`);
 const afterHighSchoolCertificates = [
-  '/certificates/afterschool/NASA.jpeg',
-  '/certificates/afterschool/visa.jpeg',
+  '/mba-bound-blueprint/certificates/afterschool/NASA.jpeg',
+  '/mba-bound-blueprint/certificates/afterschool/visa.jpeg',
 ];
 
 const AwardsSection = () => {
@@ -83,7 +83,7 @@ const AwardsSection = () => {
           {/* Sam image */}
           <div className="flex justify-center w-full md:w-auto">
             <img
-              src="/avatar/Awards.png"
+              src="/mba-bound-blueprint/avatar/Awards.png"
               alt="Sam showing project blueprints"
               className="h-28 w-auto"
               loading="lazy"
